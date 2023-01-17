@@ -7,6 +7,9 @@ export default defineNuxtConfig({
     "nuxt-icon",
     "nuxt-meilisearch",
   ],
+  build: {
+    transpile: ["vue-instantsearch"],
+  },
   meilisearch: {
     hostUrl: process.env.NUXT_MEILISEARCH_URL,
     searchApiKey: process.env.NUXT_MEILISEARCH_KEY,
