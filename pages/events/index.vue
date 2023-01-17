@@ -1,9 +1,9 @@
 <template>
-  <div class="bg-base-200 py-16">
+  <div class="py-16">
     <div class="w-[1280px] mx-auto">
       <h1 class="font-bold text-3xl mb-8">Our Events</h1>
       <div
-        class="w-full rounded-xl flex border border-gray-300 p-2 justify-between"
+        class="w-full rounded-xl flex border border-base-300 p-2 justify-between"
       >
         <div class="flex gap-2">
           <select class="select select-bordered w-full max-w-xs">
@@ -27,7 +27,7 @@
             <option>December</option>
           </select>
         </div>
-        <button class="btn btn-secondary w-44">Clear Filters</button>
+        <button class="btn btn-secondary btn-outline">Clear Filters</button>
       </div>
       <div
         class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 container gap-16 mt-20"
@@ -67,7 +67,7 @@
               ...
             </p>
             <div
-              class="flex gap-2 rounded-md border items-center bg-base-100 py-2 px-4 mt-2"
+              class="flex gap-2 rounded-md border border-base-300 items-center bg-base-100 py-2 px-4 mt-2"
             >
               <Icon name="ion:calendar-outline" size="26px" class="mr-1" />
               <span class="font-bold"
@@ -94,12 +94,16 @@
           </div>
         </div>
       </div>
-      <div class="flex items-center justify-center">
+      <div class="flex items-center justify-center mb-20">
         <div class="btn-group mt-20 mb-10">
-          <button class="btn btn-active">1</button>
-          <button class="btn">2</button>
-          <button class="btn">3</button>
-          <button class="btn">4</button>
+          <button
+            class="btn"
+            v-for="(event, index) in events.meta.pagination.pageCount"
+            @click="options.page = index + 1"
+            :class="options.page === index + 1 ? 'btn-active' : ''"
+          >
+            {{ index + 1 }}
+          </button>
         </div>
       </div>
     </div>
@@ -109,14 +113,29 @@
 <script setup>
 const { find } = useStrapi();
 
-const events = await find("events", {
-  populate: ["Thumbnail"],
+const options = reactive({
+  pageSize: 6,
+  page: 1,
+});
+
+const events = ref(
+  await find("events", {
+    populate: ["Thumbnail"],
+    pagination: options,
+  })
+);
+
+watch(options, async (newValue, oldValue) => {
+  posts.value = await find("events", {
+    populate: ["Thumbnail"],
+    pagination: newValue,
+  });
 });
 
 const setTagsBg = function (value) {
-  if (value === "Religious") {
+  if (value === "Temple") {
     return "bg-purple-600";
-  } else if (value === "Discover") {
+  } else if (value === "Discovery") {
     return "bg-blue-600";
   } else {
     return "bg-orange-600";

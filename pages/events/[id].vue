@@ -3,7 +3,7 @@
     <div class="hero-content flex-col lg:flex-row">
       <img
         :src="
-          'http://localhost:1337' +
+          config.strapiBase +
           event.data.attributes.Thumbnail.data.attributes.formats.small.url
         "
         class="max-w-md rounded-lg shadow-2xl"
@@ -63,7 +63,7 @@
     <div class="pt-36 grid-cols-2 pb-16 grid gap-4">
       <div
         v-for="teacher in event.data.attributes.Teachers.data"
-        class="p-6 border-2 rounded-xl"
+        class="p-6 border-2 border-base-300 rounded-xl"
       >
         <img
           :src="
@@ -77,7 +77,7 @@
         >
           {{ teacher.attributes.Subject }}
         </div>
-        <h3 class="uppercase font-bold mt-4 text-md text-gray-600 mb-3">
+        <h3 class="uppercase font-bold mt-4 text-md mb-3">
           {{ teacher.attributes.Name }}
         </h3>
         <p class="mb-2">{{ teacher.attributes.Description }}</p>
@@ -110,25 +110,29 @@
               })
             }}
           </div>
-          <table class="table table-zebra w-full mt-4 rounded-2xl shadow-lg">
-            <!-- head -->
-            <thead>
-              <tr>
-                <th></th>
-                <th>Time</th>
-                <th>Activity</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr v-for="(activity, index) in day.attributes.Activity">
-                <th class="text-gray-300">{{ index + 1 }}</th>
-                <td>
-                  {{ activity.Time.slice(0, 5) }}
-                </td>
-                <td>{{ activity.Subject }}</td>
-              </tr>
-            </tbody>
-          </table>
+          <div
+            class="border-2 mt-4 w-full overflow-auto border-base-300 rounded-2xl"
+          >
+            <table class="table table-zebra w-full">
+              <!-- head -->
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>Time</th>
+                  <th>Activity</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr v-for="(activity, index) in day.attributes.Activity">
+                  <th class="text-gray-300">{{ index + 1 }}</th>
+                  <td>
+                    {{ activity.Time.slice(0, 5) }}
+                  </td>
+                  <td>{{ activity.Subject }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>
@@ -151,7 +155,7 @@
         >
       </div>
       <div
-        class="border-2 rounded-md flex justify-center items-center p-4 gap-2"
+        class="border-2 rounded-md border-base-300 flex justify-center items-center p-4 gap-2"
       >
         <a
           :href="
