@@ -6,11 +6,14 @@
         class="w-full rounded-xl flex border border-base-300 p-2 justify-between"
       >
         <div class="flex gap-2">
-          <select class="select select-bordered w-full max-w-xs">
-            <option disabled selected>Tags</option>
-            <option>Religious</option>
-            <option>Discover</option>
-            <option>Retreat</option>
+          <select
+            v-model="filter"
+            class="select select-bordered w-full max-w-xs"
+          >
+            <option value="" disabled selected>Tags</option>
+            <option value="Temple">Temple</option>
+            <option value="Discovery">Discovery</option>
+            <option value="Retreat">Retreat</option>
           </select>
           <select class="select select-bordered w-full max-w-xs">
             <option disabled selected>Month</option>
@@ -27,7 +30,12 @@
             <option>December</option>
           </select>
         </div>
-        <button class="btn btn-secondary btn-outline">Clear Filters</button>
+        <button
+          class="btn btn-secondary btn-outline"
+          @click="() => (filter = '')"
+        >
+          Clear Filters
+        </button>
       </div>
       <div
         class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 container gap-16 mt-20"
@@ -113,6 +121,8 @@
 <script setup>
 const { find } = useStrapi();
 
+const filter = ref("");
+
 const options = reactive({
   pageSize: 6,
   page: 1,
@@ -126,10 +136,43 @@ const events = ref(
 );
 
 watch(options, async (newValue, oldValue) => {
-  posts.value = await find("events", {
-    populate: ["Thumbnail"],
-    pagination: newValue,
-  });
+  if (filter.value === "") {
+    events.value = await find("events", {
+      populate: ["Thumbnail"],
+      pagination: newValue,
+    });
+  } else {
+    events.value = await find("events", {
+      populate: ["Thumbnail"],
+      pagination: newValue,
+      filters: {
+        Tag: {
+          $eq: filter.value,
+        },
+      },
+    });
+  }
+});
+
+watch(filter, async (newValue, oldValue) => {
+  if (newValue === "") {
+    options.page = 1;
+    events.value = await find("events", {
+      populate: ["Thumbnail"],
+      pagination: options,
+    });
+  } else {
+    options.page = 1;
+    events.value = await find("events", {
+      populate: ["Thumbnail"],
+      pagination: options,
+      filters: {
+        Tag: {
+          $eq: newValue,
+        },
+      },
+    });
+  }
 });
 
 const setTagsBg = function (value) {

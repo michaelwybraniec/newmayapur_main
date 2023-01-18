@@ -149,11 +149,13 @@ watch(options, async (newValue, oldValue) => {
 
 watch(filter, async (newValue, oldValue) => {
   if (newValue === "") {
+    options.page = 1;
     posts.value = await find("posts", {
       populate: ["Thumbnail"],
       pagination: options,
     });
   } else {
+    options.page = 1;
     posts.value = await find("posts", {
       populate: ["Thumbnail"],
       pagination: options,
@@ -178,3 +180,5 @@ const setTagsBg = function (value) {
 
 const config = useRuntimeConfig();
 </script>
+
+<style lang="postcss"></style>

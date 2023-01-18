@@ -15,16 +15,16 @@
         post.data.attributes.Thumbnail.data.attributes.formats.small.url
       "
     />
-    <h1 class="text-2xl mt-16 font-bold">
+    <h1 class="text-3xl mt-16 font-bold">
       {{ post.data.attributes.Title }}
     </h1>
-    <p class="whitespace-pre-line mt-3 mb-24">
-      {{ post.data.attributes.Content }}
-    </p>
+    <div v-html="markdown" class="mt-6 mb-24 markdown"></div>
   </div>
 </template>
 
 <script setup>
+import { marked } from "marked";
+
 const route = useRoute();
 const { findOne } = useStrapi();
 
@@ -32,5 +32,21 @@ const post = await findOne("posts", route.params.id, {
   populate: ["Thumbnail"],
 });
 
+const markdown = computed(() => marked.parse(post.data.attributes.Content));
+
 const config = useRuntimeConfig();
 </script>
+
+<style lang="postcss">
+.markdown h2 {
+  @apply font-bold text-xl mt-6 -mb-2;
+}
+
+.markdown p {
+  @apply mt-4;
+}
+
+.markdown ul {
+  @apply list-disc mt-4 ml-3;
+}
+</style>
