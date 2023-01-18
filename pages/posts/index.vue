@@ -6,14 +6,22 @@
         class="w-full rounded-xl flex border-2 border-base-200 p-2 justify-between"
       >
         <div class="flex gap-2">
-          <select class="select select-bordered w-full max-w-xs">
-            <option disabled selected>Category</option>
-            <option>Temple</option>
-            <option>Farm</option>
-            <option>Community</option>
+          <select
+            v-model="filter"
+            class="select select-bordered w-full max-w-xs"
+          >
+            <option value="" disabled selected>Category</option>
+            <option value="Temple">Temple</option>
+            <option value="Farm">Farm</option>
+            <option value="Community">Community</option>
           </select>
         </div>
-        <button class="btn btn-secondary btn-outline">Clear Filters</button>
+        <button
+          class="btn btn-secondary btn-outline"
+          @click="() => (filter = '')"
+        >
+          Clear Filters
+        </button>
       </div>
       <div class="grid grid-cols-3 items-start gap-16 mt-12">
         <div class="col-span-2 space-y-4">
@@ -106,6 +114,8 @@
 <script setup>
 const { find } = useStrapi();
 
+const filter = ref("");
+
 const options = reactive({
   pageSize: 3,
   page: 1,
@@ -119,10 +129,41 @@ let posts = ref(
 );
 
 watch(options, async (newValue, oldValue) => {
-  posts.value = await find("posts", {
-    populate: ["Thumbnail"],
-    pagination: newValue,
-  });
+  if (filter.value === "") {
+    posts.value = await find("posts", {
+      populate: ["Thumbnail"],
+      pagination: newValue,
+    });
+  } else {
+    posts.value = await find("posts", {
+      populate: ["Thumbnail"],
+      pagination: newValue,
+      filters: {
+        Category: {
+          $eq: filter.value,
+        },
+      },
+    });
+  }
+});
+
+watch(filter, async (newValue, oldValue) => {
+  if (newValue === "") {
+    posts.value = await find("posts", {
+      populate: ["Thumbnail"],
+      pagination: options,
+    });
+  } else {
+    posts.value = await find("posts", {
+      populate: ["Thumbnail"],
+      pagination: options,
+      filters: {
+        Category: {
+          $eq: newValue,
+        },
+      },
+    });
+  }
 });
 
 const setTagsBg = function (value) {
