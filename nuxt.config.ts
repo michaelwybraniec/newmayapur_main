@@ -8,7 +8,7 @@ export default defineNuxtConfig({
     "nuxt-meilisearch",
   ],
   build: {
-    transpile: ["vue-instantsearch"],
+    transpile: ["vue-instantsearch", "marked"],
   },
   meilisearch: {
     hostUrl: process.env.NUXT_MEILISEARCH_URL,
