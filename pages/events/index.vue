@@ -3,7 +3,7 @@
     <div class="w-[1280px] mx-auto">
       <h1 class="font-bold text-3xl mb-8">Our Events</h1>
       <div
-        class="w-full rounded-xl flex border border-base-300 p-2 justify-between"
+        class="w-full rounded-xl flex items-center border border-base-300 p-2 justify-between"
       >
         <div class="flex gap-2">
           <select
@@ -15,24 +15,32 @@
             <option value="Discovery">Discovery</option>
             <option value="Retreat">Retreat</option>
           </select>
-          <select class="select select-bordered w-full max-w-xs">
-            <option disabled selected>Month</option>
-            <option>January</option>
-            <option>February</option>
-            <option>March</option>
-            <option>April</option>
-            <option>June</option>
-            <option>July</option>
-            <option>August</option>
-            <option>September</option>
-            <option>October</option>
-            <option>November</option>
-            <option>December</option>
+          <select
+            v-model="date.month"
+            class="select select-bordered w-full max-w-xs"
+          >
+            <option value="" disabled selected>Month</option>
+            <option value="01">January</option>
+            <option value="02">February</option>
+            <option value="03">March</option>
+            <option value="04">April</option>
+            <option value="05">May</option>
+            <option value="06">June</option>
+            <option value="07">July</option>
+            <option value="08">August</option>
+            <option value="09">September</option>
+            <option value="10">October</option>
+            <option value="11">November</option>
+            <option value="12">December</option>
           </select>
         </div>
+        <span
+          class="text-sm bg-blue-200 p-3 border border-blue-200 -ml-20 rounded-md"
+          >All events are for the <b>current year.</b></span
+        >
         <button
           class="btn btn-secondary btn-outline"
-          @click="() => (filter = '')"
+          @click="() => ((filter = ''), (date.month = ''))"
         >
           Clear Filters
         </button>
@@ -128,20 +136,31 @@ const options = reactive({
   page: 1,
 });
 
+const date = reactive({
+  firstDay: 1,
+  year: new Date().getFullYear(),
+  month: "",
+});
+
 const events = ref(
   await find("events", {
     populate: ["Thumbnail"],
     pagination: options,
+    filters: {
+      Start: {
+        $gte: new Date(date.year, 0, 1),
+      },
+    },
   })
 );
 
 watch(options, async (newValue, oldValue) => {
-  if (filter.value === "") {
+  if (filter.value === "" && date.month === "") {
     events.value = await find("events", {
       populate: ["Thumbnail"],
       pagination: newValue,
     });
-  } else {
+  } else if (filter.value !== "" && date.month === "") {
     events.value = await find("events", {
       populate: ["Thumbnail"],
       pagination: newValue,
@@ -151,15 +170,66 @@ watch(options, async (newValue, oldValue) => {
         },
       },
     });
+  } else if (filter.value === "" && date.month !== "") {
+    events.value = await find("events", {
+      populate: ["Thumbnail"],
+      pagination: newValue,
+      filters: {
+        Start: {
+          $gte: new Date(date.year + "-" + date.month + "-" + date.firstDay),
+          $lte: new Date(
+            date.year +
+              "-" +
+              date.month +
+              "-" +
+              new Date(date.year, date.month, 0).getDate()
+          ),
+        },
+      },
+    });
+  } else {
+    events.value = await find("events", {
+      populate: ["Thumbnail"],
+      pagination: newValue,
+      filters: {
+        Start: {
+          $gte: new Date(date.year + "-" + date.month + "-" + date.firstDay),
+          $lte: new Date(
+            date.year +
+              "-" +
+              date.month +
+              "-" +
+              new Date(date.year, date.month, 0).getDate()
+          ),
+        },
+        Tag: {
+          $eq: filter.value,
+        },
+      },
+    });
   }
 });
 
-watch(filter, async (newValue, oldValue) => {
-  if (newValue === "") {
+watch(date, async (newValue, oldValue) => {
+  if (filter.value === "") {
     options.page = 1;
     events.value = await find("events", {
       populate: ["Thumbnail"],
       pagination: options,
+      filters: {
+        Start: {
+          $gte: new Date(
+            newValue.year + "-" + newValue.month + "-" + newValue.firstDay
+          ),
+          $lte: new Date(
+            newValue.year +
+              "-" +
+              newValue.month +
+              "-" +
+              new Date(newValue.year, newValue.month, 0).getDate()
+          ),
+        },
+      },
     });
   } else {
     options.page = 1;
@@ -167,6 +237,78 @@ watch(filter, async (newValue, oldValue) => {
       populate: ["Thumbnail"],
       pagination: options,
       filters: {
+        Start: {
+          $gte: new Date(
+            newValue.year + "-" + newValue.month + "-" + newValue.firstDay
+          ),
+          $lte: new Date(
+            newValue.year +
+              "-" +
+              newValue.month +
+              "-" +
+              new Date(newValue.year, newValue.month, 0).getDate()
+          ),
+        },
+        Tag: {
+          $eq: filter.value,
+        },
+      },
+    });
+  }
+});
+
+watch(filter, async (newValue, oldValue) => {
+  if (newValue === "" && date.month === "") {
+    options.page = 1;
+    events.value = await find("events", {
+      populate: ["Thumbnail"],
+      pagination: options,
+    });
+  } else if (newValue !== "" && date.month === "") {
+    options.page = 1;
+    events.value = await find("events", {
+      populate: ["Thumbnail"],
+      pagination: options,
+      filters: {
+        Tag: {
+          $eq: newValue,
+        },
+      },
+    });
+  } else if (newValue === "" && date.month !== "") {
+    options.page = 1;
+    events.value = await find("events", {
+      populate: ["Thumbnail"],
+      pagination: options,
+      filters: {
+        Start: {
+          $gte: new Date(date.year + "-" + date.month + "-" + date.firstDay),
+          $lte: new Date(
+            date.year +
+              "-" +
+              date.month +
+              "-" +
+              new Date(date.year, date.month, 0).getDate()
+          ),
+        },
+      },
+    });
+  } else {
+    options.page = 1;
+    events.value = await find("events", {
+      populate: ["Thumbnail"],
+      pagination: options,
+      filters: {
+        Start: {
+          $gte: new Date(date.year + "-" + date.month + "-" + date.firstDay),
+          $lte: new Date(
+            date.year +
+              "-" +
+              date.month +
+              "-" +
+              new Date(date.year, date.month, 0).getDate()
+          ),
+        },
         Tag: {
           $eq: newValue,
         },
