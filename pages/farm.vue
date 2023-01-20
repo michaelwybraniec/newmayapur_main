@@ -66,120 +66,127 @@
       </div>
     </div>
   </div>
-  <div class="pb-32 pt-28 lg:px-10 w-[1000px] mx-auto">
+  <div class="pb-32 pt-28 lg:px-10 lg:w-[1000px] mx-auto">
     <h2 class="text-2xl font-bold text-center mb-12">Our Farm's Activities</h2>
-    <div class="flex gap-4 items-center justify-center mb-16">
-      <img class="h-[245px] rounded-xl" src="/img/wheat.jpeg" />
-      <img class="h-[245px] rounded-xl" src="/img/quinoa.jpeg" />
-    </div>
     <div
-      tabindex="0"
-      class="collapse collapse-plus border border-base-300 bg-base-100 rounded-box"
+      class="flex flex-col mx-4 md:flex-row gap-4 items-center justify-center mb-16"
     >
-      <input type="checkbox" />
-      <div class="collapse-title text-xl font-medium">Ecology</div>
-      <div class="collapse-content">
-        <p>
-          Sustainability is currently the biggest challenge facing humanity, and
-          the practice of ecology is one of the core principle that will enable
-          us to create a healthy, long-lasting civilization. As such, we in New
-          Mayapur endeavour to permeate all of our activities with a respect for
-          nature and its gifts.
-        </p>
+      <img class="md:h-[245px] rounded-xl" src="/img/wheat.jpeg" />
+      <img class="md:h-[245px] rounded-xl" src="/img/quinoa.jpeg" />
+    </div>
+    <div class="mx-4">
+      <div
+        tabindex="0"
+        class="collapse collapse-plus border border-base-300 bg-base-100 rounded-box"
+      >
+        <input type="checkbox" />
+        <div class="collapse-title text-xl font-medium">Ecology</div>
+        <div class="collapse-content">
+          <p>
+            Sustainability is currently the biggest challenge facing humanity,
+            and the practice of ecology is one of the core principle that will
+            enable us to create a healthy, long-lasting civilization. As such,
+            we in New Mayapur endeavour to permeate all of our activities with a
+            respect for nature and its gifts.
+          </p>
+        </div>
       </div>
-    </div>
-    <div
-      tabindex="0"
-      class="collapse collapse-plus border mt-4 border-base-300 bg-base-100 rounded-box"
-    >
-      <input type="checkbox" />
-      <div class="collapse-title text-xl font-medium">Animal Husbandry</div>
-      <div class="collapse-content">
-        <p>
-          Our farm is home to two Jersey cows, who provide us with their milk
-          every day, along with their two calves. We also have a herd of four
-          billys who help us clean the forest by eating thorn bushes and other
-          unwanted vegetation. We take pride in the fact that none of the
-          animals we care for will ever see a slaughterhouse, and we therefore
-          shelter older bovids who might not be productive anymore, and who
-          would have seen their lives terminated in other structures.
-        </p>
+      <div
+        tabindex="0"
+        class="collapse collapse-plus border mt-4 border-base-300 bg-base-100 rounded-box"
+      >
+        <input type="checkbox" />
+        <div class="collapse-title text-xl font-medium">Animal Husbandry</div>
+        <div class="collapse-content">
+          <p>
+            Our farm is home to two Jersey cows, who provide us with their milk
+            every day, along with their two calves. We also have a herd of four
+            billys who help us clean the forest by eating thorn bushes and other
+            unwanted vegetation. We take pride in the fact that none of the
+            animals we care for will ever see a slaughterhouse, and we therefore
+            shelter older bovids who might not be productive anymore, and who
+            would have seen their lives terminated in other structures.
+          </p>
+        </div>
       </div>
-    </div>
-    <div
-      tabindex="0"
-      class="collapse collapse-plus mt-4 border border-base-300 bg-base-100 rounded-box"
-    >
-      <input type="checkbox" />
-      <div class="collapse-title text-xl font-medium">Grains Production</div>
-      <div class="collapse-content">
-        <p>
-          "All living bodies subsist on food grains, which are produced from
-          rain. Rains are produced by performance of <i>yajna</i> [sacrifice],
-          and <i>yajna</i> is born of prescribed duties" (Bhagavad-Gita, 3.14)
-        </p>
-        <p class="mt-2">
-          Grains are the staple of a balanced diet. If we are to reach full
-          self-sufficiency, we will have to provide grains daily to all the
-          members of our community. We currently have a few fields dedicated to
-          the production of wheat and amaranth, with which we are manufacturing
-          flour and baking bread throughout the year.
-        </p>
+      <div
+        tabindex="0"
+        class="collapse collapse-plus mt-4 border border-base-300 bg-base-100 rounded-box"
+      >
+        <input type="checkbox" />
+        <div class="collapse-title text-xl font-medium">Grains Production</div>
+        <div class="collapse-content">
+          <p>
+            "All living bodies subsist on food grains, which are produced from
+            rain. Rains are produced by performance of <i>yajna</i> [sacrifice],
+            and <i>yajna</i> is born of prescribed duties" (Bhagavad-Gita, 3.14)
+          </p>
+          <p class="mt-2">
+            Grains are the staple of a balanced diet. If we are to reach full
+            self-sufficiency, we will have to provide grains daily to all the
+            members of our community. We currently have a few fields dedicated
+            to the production of wheat and amaranth, with which we are
+            manufacturing flour and baking bread throughout the year.
+          </p>
+        </div>
       </div>
-    </div>
-    <div
-      tabindex="0"
-      class="collapse collapse-plus mt-4 border border-base-300 bg-base-100 rounded-box"
-    >
-      <input type="checkbox" />
-      <div class="collapse-title text-xl font-medium">Fruits & Vegetables</div>
-      <div class="collapse-content">
-        <p>
-          Next to the temple is situated the <i>Krishna-Balarama</i> garden,
-          which is producing various vegetables according to the season:
-          eggplants, tomatoes, spinach, potatoes, zucchinis, beetoroots, carrots
-          and more. We also have an apple orchard, which provides us with
-          delicious apple juice, and cherry trees all around the property.
-        </p>
+      <div
+        tabindex="0"
+        class="collapse collapse-plus mt-4 border border-base-300 bg-base-100 rounded-box"
+      >
+        <input type="checkbox" />
+        <div class="collapse-title text-xl font-medium">
+          Fruits & Vegetables
+        </div>
+        <div class="collapse-content">
+          <p>
+            Next to the temple is situated the <i>Krishna-Balarama</i> garden,
+            which is producing various vegetables according to the season:
+            eggplants, tomatoes, spinach, potatoes, zucchinis, beetoroots,
+            carrots and more. We also have an apple orchard, which provides us
+            with delicious apple juice, and cherry trees all around the
+            property.
+          </p>
+        </div>
       </div>
-    </div>
-    <div
-      tabindex="0"
-      class="collapse collapse-plus mt-4 border border-base-300 bg-base-100 rounded-box"
-    >
-      <input type="checkbox" />
-      <div class="collapse-title text-xl font-medium">Forest Management</div>
-      <div class="collapse-content">
-        <p>
-          New Mayapur has around 60 hectares of beautiful forest, where our
-          visitors can take beautiful walks and restore themselves. We are
-          actively using the wood for a variety of construction work, as well as
-          heating during the winter season, and make sure the forest stays clean
-          and healthy in order to have a reliable, long-term source of good
-          quality material.
-        </p>
+      <div
+        tabindex="0"
+        class="collapse collapse-plus mt-4 border border-base-300 bg-base-100 rounded-box"
+      >
+        <input type="checkbox" />
+        <div class="collapse-title text-xl font-medium">Forest Management</div>
+        <div class="collapse-content">
+          <p>
+            New Mayapur has around 60 hectares of beautiful forest, where our
+            visitors can take beautiful walks and restore themselves. We are
+            actively using the wood for a variety of construction work, as well
+            as heating during the winter season, and make sure the forest stays
+            clean and healthy in order to have a reliable, long-term source of
+            good quality material.
+          </p>
+        </div>
       </div>
-    </div>
-    <div
-      tabindex="0"
-      class="collapse collapse-plus border mt-4 border-base-300 bg-base-100 rounded-box"
-    >
-      <input type="checkbox" />
-      <div class="collapse-title text-xl font-medium">Flower Garden</div>
-      <div class="collapse-content">
-        <p>
-          French gardens are known all over the world for their aesthetics and
-          tidyness. New Mayapur is no exception, as we maintain a rose garden
-          situtated in front of the castle, that is a beautiful ornament to the
-          property and provides us with flowers for the worship of the Deities
-          for most of the year.
-        </p>
+      <div
+        tabindex="0"
+        class="collapse collapse-plus border mt-4 border-base-300 bg-base-100 rounded-box"
+      >
+        <input type="checkbox" />
+        <div class="collapse-title text-xl font-medium">Flower Garden</div>
+        <div class="collapse-content">
+          <p>
+            French gardens are known all over the world for their aesthetics and
+            tidyness. New Mayapur is no exception, as we maintain a rose garden
+            situtated in front of the castle, that is a beautiful ornament to
+            the property and provides us with flowers for the worship of the
+            Deities for most of the year.
+          </p>
+        </div>
       </div>
     </div>
   </div>
   <div class="bg-base-200 py-28 lg:px-16">
     <div
-      class="w-[1280px] flex items-center gap-20 mx-auto bg-base-100 rounded-2xl p-10"
+      class="xl:w-[1200px] flex flex-col-reverse xl:flex-row items-center gap-8 lg:gap-20 xl:mx-auto bg-base-100 rounded-2xl p-6 mx-4 md:p-10"
     >
       <div>
         <h2 class="text-xl uppercase font-bold">Volunteering</h2>
@@ -193,7 +200,7 @@
         <button class="btn btn-primary btn-outline mt-4">Workaway</button>
         <button class="btn btn-primary btn-outline ml-2 mt-4">Woofing</button>
       </div>
-      <img class="max-w-lg rounded-xl" src="/img/volunteer.jpg" />
+      <img class="md:max-w-lg rounded-xl" src="/img/volunteer.jpg" />
     </div>
   </div>
 </template>
