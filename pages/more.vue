@@ -1,9 +1,5 @@
 <template>
-  <div
-    id="map"
-    style="height: 600px; width: 800px"
-    class="rounded-xl mx-auto pt-24 overflow-auto"
-  >
+  <div id="map" class="rounded-xl map mx-auto pt-24">
     <l-map
       class="z-10"
       ref="map"
@@ -26,7 +22,7 @@
   <div class="py-24 pb-32 lg:px-10">
     <h2 class="text-3xl font-bold text-center mb-16">How to Reach Us</h2>
     <div
-      class="mb-32 border-2 flex gap-4 border-base-300 px-5 py-4 rounded-lg max-w-lg mx-auto"
+      class="mb-32 border-2 flex gap-4 border-base-300 px-5 py-4 rounded-lg max-w-lg mx-4 md:mx-auto"
     >
       <Icon name="ion:information-circle-outline" size="72px" />
       <span
@@ -116,23 +112,23 @@
       </div>
       <div class="order-1 lg:order-2 md:px-24 lg:px-0" id="contact">
         <h2 class="text-xl uppercase font-bold">Find us Online</h2>
-        <div class="grid grid-cols-3 gap-3 mt-8">
+        <div class="grid grid-col-1 mb-12 md:grid-cols-3 gap-3 mt-8">
           <div
             class="p-4 rounded-xl bg-base-100 flex items-center justify-center gap-4"
           >
-            <Icon name="ion:logo-instagram" size="42px" />
+            <Icon name="ion:logo-instagram" size="38px" />
             <p class="font-bold uppercase">Instagram</p>
           </div>
           <div
             class="p-4 rounded-xl bg-base-100 flex items-center justify-center gap-4"
           >
-            <Icon name="ion:logo-facebook" size="42px" />
+            <Icon name="ion:logo-facebook" size="38px" />
             <p class="font-bold uppercase">Facebook</p>
           </div>
           <div
             class="p-4 rounded-xl bg-base-100 flex items-center justify-center gap-4"
           >
-            <Icon name="ion:logo-youtube" size="42px" />
+            <Icon name="ion:logo-youtube" size="38px" />
             <p class="font-bold uppercase">YouTube</p>
           </div>
         </div>
@@ -158,3 +154,22 @@ export default {
   },
 };
 </script>
+
+<style>
+.map {
+  @media (min-width: 10px) {
+    height: 350px;
+    width: 350px;
+  }
+
+  @media (min-width: 420px) {
+    height: 420px;
+    width: 420px;
+  }
+
+  @media (min-width: 900px) {
+    height: 600px;
+    width: 800px;
+  }
+}
+</style>
