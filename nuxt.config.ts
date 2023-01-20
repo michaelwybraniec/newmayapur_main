@@ -20,4 +20,8 @@ export default defineNuxtConfig({
       strapiBase: process.env.NUXT_STRAPI_BASE_URL,
     },
   },
+  privateRuntimeConfig: {
+    NUXT_MAILCHIMP_API_KEY: process.env.NUXT_MAILCHIMP_API_KEY,
+    NUXT_MAILCHIMP_SERVER: process.env.NUXT_MAILCHIMP_SERVER,
+  },
 });
