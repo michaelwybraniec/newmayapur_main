@@ -84,14 +84,23 @@
             Subscribe to our Newsletter
           </p>
           <div class="form-control px-4">
-            <div class="input-group">
+            <form @submit.prevent="subscribe" class="input-group">
               <input
+                v-model="email"
                 type="text"
                 placeholder="Your Email"
                 class="input input-bordered"
               />
-              <button class="btn px-6">Submit</button>
-            </div>
+              <button type="submit" class="btn px-6">Submit</button>
+            </form>
+            <p
+              class="text-sm mt-2 text-center"
+              :class="
+                res.includes('registered') ? 'text-green-600' : 'text-red-600'
+              "
+            >
+              {{ res }}
+            </p>
           </div>
         </div>
       </div>
@@ -113,6 +122,20 @@
 
 <script setup>
 const { find } = useStrapi();
+
+const email = ref("");
+const res = ref("");
+
+const subscribe = async () => {
+  const { data, pending, error, refresh } = await useFetch("/api/mailchimp", {
+    method: "POST",
+    body: { email: email.value },
+  });
+
+  res.value = error.value
+    ? "Oops! Something went wrong. Please try again later."
+    : "Your subscription has been registered.";
+};
 
 const filter = ref("");
 

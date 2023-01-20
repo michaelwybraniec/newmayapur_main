@@ -68,13 +68,18 @@
       </div>
     </div>
   </div>
-  <div class="pb-32 py-24 lg:px-28 grid grid-cols-2 gap-24">
+  <div
+    class="pb-32 lg:pt-24 lg:px-28 grid grid-cols-1 mx-2 lg:mx-0 lg:grid-cols-2 gap-24"
+  >
     <div>
       <h2 class="text-2xl font-bold border-b-2 border-base-300 pb-2">
         Upcoming Events
       </h2>
       <ul class="mt-10">
-        <li v-for="event in events.data" class="mt-8 flex items-start">
+        <li
+          v-for="event in events.data"
+          class="mt-8 flex flex-col lg:flex-row items-start"
+        >
           <div
             class="bg-primary px-2 py-0.5 rounded-md mt-0.5 text-white font-bold mr-4"
           >
@@ -86,7 +91,7 @@
               })
             }}
           </div>
-          <div class="w-4/5">
+          <div class="lg:w-4/5 mt-2 lg:mt-0">
             <NuxtLink :to="'/events/' + event.id"
               ><h3 class="font-bold text-xl pb-2">
                 {{ event.attributes.Title }}
@@ -111,26 +116,26 @@
       <h2 class="text-2xl font-bold border-b-2 border-base-300 pb-2">
         Our Shop
       </h2>
-      <div class="grid grid-cols-2 gap-2 mt-10 w-[423px] mx-auto">
+      <div class="grid grid-cols-2 gap-2 mt-10 md:w-[423px] mx-auto">
         <img
           src="/img/bhagavad-gita.jpg"
           alt="Bhagavad-Gita"
-          class="h-52 rounded-md"
+          class="h-44 sm:h-52 rounded-md"
         />
         <img
           src="/img/perfection-du-yoga.jpg"
           alt="Bhagavad-Gita"
-          class="h-52 rounded-md"
+          class="h-44 sm:h-52 rounded-md"
         />
         <img
           src="/img/sri-isopanisad.jpg"
           alt="Bhagavad-Gita"
-          class="h-52 rounded-md"
+          class="h-44 sm:h-52 rounded-md"
         />
         <img
           src="/img/gloire-mysteres-inde.jpg"
           alt="Bhagavad-Gita"
-          class="h-52 rounded-md"
+          class="h-44 sm:h-52 rounded-md"
         />
       </div>
       <button class="btn btn-secondary mx-auto block mt-8">
@@ -140,12 +145,14 @@
   </div>
   <div class="bg-base-200 mx-auto pt-24 pb-32">
     <h2 class="text-3xl font-bold text-center mb-6">Contributing</h2>
-    <p class="max-w-xl pt-2 pb-2 mx-auto text-center">
+    <p class="max-w-xl pt-2 pb-2 mx-2 sm:mx-auto text-center">
       All contributions made to New Mayapur directly support the maintenance of
       the property and its residents, and are making innovative preaching
       ventures possible. Donate once or <b>become a member</b> today.
     </p>
-    <div class="p-7 rounded-xl shadow-md bg-base-100 mt-12 w-1/3 mx-auto">
+    <div
+      class="p-7 rounded-xl shadow-md bg-base-100 mt-12 mx-2 lg:w-1/3 lg:mx-auto"
+    >
       <img class="mb-6 mx-auto rounded-lg" src="/img/contribute.jpg" />
       <button class="btn btn-secondary ml-auto block">Donate Now</button>
     </div>
@@ -153,14 +160,14 @@
   <div class="">
     <div class="mx-auto py-32 lg:px-16">
       <div
-        class="grid grid-rows-1 lg:grid-cols-4 px-4 lg:px-20 items-center gap-x-4"
+        class="grid grid-cols-1 lg:grid-cols-4 px-4 lg:px-20 items-center gap-x-4"
       >
-        <div class="md:px-24 lg:px-0 col-span-2">
+        <div class="md:px-24 lg:px-0 lg:col-span-2">
           <div class="p-5 pb-6 mx-auto inline bg-base-200 rounded-xl mb-16">
             <Icon name="ion:book-outline" size="28px" />
           </div>
           <h2 class="text-xl uppercase font-bold mt-12">Read Our Blog</h2>
-          <p class="pt-3 w-3/4">
+          <p class="pt-3 md:w-3/4">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
             unde pariatur quos temporibus, blanditiis cum praesentium at non
             officiis perferendis incidunt molestias sint maiores quisquam itaque
@@ -168,7 +175,10 @@
             quaerat!
           </p>
         </div>
-        <div v-for="post in posts.data" class="card w-96 bg-base-100 shadow-xl">
+        <div
+          v-for="post in posts.data"
+          class="card mt-6 md:mx-auto lg:mx-0 max-w-sm bg-base-100 shadow-xl"
+        >
           <figure>
             <img
               :src="
@@ -181,7 +191,7 @@
           </figure>
           <div class="card-body">
             <h2 class="card-title">
-              {{ post.attributes.Title.substr(0, 22) + "..." }}
+              {{ post.attributes.Title.substr(0, 16) + "..." }}
               <div
                 class="badge border-none"
                 :class="setTagsBg(post.attributes.Category)"
@@ -203,19 +213,28 @@
     </div>
   </div>
   <div class="pb-44 pt-24 flex items-center justify-center">
-    <div class="border-2 border-base-300 p-8 pt-4 rounded-xl">
-      <h2 class="text-xl mb-4 text-center uppercase font-bold">
+    <div class="md:border-2 border-base-300 md:p-8 pt-4 rounded-xl">
+      <h2 class="text-md md:text-xl mb-4 text-center uppercase font-bold">
         Subscribe to our Newsletter
       </h2>
       <div class="form-control">
-        <div class="input-group">
+        <form class="input-group" @submit.prevent="subscribe">
           <input
-            type="text"
+            v-model="email"
             placeholder="Your Email"
-            class="input input-bordered w-[350px]"
+            class="input input-bordered max-w-sm md:w-[350px]"
+            type="email"
           />
-          <button class="btn px-6">Submit</button>
-        </div>
+          <button type="submit" class="btn px-6">Submit</button>
+        </form>
+        <p
+          class="text-sm mt-2 text-center"
+          :class="
+            res.includes('registered') ? 'text-green-600' : 'text-red-600'
+          "
+        >
+          {{ res }}
+        </p>
       </div>
     </div>
   </div>
@@ -223,6 +242,20 @@
 
 <script setup>
 const { find } = useStrapi();
+
+const email = ref("");
+const res = ref("");
+
+const subscribe = async () => {
+  const { data, pending, error, refresh } = await useFetch("/api/mailchimp", {
+    method: "POST",
+    body: { email: email.value },
+  });
+
+  res.value = error.value
+    ? "Oops! Something went wrong. Please try again later."
+    : "Your subscription has been registered.";
+};
 
 const events = await find("events", {
   sort: ["Start:desc"],

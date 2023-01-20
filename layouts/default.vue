@@ -92,7 +92,9 @@
   </div>
   <slot />
 
-  <footer class="footer text-base py-20 px-64 bg-neutral text-neutral-content">
+  <footer
+    class="footer text-base px-8 py-20 lg:px-56 bg-neutral text-neutral-content"
+  >
     <div>
       <div class="grid grid-flow-col gap-4 mb-4">
         <Icon name="ion:logo-instagram" size="28px" />
