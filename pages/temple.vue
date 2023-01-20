@@ -65,114 +65,119 @@
       </div>
     </div>
   </div>
-  <div class="pb-32 py-28 lg:px-10 w-[1000px] mx-auto">
+  <div class="pb-32 py-28 lg:px-10 lg:w-[1000px] mx-auto">
     <h2 class="text-2xl font-bold text-center mb-12">Our Temple's History</h2>
-    <div class="flex gap-4 items-center justify-center mb-16">
-      <img class="h-[245px] rounded-xl" src="/img/castle_front.jpg" />
-      <img class="h-[245px] rounded-xl" src="/img/castle_rear.jpg" />
-    </div>
     <div
-      tabindex="0"
-      class="collapse collapse-plus border border-base-300 bg-base-100 rounded-box"
+      class="flex flex-col md:flex-row gap-4 mx-4 md:mx-0 items-center justify-center mb-16"
     >
-      <input type="checkbox" />
-      <div class="collapse-title text-xl font-medium">Background</div>
-      <div class="collapse-content">
-        <p>
-          In the early 70s, the Hare Krishna devotees in Paris wanted to expand
-          as the temple there was too small, especially for families and
-          children. After looking at a number of places, they finally selected
-          Château d’Oublaise, and the devotees had Srila Prabhupada visit here
-          for his advice and support. Srila Prabhupada felt that this place
-          would be ideal for the devotees and it was purchased in 1974.
-        </p>
+      <img class="md:h-[245px] rounded-xl" src="/img/castle_rear.jpg" />
+      <img class="md:h-[245px] rounded-xl" src="/img/castle_front.jpg" />
+    </div>
+    <div class="mx-4">
+      <div
+        tabindex="0"
+        class="collapse collapse-plus border border-base-300 bg-base-100 rounded-box"
+      >
+        <input type="checkbox" />
+        <div class="collapse-title text-xl font-medium">Background</div>
+        <div class="collapse-content">
+          <p>
+            In the early 70s, the Hare Krishna devotees in Paris wanted to
+            expand as the temple there was too small, especially for families
+            and children. After looking at a number of places, they finally
+            selected Château d’Oublaise, and the devotees had Srila Prabhupada
+            visit here for his advice and support. Srila Prabhupada felt that
+            this place would be ideal for the devotees and it was purchased in
+            1974.
+          </p>
+        </div>
       </div>
-    </div>
-    <div
-      tabindex="0"
-      class="collapse collapse-plus border mt-4 border-base-300 bg-base-100 rounded-box"
-    >
-      <input type="checkbox" />
-      <div class="collapse-title text-xl font-medium">The Castle</div>
-      <div class="collapse-content">
-        <p>
-          The main feature of the property is its castle, which was built on the
-          foundations of an old castle on the same site, from the Renaissance
-          era. It was built by and belonged to the same family (the Preaux
-          dynasty) until its sale in 1946.
-        </p>
-        <p class="mt-2">
-          The castle of Oublaise then went into the hands of a French army
-          commander, Jean-François Perrette, who gathered unemployed and sick
-          French war veterans here after World War II. Perette decided to sell
-          it to the Hare Krishna devotees when he reached the age of 80 in 1974.
-          To this day, it belongs to the International Society for Krishna
-          Consciousness.
-        </p>
-        <p class="mt-2">
-          The castle is built in a Neo-Renaissance style, has three floors,
-          stunning wood marquetry on each floor, pillars ornamented with
-          delicate sculptures, and even its own chapel complete with stained
-          glass windows. Its opulence and refinement make it a must-see
-          location.
-        </p>
+      <div
+        tabindex="0"
+        class="collapse collapse-plus border mt-4 border-base-300 bg-base-100 rounded-box"
+      >
+        <input type="checkbox" />
+        <div class="collapse-title text-xl font-medium">The Castle</div>
+        <div class="collapse-content">
+          <p>
+            The main feature of the property is its castle, which was built on
+            the foundations of an old castle on the same site, from the
+            Renaissance era. It was built by and belonged to the same family
+            (the Preaux dynasty) until its sale in 1946.
+          </p>
+          <p class="mt-2">
+            The castle of Oublaise then went into the hands of a French army
+            commander, Jean-François Perrette, who gathered unemployed and sick
+            French war veterans here after World War II. Perette decided to sell
+            it to the Hare Krishna devotees when he reached the age of 80 in
+            1974. To this day, it belongs to the International Society for
+            Krishna Consciousness.
+          </p>
+          <p class="mt-2">
+            The castle is built in a Neo-Renaissance style, has three floors,
+            stunning wood marquetry on each floor, pillars ornamented with
+            delicate sculptures, and even its own chapel complete with stained
+            glass windows. Its opulence and refinement make it a must-see
+            location.
+          </p>
+        </div>
       </div>
-    </div>
-    <div
-      tabindex="0"
-      class="collapse collapse-plus mt-4 border border-base-300 bg-base-100 rounded-box"
-    >
-      <input type="checkbox" />
-      <div class="collapse-title text-xl font-medium">The Area</div>
-      <div class="collapse-content">
-        <p>
-          New Mayapur is situated in a rural part of the Centre Val-de-Loire
-          district — which has many historical sites of significance. The
-          property is surrounded by forests and fields, as well as medieval
-          villages and ancient castles nearby. The area was favoured by the
-          French nobility and royalty during the 15th century. It is also famous
-          for its milk and cheese production.
-        </p>
+      <div
+        tabindex="0"
+        class="collapse collapse-plus mt-4 border border-base-300 bg-base-100 rounded-box"
+      >
+        <input type="checkbox" />
+        <div class="collapse-title text-xl font-medium">The Area</div>
+        <div class="collapse-content">
+          <p>
+            New Mayapur is situated in a rural part of the Centre Val-de-Loire
+            district — which has many historical sites of significance. The
+            property is surrounded by forests and fields, as well as medieval
+            villages and ancient castles nearby. The area was favoured by the
+            French nobility and royalty during the 15th century. It is also
+            famous for its milk and cheese production.
+          </p>
+        </div>
       </div>
-    </div>
-    <div
-      tabindex="0"
-      class="collapse collapse-plus mt-4 border border-base-300 bg-base-100 rounded-box"
-    >
-      <input type="checkbox" />
-      <div class="collapse-title text-xl font-medium">Devotees</div>
-      <div class="collapse-content">
-        <p>
-          Devotees moved onto the property in 1974 and arranged the castle as a
-          temple for their Lordships Sri-Sri Gaura-Nitai, installed that year.
-          In 1975, Srila Prabhupada installed Krishna-Balarama Deities, and in
-          1979, under Bhagavan Dasa, Sri-Sri-Radha-Govinda-Madhava were
-          installed, as well as a Laxmi-Nrsimha Deity, given by Indradyumna
-          swami, on the occasion of the Nrsimha-Caturdasi Festival. You can also
-          find a Govardhan-Shila on the altar, which was given to the temple by
-          Srila Prabhupada.
-        </p>
+      <div
+        tabindex="0"
+        class="collapse collapse-plus mt-4 border border-base-300 bg-base-100 rounded-box"
+      >
+        <input type="checkbox" />
+        <div class="collapse-title text-xl font-medium">Devotees</div>
+        <div class="collapse-content">
+          <p>
+            Devotees moved onto the property in 1974 and arranged the castle as
+            a temple for their Lordships Sri-Sri Gaura-Nitai, installed that
+            year. In 1975, Srila Prabhupada installed Krishna-Balarama Deities,
+            and in 1979, under Bhagavan Dasa, Sri-Sri-Radha-Govinda-Madhava were
+            installed, as well as a Laxmi-Nrsimha Deity, given by Indradyumna
+            swami, on the occasion of the Nrsimha-Caturdasi Festival. You can
+            also find a Govardhan-Shila on the altar, which was given to the
+            temple by Srila Prabhupada.
+          </p>
+        </div>
       </div>
-    </div>
-    <div
-      tabindex="0"
-      class="collapse collapse-plus border mt-4 border-base-300 bg-base-100 rounded-box"
-    >
-      <input type="checkbox" />
-      <div class="collapse-title text-xl font-medium">Srila Prabhupada</div>
-      <div class="collapse-content">
-        <p>
-          Srila Prabhupada loved New Mayapur, especially for its rural aspect
-          and he visited here several times. During his visits, he emphasized
-          the importance of agriculture and cow protection — asking his
-          disciples to organise a self-sufficient community depending on natural
-          technologies.
-        </p>
-        <p class="mt-2">
-          New Mayapur is the only western temple where Srila Prabhupada
-          installed Krishna-Balarama Deities. It is also one of the rare places
-          with his personal quarters preserved for posterity.
-        </p>
+      <div
+        tabindex="0"
+        class="collapse collapse-plus border mt-4 border-base-300 bg-base-100 rounded-box"
+      >
+        <input type="checkbox" />
+        <div class="collapse-title text-xl font-medium">Srila Prabhupada</div>
+        <div class="collapse-content">
+          <p>
+            Srila Prabhupada loved New Mayapur, especially for its rural aspect
+            and he visited here several times. During his visits, he emphasized
+            the importance of agriculture and cow protection — asking his
+            disciples to organise a self-sufficient community depending on
+            natural technologies.
+          </p>
+          <p class="mt-2">
+            New Mayapur is the only western temple where Srila Prabhupada
+            installed Krishna-Balarama Deities. It is also one of the rare
+            places with his personal quarters preserved for posterity.
+          </p>
+        </div>
       </div>
     </div>
   </div>
@@ -195,87 +200,91 @@
         </p>
       </div>
       <img
-        class="order-1 max-w-lg md:max-w-md lg:order-2 mb-12 lg:mb-0 md:mb-24 lg:ml-auto lg:mr-0 mx-auto rounded-lg"
+        class="order-1 max-w-xs lg:max-w-lg md:max-w-md lg:order-2 mb-12 lg:mb-0 md:mb-24 lg:ml-auto lg:mr-0 mx-auto rounded-lg"
         src="/img/sanskrit.jpg"
       />
     </div>
   </div>
-  <div class="pb-32 py-28 lg:px-10 w-[1000px] mx-auto">
+  <div class="pb-32 py-28 lg:px-10 lg:w-[1000px] mx-auto">
     <h2 class="text-2xl font-bold text-center mb-12">Srila Prabhupada</h2>
-    <div class="flex gap-4 items-center justify-center mb-16">
-      <img class="h-[245px] rounded-xl" src="/img/sp.webp" />
-      <img class="h-[245px] rounded-xl" src="/img/sp2.jpg" />
-    </div>
     <div
-      tabindex="0"
-      class="collapse collapse-plus border border-base-300 bg-base-100 rounded-box"
+      class="flex flex-col mx-4 md:mx-0 md:flex-row gap-4 items-center justify-center mb-16"
     >
-      <input type="checkbox" />
-      <div class="collapse-title text-xl font-medium">Early Life</div>
-      <div class="collapse-content">
-        <p>
-          Srila Prabhupada was born Abhay Charan De on 1st September, 1896 in
-          India. He met his spiritual master, Srila Bhaktisiddhanta Sarasvati,
-          in 1922. Srila Bhaktisiddhanta was a leader in the Gaudiya Vaishnava
-          tradition. He requested Abhay to share the teachings of Lord Krishna
-          to the English-speaking world. Abhay became a disciple of Srila
-          Bhaktisiddhanta in 1933, and resolved to fulfil his master’s desire.
-          Abhay, later known by the honorific title A. C. Bhaktivedanta Swami
-          Prabhupada, spent the next 32 years preparing for his journey west.
-        </p>
+      <img class="md:h-[245px] rounded-xl" src="/img/sp.webp" />
+      <img class="md:h-[245px] rounded-xl" src="/img/sp2.jpg" />
+    </div>
+    <div class="mx-4">
+      <div
+        tabindex="0"
+        class="collapse collapse-plus border border-base-300 bg-base-100 rounded-box"
+      >
+        <input type="checkbox" />
+        <div class="collapse-title text-xl font-medium">Early Life</div>
+        <div class="collapse-content">
+          <p>
+            Srila Prabhupada was born Abhay Charan De on 1st September, 1896 in
+            India. He met his spiritual master, Srila Bhaktisiddhanta Sarasvati,
+            in 1922. Srila Bhaktisiddhanta was a leader in the Gaudiya Vaishnava
+            tradition. He requested Abhay to share the teachings of Lord Krishna
+            to the English-speaking world. Abhay became a disciple of Srila
+            Bhaktisiddhanta in 1933, and resolved to fulfil his master’s desire.
+            Abhay, later known by the honorific title A. C. Bhaktivedanta Swami
+            Prabhupada, spent the next 32 years preparing for his journey west.
+          </p>
+        </div>
       </div>
-    </div>
-    <div
-      tabindex="0"
-      class="collapse collapse-plus border mt-4 border-base-300 bg-base-100 rounded-box"
-    >
-      <input type="checkbox" />
-      <div class="collapse-title text-xl font-medium">Sannyasa</div>
-      <div class="collapse-content">
-        <p>
-          In 1965, at the age of sixty-nine, Srila Prabhupada travelled to New
-          York City. He arrived in the United States with his translations of
-          sacred Sanskrit texts. Srila Prabhupada began to share the timeless
-          wisdom of Krishna consciousness. His message resonated with many young
-          people, some of whom became his serious students. With their help,
-          Srila Prabhupada rented a small storefront on New York’s Lower East
-          Side to use as a temple. On 11th July, 1966, he officially registered
-          his organization in the state of New York, founding the International
-          Society for Krishna Consciousness (ISKCON).
-        </p>
-        <p class="mt-2">
-          In the eleven years that followed, Srila Prabhupada circled the globe
-          14 times on lecture tours, bringing the teachings of Lord Krishna to
-          thousands of people. Men and women from all backgrounds accepted his
-          message, and with their help, Srila Prabhupada established ISKCON
-          centres and projects throughout the world. Under his inspiration,
-          Krishna devotees established temples, rural communities and
-          educational institutions.
-        </p>
+      <div
+        tabindex="0"
+        class="collapse collapse-plus border mt-4 border-base-300 bg-base-100 rounded-box"
+      >
+        <input type="checkbox" />
+        <div class="collapse-title text-xl font-medium">Sannyasa</div>
+        <div class="collapse-content">
+          <p>
+            In 1965, at the age of sixty-nine, Srila Prabhupada travelled to New
+            York City. He arrived in the United States with his translations of
+            sacred Sanskrit texts. Srila Prabhupada began to share the timeless
+            wisdom of Krishna consciousness. His message resonated with many
+            young people, some of whom became his serious students. With their
+            help, Srila Prabhupada rented a small storefront on New York’s Lower
+            East Side to use as a temple. On 11th July, 1966, he officially
+            registered his organization in the state of New York, founding the
+            International Society for Krishna Consciousness (ISKCON).
+          </p>
+          <p class="mt-2">
+            In the eleven years that followed, Srila Prabhupada circled the
+            globe 14 times on lecture tours, bringing the teachings of Lord
+            Krishna to thousands of people. Men and women from all backgrounds
+            accepted his message, and with their help, Srila Prabhupada
+            established ISKCON centres and projects throughout the world. Under
+            his inspiration, Krishna devotees established temples, rural
+            communities and educational institutions.
+          </p>
+        </div>
       </div>
-    </div>
-    <div
-      tabindex="0"
-      class="collapse collapse-plus mt-4 border border-base-300 bg-base-100 rounded-box"
-    >
-      <input type="checkbox" />
-      <div class="collapse-title text-xl font-medium">Literary Work</div>
-      <div class="collapse-content">
-        <p>
-          Srila Prabhupada’s most significant contributions are his books. He
-          authored over 80 of them, which are highly respected for their
-          authority, depth and fidelity to the tradition. His writings have been
-          translated into 76 languages. His most prominent works include
-          Bhagavad-gita As It Is, the 30-volume Srimad-Bhagavatam, and the
-          17-volume Sri Caitanya-Caritamrta and Sri-Isopanisad.
-        </p>
+      <div
+        tabindex="0"
+        class="collapse collapse-plus mt-4 border border-base-300 bg-base-100 rounded-box"
+      >
+        <input type="checkbox" />
+        <div class="collapse-title text-xl font-medium">Literary Work</div>
+        <div class="collapse-content">
+          <p>
+            Srila Prabhupada’s most significant contributions are his books. He
+            authored over 80 of them, which are highly respected for their
+            authority, depth and fidelity to the tradition. His writings have
+            been translated into 76 languages. His most prominent works include
+            Bhagavad-gita As It Is, the 30-volume Srimad-Bhagavatam, and the
+            17-volume Sri Caitanya-Caritamrta and Sri-Isopanisad.
+          </p>
+        </div>
       </div>
-    </div>
-    <div
-      class="flex mt-4 p-2 pl-4 pr-3 justify-between items-center border border-base-300 bg-base-100 rounded-box"
-    >
-      <h3 class="text-xl">Want to Learn More?</h3>
-      <button class="btn btn-primary btn-outline">Read More</button>
+      <div
+        class="flex mt-4 p-2 pl-4 pr-3 justify-between items-center border border-base-300 bg-base-100 rounded-box"
+      >
+        <h3 class="text-xl">Want to Learn More?</h3>
+        <button class="btn btn-primary btn-outline">Read More</button>
+      </div>
     </div>
   </div>
   <div class="pt-20 pb-36 lg:px-16">
@@ -320,7 +329,7 @@
       </div>
       <div class="overflow-x-auto">
         <h2 class="text-xl uppercase mb-5 ml-0.5 font-bold">Our Schedule</h2>
-        <div class="border-2 border-base-300 rounded-xl">
+        <div class="border-2 border-base-300 rounded-xl mb-20 lg:mb-0">
           <table class="table table-zebra w-full">
             <!-- head -->
             <thead>
