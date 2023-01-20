@@ -6,6 +6,9 @@ export default defineEventHandler(async (event) => {
     server: process.env.NUXT_MAILCHIMP_SERVER,
   });
 
+  console.log(process.env.NUXT_MAILCHIMP_API_KEY);
+  console.log(process.env.NUXT_MAILCHIMP_SERVER);
+
   const body = await readBody(event);
 
   const listId = "ac2862c58b";
