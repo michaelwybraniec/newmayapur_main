@@ -182,7 +182,7 @@
           <figure>
             <img
               :src="
-                config.strapiBase +
+                config.public.strapiBase +
                 post.attributes.Thumbnail.data.attributes.formats.small.url
               "
               class="h-52 w-full object-cover"

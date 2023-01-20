@@ -8,8 +8,6 @@ export default defineEventHandler(async (event) => {
     server: config.mailchimpServer,
   });
 
-  console.log(config);
-
   const body = await readBody(event);
 
   const listId = "ac2862c58b";
@@ -24,6 +22,5 @@ export default defineEventHandler(async (event) => {
 
   return {
     status: 200,
-    data: response,
   };
 });

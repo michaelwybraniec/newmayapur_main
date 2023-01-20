@@ -54,7 +54,7 @@
         >
           <img
             :src="
-              config.strapiBase +
+              config.public.strapiBase +
               event.attributes.Thumbnail.data.attributes.formats.small.url
             "
             alt="Thumbnail"

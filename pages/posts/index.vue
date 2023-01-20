@@ -30,7 +30,7 @@
               <figure class="w-[1200px]">
                 <img
                   :src="
-                    config.strapiBase +
+                    config.public.strapiBase +
                     post.attributes.Thumbnail.data.attributes.formats.small.url
                   "
                   alt="Thumbnail"

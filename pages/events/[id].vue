@@ -3,7 +3,7 @@
     <div class="hero-content flex-col lg:flex-row">
       <img
         :src="
-          config.strapiBase +
+          config.public.strapiBase +
           event.data.attributes.Thumbnail.data.attributes.formats.small.url
         "
         class="max-w-md rounded-lg shadow-2xl"
@@ -67,7 +67,7 @@
       >
         <img
           :src="
-            config.strapiBase +
+            config.public.strapiBase +
             teacher.attributes.Picture.data.attributes.formats.small.url
           "
           class="rounded-md h-24 w-24 object-cover ml-auto -translate-y-3/4 -mb-24"
@@ -159,7 +159,7 @@
       >
         <a
           :href="
-            config.strapiBase +
+            config.public.strapiBase +
             event.data.attributes.Program.data.attributes.url
           "
           target="_blank"

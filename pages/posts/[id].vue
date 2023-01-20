@@ -11,7 +11,7 @@
     <img
       class="max-w-s md:max-w-lg mb-12 mt-10 rounded-lg"
       :src="
-        config.strapiBase +
+        config.public.strapiBase +
         post.data.attributes.Thumbnail.data.attributes.formats.small.url
       "
     />
