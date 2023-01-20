@@ -4,8 +4,8 @@ export default defineEventHandler(async (event) => {
   const config = useRuntimeConfig();
 
   mailchimp.setConfig({
-    apiKey: config.MAILCHIMP_API_KEY,
-    server: config.MAILCHIMP_SERVER,
+    apiKey: config.mailchimpKey,
+    server: config.mailchimpServer,
   });
 
   console.log(config);
