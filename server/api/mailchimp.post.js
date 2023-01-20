@@ -1,13 +1,12 @@
 import mailchimp from "@mailchimp/mailchimp_marketing";
 
 export default defineEventHandler(async (event) => {
-  mailchimp.setConfig({
-    apiKey: process.env.MAILCHIMP_API_KEY,
-    server: process.env.MAILCHIMP_SERVER,
-  });
+  const config = useRuntimeConfig();
 
-  console.log(process.env.MAILCHIMP_API_KEY);
-  console.log(process.env.MAILCHIMP_SERVER);
+  mailchimp.setConfig({
+    apiKey: config.MAILCHIMP_API_KEY,
+    server: config.MAILCHIMP_SERVER,
+  });
 
   const body = await readBody(event);
 
