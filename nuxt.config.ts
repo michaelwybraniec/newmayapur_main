@@ -21,7 +21,7 @@ export default defineNuxtConfig({
     },
   },
   privateRuntimeConfig: {
-    NUXT_MAILCHIMP_API_KEY: process.env.NUXT_MAILCHIMP_API_KEY,
-    NUXT_MAILCHIMP_SERVER: process.env.NUXT_MAILCHIMP_SERVER,
+    MAILCHIMP_API_KEY: process.env.MAILCHIMP_API_KEY,
+    MAILCHIMP_SERVER: process.env.MAILCHIMP_SERVER,
   },
 });

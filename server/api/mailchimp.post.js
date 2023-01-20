@@ -2,12 +2,12 @@ import mailchimp from "@mailchimp/mailchimp_marketing";
 
 export default defineEventHandler(async (event) => {
   mailchimp.setConfig({
-    apiKey: process.env.NUXT_MAILCHIMP_API_KEY,
-    server: process.env.NUXT_MAILCHIMP_SERVER,
+    apiKey: process.env.MAILCHIMP_API_KEY,
+    server: process.env.MAILCHIMP_SERVER,
   });
 
-  console.log(process.env.NUXT_MAILCHIMP_API_KEY);
-  console.log(process.env.NUXT_MAILCHIMP_SERVER);
+  console.log(process.env.MAILCHIMP_API_KEY);
+  console.log(process.env.MAILCHIMP_SERVER);
 
   const body = await readBody(event);
 
