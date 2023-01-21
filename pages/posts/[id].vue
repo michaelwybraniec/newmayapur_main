@@ -1,5 +1,5 @@
 <template>
-  <div class="py-32 w-[900px] mx-auto">
+  <div class="py-32 xl:w-[900px] mx-4 xl:mx-auto">
     <NuxtLink to="/posts" class="w-32 block">
       <div
         class="-ml-2 flex items-center gap-2 cursor-pointer hover:-translate-x-2 transition"
