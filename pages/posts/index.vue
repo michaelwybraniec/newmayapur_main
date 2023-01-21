@@ -1,6 +1,6 @@
 <template>
   <div class="py-16">
-    <div class="w-[1280px] mx-auto">
+    <div class="xl:w-[1280px] mx-4 xl:mx-auto">
       <h1 class="font-bold text-3xl mb-8">Our Blog</h1>
       <div
         class="w-full rounded-xl flex border-2 border-base-200 p-2 justify-between"
@@ -23,18 +23,18 @@
           Clear Filters
         </button>
       </div>
-      <div class="grid grid-cols-3 items-start gap-16 mt-12">
-        <div class="col-span-2 space-y-4">
+      <div class="grid grid-cols-1 lg:grid-cols-3 items-start gap-16 mt-12">
+        <div class="lg:col-span-2 max-lg:order-2 space-y-4">
           <div v-for="post in posts.data">
-            <div class="card lg:card-side bg-base-100 border-2 border-base-200">
-              <figure class="w-[1200px]">
+            <div class="card sm:card-side bg-base-100 border-2 border-base-200">
+              <figure class="sm:w-[1200px]">
                 <img
                   :src="
                     config.public.strapiBase +
                     post.attributes.Thumbnail.data.attributes.formats.small.url
                   "
                   alt="Thumbnail"
-                  class="h-[300px]"
+                  class="h-[300px] max-md:w-full object-cover"
                 />
               </figure>
               <div class="card-body">
@@ -58,7 +58,9 @@
             </div>
           </div>
         </div>
-        <div class="col-span-1 border-2 border-base-200 py-6 pb-8 rounded-xl">
+        <div
+          class="lg:col-span-1 max-lg:order-1 border-2 border-base-200 py-6 pb-8 rounded-xl"
+        >
           <img class="h-32 block mx-auto rounded-xl" src="/img/logo.jpg" />
           <p class="uppercase font-bold text-center mt-2 text-red-800">
             New Mayapur
@@ -84,14 +86,16 @@
             Subscribe to our Newsletter
           </p>
           <div class="form-control px-4">
-            <form @submit.prevent="subscribe" class="input-group">
+            <form @submit.prevent="subscribe" class="">
               <input
                 v-model="email"
                 type="text"
                 placeholder="Your Email"
-                class="input input-bordered"
+                class="input input-bordered w-full"
               />
-              <button type="submit" class="btn px-6">Submit</button>
+              <button type="submit" class="btn px-6 py-2 mt-2 w-full">
+                Submit
+              </button>
             </form>
             <p
               class="text-sm mt-2 text-center"

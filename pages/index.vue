@@ -69,7 +69,7 @@
     </div>
   </div>
   <div
-    class="pb-32 lg:pt-24 lg:px-28 grid grid-cols-1 mx-2 lg:mx-0 lg:grid-cols-2 gap-24"
+    class="pb-32 lg:pt-24 lg:px-28 grid grid-cols-1 mx-4 lg:mx-0 lg:grid-cols-2 gap-24"
   >
     <div>
       <h2 class="text-2xl font-bold border-b-2 border-base-300 pb-2">
@@ -145,13 +145,13 @@
   </div>
   <div class="bg-base-200 mx-auto pt-24 pb-32">
     <h2 class="text-3xl font-bold text-center mb-6">Contributing</h2>
-    <p class="max-w-xl pt-2 pb-2 mx-2 sm:mx-auto text-center">
+    <p class="max-w-xl pt-2 pb-2 mx-4 sm:mx-auto text-center">
       All contributions made to New Mayapur directly support the maintenance of
       the property and its residents, and are making innovative preaching
       ventures possible. Donate once or <b>become a member</b> today.
     </p>
     <div
-      class="p-7 rounded-xl shadow-md bg-base-100 mt-12 mx-2 lg:w-1/3 lg:mx-auto"
+      class="p-7 rounded-xl shadow-md bg-base-100 mt-12 mx-4 lg:w-1/3 lg:mx-auto"
     >
       <img class="mb-6 mx-auto rounded-lg" src="/img/contribute.jpg" />
       <button class="btn btn-secondary ml-auto block">Donate Now</button>
