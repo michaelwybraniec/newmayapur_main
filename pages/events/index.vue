@@ -1,14 +1,14 @@
 <template>
   <div class="py-16">
-    <div class="w-[1280px] mx-auto">
+    <div class="xl:w-[1280px] mx-4 xl:mx-auto">
       <h1 class="font-bold text-3xl mb-8">Our Events</h1>
       <div
-        class="w-full rounded-xl flex items-center border border-base-300 p-2 justify-between"
+        class="w-full rounded-xl flex flex-col md:flex-row items-center border border-base-300 p-2 justify-between"
       >
-        <div class="flex gap-2">
+        <div class="flex flex-col md:flex-row gap-2 w-full md:max-w-xs">
           <select
             v-model="filter"
-            class="select select-bordered w-full max-w-xs"
+            class="select select-bordered w-100 md:max-w-xs xl:w-64"
           >
             <option value="" disabled selected>Tags</option>
             <option value="Temple">Temple</option>
@@ -17,7 +17,7 @@
           </select>
           <select
             v-model="date.month"
-            class="select select-bordered w-full max-w-xs"
+            class="select select-bordered w-full md:w-40 xl:w-64"
           >
             <option value="" disabled selected>Month</option>
             <option value="01">January</option>
@@ -35,11 +35,11 @@
           </select>
         </div>
         <span
-          class="text-sm bg-blue-200 p-3 border border-blue-200 -ml-20 rounded-md"
+          class="text-sm w-full mt-2 md:mt-0 md:w-60 bg-blue-200 p-3 border border-blue-200 lg:-ml-20 rounded-md"
           >All events are for the <b>current year.</b></span
         >
         <button
-          class="btn btn-secondary btn-outline"
+          class="btn mt-2 w-full md:w-36 md:mt-0 btn-secondary btn-outline"
           @click="() => ((filter = ''), (date.month = ''))"
         >
           Clear Filters
@@ -50,7 +50,7 @@
       >
         <div
           v-for="event in events.data"
-          class="card w-96 bg-base-100 shadow-xl"
+          class="card sm:w-96 bg-base-100 shadow-xl"
         >
           <img
             :src="
@@ -211,7 +211,7 @@ watch(options, async (newValue, oldValue) => {
 });
 
 watch(date, async (newValue, oldValue) => {
-  if (filter.value === "") {
+  if (filter.value === "" && newValue.month !== "") {
     options.page = 1;
     events.value = await find("events", {
       populate: ["Thumbnail"],
@@ -231,7 +231,7 @@ watch(date, async (newValue, oldValue) => {
         },
       },
     });
-  } else {
+  } else if (filter.value !== "" && newValue.month !== "") {
     options.page = 1;
     events.value = await find("events", {
       populate: ["Thumbnail"],
@@ -253,6 +253,12 @@ watch(date, async (newValue, oldValue) => {
           $eq: filter.value,
         },
       },
+    });
+  } else if (newValue.month === "") {
+    options.page = 1;
+    events.value = await find("events", {
+      populate: ["Thumbnail"],
+      pagination: options,
     });
   }
 });
