@@ -220,10 +220,14 @@
       <div class="form-control">
         <form class="input-group" @submit.prevent="subscribe">
           <input
-            v-model="email"
+            v-model="mail.value"
             placeholder="Your Email"
             class="input input-bordered max-w-sm md:w-[350px]"
-            type="email"
+            type="text"
+            @change="v$.value.$touch"
+            :class="{
+              'border-red-500': v$.value.$error,
+            }"
           />
           <button type="submit" class="btn px-6">Submit</button>
         </form>
@@ -235,26 +239,48 @@
         >
           {{ res }}
         </p>
+        <p v-if="v$.value.$error" class="text-sm mt-2 text-center text-red-600">
+          Please enter a valid email.
+        </p>
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
+import { required, email, helpers } from "@vuelidate/validators";
+import { useVuelidate } from "@vuelidate/core";
+
+const rules = computed(() => {
+  return {
+    value: {
+      required: helpers.withMessage("The email field is required", required),
+      email: helpers.withMessage("Invalid email format", email),
+    },
+  };
+});
+
 const { find } = useStrapi();
 
-const email = ref("");
+const mail = reactive({ value: "" });
 const res = ref("");
 
+const v$ = useVuelidate(rules, mail);
+
 const subscribe = async () => {
+  const isCorrect = await v$.value.$validate();
+  if (!isCorrect) return;
   const { data, pending, error, refresh } = await useFetch("/api/mailchimp", {
     method: "POST",
-    body: { email: email.value },
+    body: { email: mail.value },
   });
 
   res.value = error.value
     ? "Oops! Something went wrong. Please try again later."
     : "Your subscription has been registered.";
+
+  mail.value = "";
+  v$.value.$reset();
 };
 
 const events = await find("events", {
