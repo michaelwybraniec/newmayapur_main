@@ -6,6 +6,7 @@ export default defineNuxtConfig({
     "@nuxtjs/strapi",
     "nuxt-icon",
     "nuxt-meilisearch",
+    "nuxt-mail",
   ],
   build: {
     transpile: ["vue-instantsearch", "marked"],
@@ -21,5 +22,18 @@ export default defineNuxtConfig({
     },
     mailchimpKey: process.env.MAILCHIMP_API_KEY,
     mailchimpServer: process.env.MAILCHIMP_SERVER,
+  },
+  mail: {
+    message: {
+      to: "valentinmorice1@gmail.com",
+    },
+    smtp: {
+      host: "smtp-relay.sendinblue.com",
+      port: 587,
+      auth: {
+        user: process.env.SENDINBLUE_USER,
+        pass: process.env.SENDINBLUE_PW,
+      },
+    },
   },
 });

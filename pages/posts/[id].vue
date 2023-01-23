@@ -2,7 +2,7 @@
   <div class="py-32 xl:w-[900px] mx-4 xl:mx-auto">
     <NuxtLink to="/posts" class="w-32 block">
       <div
-        class="-ml-2 flex items-center gap-2 cursor-pointer hover:-translate-x-2 transition"
+        class="-ml-2 flex items-center gap-2 cursor-pointer lg:hover:-translate-x-2 transition"
       >
         <Icon name="ion:arrow-back-circle-outline" size="40px" />
         <p class="text-xl font-bold">Go Back</p>

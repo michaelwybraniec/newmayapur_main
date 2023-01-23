@@ -6,9 +6,9 @@
           config.public.strapiBase +
           event.data.attributes.Thumbnail.data.attributes.formats.small.url
         "
-        class="max-w-md rounded-lg shadow-2xl"
+        class="max-w-xs max-lg:mb-8 md:max-w-md rounded-lg shadow-2xl"
       />
-      <div class="ml-16">
+      <div class="lg:ml-16">
         <div class="flex">
           <div
             class="flex gap-2 mb-6 items-center bg-base-100 py-2 px-4 rounded-xl"
@@ -51,7 +51,7 @@
     </div>
   </div>
   <div
-    class="w-[1280px] mx-auto py-28"
+    class="xl:w-[1280px] mx-4 xl:mx-auto py-28"
     v-if="event.data.attributes.Teachers.data.length !== 0"
   >
     <h2 class="text-3xl font-bold text-center mb-6">Your Teachers</h2>
@@ -60,7 +60,9 @@
       quos reprehenderit ab vero, dolorem blanditiis officiis! Eligendi, vitae
       laborum.
     </p>
-    <div class="pt-36 grid-cols-2 pb-16 grid gap-4">
+    <div
+      class="pt-36 max-md:space-y-16 grid-cols-1 md:grid-cols-2 pb-16 grid gap-4"
+    >
       <div
         v-for="teacher in event.data.attributes.Teachers.data"
         class="p-6 border-2 border-base-300 rounded-xl"
@@ -89,14 +91,14 @@
       event.data.attributes.Teachers.data.length === 0 ? '' : 'bg-base-200'
     "
   >
-    <div class="w-[1280px] mx-auto pt-28 pb-44">
+    <div class="xl:w-[1280px] mx-4 xl:mx-auto pt-28 pb-44">
       <h2 class="text-3xl font-bold text-center mb-6">Your Schedule</h2>
       <p class="max-w-xl pt-2 pb-2 mx-auto text-center mb-16">
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore fugit
         quos reprehenderit ab vero, dolorem blanditiis officiis! Eligendi, vitae
         laborum.
       </p>
-      <div class="grid grid-cols-2 gap-6">
+      <div class="grid grid-cols-1 max-md:space-y-8 md:grid-cols-2 gap-6">
         <div
           v-for="day in event.data.attributes.Days.data"
           class="flex items-center flex-col"
@@ -137,14 +139,14 @@
       </div>
     </div>
   </div>
-  <div class="w-[900px] mx-auto pt-28 pb-36">
+  <div class="lg:w-[900px] mx-4 lg:mx-auto pt-28 pb-36">
     <h2 class="text-3xl font-bold text-center mb-6">Interested?</h2>
     <p class="max-w-xl pt-2 pb-2 mx-auto text-center mb-16">
       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore fugit
       quos reprehenderit ab vero, dolorem blanditiis officiis! Eligendi, vitae
       laborum.
     </p>
-    <div class="p-6 rounded-xl shadow-lg mt-20 grid grid-cols-2 gap-4">
+    <div class="p-6 rounded-xl shadow-lg mt-20 grid md:grid-cols-2 gap-4">
       <div class="rounded-md p-4 bg-base-200 flex justify-between items-bottom">
         <div>
           <p class="text-2xl font-bold">Price</p>
@@ -155,7 +157,7 @@
         >
       </div>
       <div
-        class="border-2 rounded-md border-base-300 flex justify-center items-center p-4 gap-2"
+        class="border-2 rounded-md border-base-300 flex max-md:flex-col justify-center items-center p-4 gap-2"
       >
         <a
           :href="
@@ -163,10 +165,10 @@
             event.data.attributes.Program.data.attributes.url
           "
           target="_blank"
-          class="btn btn-primary"
+          class="btn btn-primary max-md:w-full"
           >Download the Program</a
         >
-        <button class="btn btn-secondary">Book Now</button>
+        <button class="btn btn-secondary max-md:w-full">Book Now</button>
       </div>
     </div>
   </div>

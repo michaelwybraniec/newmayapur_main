@@ -88,24 +88,27 @@
           You have a question, or you would like to share with us your ideas and
           suggestions? Please reach out to us using the form below.
         </p>
-        <form class="mt-6">
+        <form class="mt-6" @submit.prevent="sendEmail">
           <div class="grid grid-cols-2 gap-2">
             <input
               type="text"
               placeholder="Name"
               class="input input-bordered w-full"
+              v-model="infos.name"
             /><input
               type="email"
               placeholder="Email"
               class="input input-bordered w-full"
+              v-model="infos.email"
             />
           </div>
           <textarea
             class="textarea textarea-bordered resize-none text-base w-full mt-3"
             placeholder="Your Message"
             rows="6"
+            v-model="infos.message"
           ></textarea>
-          <button class="btn btn-primary ml-auto mt-3 block w-40">
+          <button type="submit" class="btn btn-primary ml-auto mt-3 block w-40">
             Submit
           </button>
         </form>
@@ -152,6 +155,24 @@ export default {
       zoom: 14,
     };
   },
+};
+</script>
+
+<script setup>
+const mail = useMail();
+const infos = reactive({
+  name: "",
+  email: "",
+  message: "",
+});
+
+const sendEmail = function () {
+  mail.send({
+    from: infos.email,
+    subject: "You received a new message from " + infos.name,
+    text: infos.message,
+  });
+  console.log("Email Sent!");
 };
 </script>
 

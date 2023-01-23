@@ -19,6 +19,7 @@
   "dependencies": {
     "@mailchimp/mailchimp_marketing": "^3.0.80",
     "daisyui": "^2.45.0",
-    "marked": "^4.2.12"
+    "marked": "^4.2.12",
+    "nuxt-mail": "^3.1.3"
   }
 }
