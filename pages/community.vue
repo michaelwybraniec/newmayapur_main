@@ -60,7 +60,7 @@
         <h2 class="text-xl mt-12 uppercase font-bold">Striving For Ecology</h2>
         <p class="pt-3">
           According to the <i>Vedas</i>, the Earth is to be considered as a
-          mother, providing everyone with the means for sustaining themselves.
+          mother, supplying everyone with the means for maintaining themselves.
           As such, we are striving to make New Mayapur a shining example of a
           functional ecological community.
         </p>
@@ -92,7 +92,7 @@
   </div>
   <div class="pb-32 py-28 lg:w-[1280px] mx-auto">
     <h2 class="text-2xl font-bold text-center mb-2">Current Projects</h2>
-    <p class="max-w-xl pt-2 pb-2 md:mx-auto text-center mb-16 mx-4">
+    <p class="max-w-xl pt-2 pb-2 md:mx-auto text-center mb-16 mx-4lay">
       Meeting the needs of those who are close to us is an essential part of
       <i>vaisnava</i> culture. We are always eager to improve our domain, by
       making it a place respectul of the environment and self-sustainable in
