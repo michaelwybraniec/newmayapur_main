@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-base-200 py-32 lg:px-16">
+  <div class="bg-base-200 py-28 lg:px-16">
     <div
       class="grid grid-rows-1 lg:grid-cols-2 px-4 lg:px-20 items-center gap-x-4"
     >
@@ -55,7 +55,7 @@
       </div>
       <div class="md:px-24 lg:px-0 mb-24 lg:mb-0">
         <div class="p-5 pb-6 mx-auto inline bg-base-200 rounded-xl mb-16">
-          <Icon name="ion:sparkles-outline" size="28px" />
+          <Icon name="ion:leaf-outline" size="28px" />
         </div>
         <h2 class="text-xl mt-12 uppercase font-bold">Striving For Ecology</h2>
         <p class="pt-3">

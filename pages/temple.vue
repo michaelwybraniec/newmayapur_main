@@ -66,7 +66,7 @@
     </div>
   </div>
   <div class="pb-32 py-28 lg:px-10 lg:w-[1000px] mx-auto">
-    <h2 class="text-2xl font-bold text-center mb-12">Our Temple's History</h2>
+    <h2 class="text-2xl font-bold text-center mb-12">Our Domain's History</h2>
     <div
       class="flex flex-col md:flex-row gap-4 mx-4 md:mx-0 items-center justify-center mb-16"
     >
