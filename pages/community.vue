@@ -6,13 +6,12 @@
       <div class="order-2 lg:order-1 md:px-24 lg:px-0">
         <h2 class="text-xl uppercase font-bold">A Spiritual Village</h2>
         <p class="pt-3">
-          New Mayapur, beyond being a temple, is a village made of people from
-          all walks of life. As such, we organise many different activities to
-          meet the needs of our community. Devotee care was greatly emphasized
-          by Srila Prabhupada himself, and we are therefore striving to provide
-          everyone with the means to live a fulfilling life, through access to
-          both material and spiritual education along with opportunities to earn
-          an income on-site.
+          New Mayapur, beyond being a temple, is a village comprising people
+          from all walks of life. Our domain is a large property that
+          accommodates bhakti-yoga practitioners, volunteers and visitors alike.
+          Our goal is to provide everyone with the means to live a fulfilling
+          life, through access to material as well as spiritual education, along
+          with practical application of a natural, holistic lifestyle.
         </p>
       </div>
       <img
@@ -23,35 +22,48 @@
   </div>
   <div class="pb-32 py-28 lg:px-10">
     <div
-      class="grid grid-cols-1 lg:grid-cols-2 px-4 lg:px-20 items-start gap-x-16"
+      class="grid grid-cols-1 lg:grid-cols-3 px-4 lg:px-20 items-start gap-x-16"
     >
-      <div class="order-2 lg:order-1 md:px-24 lg:px-0 mb-24 lg:mb-0">
+      <div class="md:px-24 lg:px-0 mb-24 lg:mb-0">
         <div class="p-5 pb-6 mx-auto inline bg-base-200 rounded-xl mb-16">
           <Icon name="ion:heart-outline" size="28px" />
         </div>
-        <h2 class="text-xl mt-12 uppercase font-bold">Food For Life</h2>
+        <h2 class="text-xl mt-12 uppercase font-bold">
+          An International Community
+        </h2>
         <p class="pt-3">
-          There are 5 to 7 millions of people in France who are regularly
-          visiting food banks, which represents around 10% of the country's
-          population. Hunger is a real issue, and it is present everywhere. New
-          Mayapur is aiming to help those in need by providing
-          <i>prasadam</i> freely in the surrounding cities.
+          There are numerous people engaged in making New Mayapur a vibrant
+          society. They are on-site residents, inhabitants of neighboring
+          villages and towns, and even citizens of countries far abroad! As
+          Srila Prabhupada said, New Mayapur should be a house
+          <i>where the whole world can live</i>.
         </p>
-        <button class="btn btn-primary btn-outline mt-6">Learn More</button>
       </div>
-      <div class="order-2 lg:order-1 md:px-24 lg:px-0 mb-24 lg:mb-0">
+      <div class="md:px-24 lg:px-0 mb-24 lg:mb-0">
         <div class="p-5 pb-6 mx-auto inline bg-base-200 rounded-xl mb-16">
-          <Icon name="ion:pizza-outline" size="28px" />
+          <Icon name="ion:sparkles-outline" size="28px" />
         </div>
-        <h2 class="text-xl mt-12 uppercase font-bold">Catering</h2>
+        <h2 class="text-xl mt-12 uppercase font-bold">
+          Providing Rich Experiences
+        </h2>
         <p class="pt-3">
-          Prasadam distribution is a great (and delicious!) way to let people
-          discover Krishna Consciousness. We are offering catering services to
-          public and private events throughout the year. We have been present at
-          France's biggest music festivals, such as <b>Les Eurockéennes</b> and
-          <b>Garorock</b>.
+          A place would be nothing without the memories and relationships it
+          creates. New Mayapur is a positive and engaging environment, where
+          every exchange is an opportunity to grow, and where every day is a new
+          opportunity to learn.
         </p>
-        <button class="btn btn-primary btn-outline mt-6">Learn More</button>
+      </div>
+      <div class="md:px-24 lg:px-0 mb-24 lg:mb-0">
+        <div class="p-5 pb-6 mx-auto inline bg-base-200 rounded-xl mb-16">
+          <Icon name="ion:sparkles-outline" size="28px" />
+        </div>
+        <h2 class="text-xl mt-12 uppercase font-bold">Striving For Ecology</h2>
+        <p class="pt-3">
+          According to the <i>Vedas</i>, the Earth is to be considered as a
+          mother, providing everyone with the means for sustaining themselves.
+          As such, we are striving to make New Mayapur a shining example of a
+          functional ecological community.
+        </p>
       </div>
     </div>
   </div>
@@ -61,33 +73,30 @@
         class="grid grid-rows-1 lg:grid-cols-2 px-4 lg:px-20 items-center gap-x-4"
       >
         <div class="order-2 md:px-24 lg:px-0">
-          <h2 class="text-xl uppercase font-bold">Retreat Center</h2>
+          <h2 class="text-xl uppercase font-bold">A Place for Everyone</h2>
           <p class="pt-3">
-            New Mayapur is situated in a haven of peace, amongst the forests and
-            fields of Indre, in the center of France. What better setttings to
-            take a break from the hustle and bustle of our everyday lives? We
-            organize regular events centered around the discovery and practice
-            of <i>yoga</i> and its adjacent culture, be it
-            <i>ahimsa</i> cooking, a natural lifestyle, or study of
-            spirituality.
+            New Mayapur is unique, as our community is made of people from
+            several generations. From toddlers to seniors, we are learning
+            everyday to live and thrive together, by communicating openly and
+            honouring our differences. In a modern world where relationships are
+            often fractured between age groups, being able to share loving
+            exchanges amongst each other is a rare and precious gift.
           </p>
-          <NuxtLink to="/events" class="btn btn-outline btn-secondary mt-6"
-            >See our Events</NuxtLink
-          >
         </div>
         <img
           class="order-1 max-w-xs md:max-w-lg mb-12 lg:mb-0 mx-auto md:mb-24 lg:mr-auto lg:ml-0 rounded-lg"
-          src="/img/yoga.jpg"
+          src="/img/generations.jpg"
         />
       </div>
     </div>
   </div>
   <div class="pb-32 py-28 lg:w-[1280px] mx-auto">
     <h2 class="text-2xl font-bold text-center mb-2">Current Projects</h2>
-    <p class="max-w-xl pt-2 pb-2 mx-auto text-center mb-16">
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore fugit
-      quos reprehenderit ab vero, dolorem blanditiis officiis! Eligendi, vitae
-      laborum.
+    <p class="max-w-xl pt-2 pb-2 md:mx-auto text-center mb-16 mx-4">
+      Meeting the needs of those who are close to us is an essential part of
+      <i>vaisnava</i> culture. We are always eager to improve our domain, by
+      making it a place respectul of the environment and self-sustainable in
+      most areas.
     </p>
     <div
       class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 container gap-16 mt-20 mb-12"

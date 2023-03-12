@@ -24,9 +24,49 @@
         >
           <li><NuxtLink to="/posts">Blog</NuxtLink></li>
           <li><NuxtLink to="/events">Events</NuxtLink></li>
-          <li><NuxtLink to="/temple">Temple</NuxtLink></li>
-          <li><NuxtLink to="/community">Community</NuxtLink></li>
-          <li><NuxtLink to="/farm">Farm</NuxtLink></li>
+          <li><NuxtLink to="/events">Booking</NuxtLink></li>
+          <li tabindex="0">
+            <a class="justify-between">
+              About
+              <svg
+                class="fill-current"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"
+                />
+              </svg>
+            </a>
+            <ul class="p-2 bg-base-100 shadow-lg space-y-1">
+              <li><NuxtLink to="/temple">Temple</NuxtLink></li>
+              <li><NuxtLink to="/community">Community</NuxtLink></li>
+              <li><NuxtLink to="/farm">Farm</NuxtLink></li>
+            </ul>
+          </li>
+          <li tabindex="0">
+            <a class="justify-between">
+              Services
+              <svg
+                class="fill-current"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"
+                />
+              </svg>
+            </a>
+            <ul class="p-2 bg-base-100 shadow-lg space-y-1">
+              <li><NuxtLink>Retreats</NuxtLink></li>
+              <li><NuxtLink>Catering</NuxtLink></li>
+              <li><NuxtLink>Renting Venue</NuxtLink></li>
+            </ul>
+          </li>
           <li tabindex="0">
             <a class="justify-between">
               More
@@ -62,9 +102,53 @@
       <ul class="menu menu-horizontal px-1 space-x-1">
         <li><NuxtLink to="/posts">Blog</NuxtLink></li>
         <li><NuxtLink to="/events">Events</NuxtLink></li>
-        <li><NuxtLink to="/temple">Temple</NuxtLink></li>
-        <li><NuxtLink to="/community">Community</NuxtLink></li>
-        <li><NuxtLink to="/farm">Farm</NuxtLink></li>
+        <li><NuxtLink to="/events">Booking</NuxtLink></li>
+        <li class="dropdown dropdown-end dropdown-hover">
+          <a class="justify-between">
+            About
+            <svg
+              class="fill-current"
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"
+              />
+            </svg>
+          </a>
+          <ul
+            class="dropdown-content menu p-2 border-2 space-y-1 border-base-300 bg-base-100 rounded-box w-52"
+          >
+            <li><NuxtLink to="/temple">Temple</NuxtLink></li>
+            <li><NuxtLink to="/community">Community</NuxtLink></li>
+            <li><NuxtLink to="/farm">Farm</NuxtLink></li>
+          </ul>
+        </li>
+        <li class="dropdown dropdown-end dropdown-hover">
+          <label tabindex="0" class=""
+            >Services<svg
+              class="fill-current"
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"
+              />
+            </svg>
+          </label>
+          <ul
+            tabindex="0"
+            class="dropdown-content menu p-2 border-2 space-y-1 border-base-300 bg-base-100 rounded-box w-52"
+          >
+            <li><NuxtLink>Retreats</NuxtLink></li>
+            <li><NuxtLink>Catering</NuxtLink></li>
+            <li><NuxtLink>Renting Venue</NuxtLink></li>
+          </ul>
+        </li>
         <li class="dropdown dropdown-end dropdown-hover">
           <label tabindex="0" class=""
             >More<svg
@@ -83,7 +167,7 @@
             tabindex="0"
             class="dropdown-content menu p-2 border-2 space-y-1 border-base-300 bg-base-100 rounded-box w-52"
           >
-            <li><NuxtLink to="/more#map">Directions</NuxtLink></li>
+            <li><NuxtLink to="/more">Directions</NuxtLink></li>
             <li><NuxtLink to="/more#contact">Contact</NuxtLink></li>
           </ul>
         </li>
