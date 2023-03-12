@@ -44,7 +44,7 @@
           <Icon name="ion:sparkles-outline" size="28px" />
         </div>
         <h2 class="text-xl mt-12 uppercase font-bold">
-          Providing Rich Experiences
+          Creating Beautiful Memories
         </h2>
         <p class="pt-3">
           A place would be nothing without the memories and relationships it
