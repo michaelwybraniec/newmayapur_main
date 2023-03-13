@@ -1,4 +1,25 @@
 <template>
+  <div class="bg-base-200 py-28 lg:px-16">
+    <div
+      class="grid grid-rows-1 lg:grid-cols-2 px-4 lg:px-20 items-center gap-x-4"
+    >
+      <div class="order-2 lg:order-1 md:px-24 lg:px-0">
+        <h2 class="text-xl uppercase font-bold">A Spiritual Village</h2>
+        <p class="pt-3">
+          New Mayapur, beyond being a temple, is a village comprising people
+          from all walks of life. Our domain is a large property that
+          accommodates bhakti-yoga practitioners, volunteers and visitors alike.
+          Our goal is to provide everyone with the means to live a fulfilling
+          life, through access to material as well as spiritual education, along
+          with practical application of a natural, holistic lifestyle.
+        </p>
+      </div>
+      <img
+        class="order-1 lg:max-w-lg max-w-xs md:max-w-md lg:order-2 mb-12 lg:mb-0 md:mb-24 lg:ml-auto lg:mr-0 mx-auto rounded-lg"
+        src="/img/kids.jpeg"
+      />
+    </div>
+  </div>
   <div class="pb-32 py-28 lg:px-10">
     <div
       class="grid grid-cols-1 lg:grid-cols-3 px-4 lg:px-20 items-start gap-x-16"
