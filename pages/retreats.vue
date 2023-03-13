@@ -21,13 +21,7 @@
     </div>
   </div>
   <div class="pb-32 pt-28 lg:px-10 lg:w-[1000px] mx-auto">
-    <h2 class="text-2xl font-bold text-center mb-2">Our Events</h2>
-    <p class="max-w-xl pt-2 pb-2 md:mx-auto text-center mb-16 mx-4lay">
-      Discover the ancient science of yoga in all of its variety. From
-      practicing asanas to learning the ancient philosophy of Sanskrit texts, or
-      simply getting introduced to our place, we offer a variety of events all
-      year round.
-    </p>
+    <h2 class="text-2xl font-bold text-center mb-12">Our Events</h2>
     <div
       class="flex flex-col mx-4 md:flex-row gap-4 items-center justify-center mb-16"
     >
@@ -43,11 +37,12 @@
         <div class="collapse-title text-xl font-medium">Open House Sundays</div>
         <div class="collapse-content">
           <p>
-            Sustainability is currently the biggest challenge facing humanity,
-            and the practice of ecology is one of the core principle that will
-            enable us to create a healthy, long-lasting civilization. As such,
-            we in New Mayapur endeavour to permeate all of our activities with a
-            respect for nature and its gifts.
+            Come and visit us every Sunday for our open days! Join us for a
+            short and sweet program, starting at 11am and ending at 3pm. You'll
+            discover the castle and its domain, meet our cows, participate in
+            kirtan and much more. A full vegetarian meal is offered at 2pm for
+            all of our guests. Everything is free, but a donation is always
+            appreciated!
           </p>
         </div>
       </div>
@@ -56,16 +51,17 @@
         class="collapse collapse-plus border mt-4 border-base-300 bg-base-100 rounded-box"
       >
         <input type="checkbox" />
-        <div class="collapse-title text-xl font-medium">Immersion Weekend</div>
+        <div class="collapse-title text-xl font-medium">Immersion Weekends</div>
         <div class="collapse-content">
           <p>
-            Our farm is home to two Jersey cows, who provide us with their milk
-            every day, along with their two calves. We also have a herd of four
-            billys who help us clean the forest by eating thorn bushes and other
-            unwanted vegetation. We take pride in the fact that none of the
-            animals we care for will ever see a slaughterhouse, and we therefore
-            shelter older bovids who might not be productive anymore, and who
-            would have seen their lives terminated in other structures.
+            Our immersion weekends are a great way to get a head start on
+            <i>vaisnava</i> traditions and culture. Spanning over the course of
+            two days, those weekends are an introduction to the practice of
+            timeless spiritual wisdom, and to show its relevance up to this day.
+            You'll be hosted in our comfortable guest-house and provided with
+            three delicious meals a day, and will have a great opportunity to
+            meet like-minded individuals interested in making their lives more
+            meaningful.
           </p>
         </div>
       </div>
@@ -77,16 +73,12 @@
         <div class="collapse-title text-xl font-medium">Full Retreats</div>
         <div class="collapse-content">
           <p>
-            "All living bodies subsist on food grains, which are produced from
-            rain. Rains are produced by performance of <i>yajna</i> [sacrifice],
-            and <i>yajna</i> is born of prescribed duties" (Bhagavad-Gita, 3.14)
-          </p>
-          <p class="mt-2">
-            Grains are the staple of a balanced diet. If we are to reach full
-            self-sufficiency, we will have to provide grains daily to all the
-            members of our community. We currently have a few fields dedicated
-            to the production of wheat and amaranth, with which we are
-            manufacturing flour and baking bread throughout the year.
+            Full retreats are dedicated to specific topics (such as
+            <i>ayurveda</i> or <i>hatha-yoga</i>, for example), last for a
+            minimum of four days, and are a great way to take a deeper dive into
+            the <i>yoga</i> tradition. Meet our team of qualified teachers and
+            take part in exciting and engaging classes, amongst beautiful
+            surroundings of natural fields and forests.
           </p>
         </div>
       </div>
@@ -103,22 +95,21 @@
           </div>
           <h2 class="text-xl uppercase font-bold mt-12">Upcoming Events</h2>
           <p class="pt-3 md:w-3/4">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
-            unde pariatur quos temporibus, blanditiis cum praesentium at non
-            officiis perferendis incidunt molestias sint maiores quisquam itaque
-            mollitia est consectetur dignissimos deserunt, omnis iste. Deserunt,
-            quaerat!
+            Discover the ancient science of yoga in all of its variety. From
+            practicing asanas to learning the ancient philosophy of Sanskrit
+            texts, or simply getting introduced to our place, we offer a variety
+            of events all year round.
           </p>
         </div>
         <div
-          v-for="post in posts.data"
+          v-for="event in events.data"
           class="card mt-6 md:mx-auto lg:mx-0 max-w-sm bg-base-100 shadow-xl"
         >
           <figure>
             <img
               :src="
                 config.public.strapiBase +
-                post.attributes.Thumbnail.data.attributes.formats.small.url
+                event.attributes.Thumbnail.data.attributes.formats.small.url
               "
               class="h-52 w-full object-cover"
               alt="Shoes"
@@ -126,18 +117,12 @@
           </figure>
           <div class="card-body">
             <h2 class="card-title">
-              {{ post.attributes.Title.substr(0, 16) + "..." }}
-              <div
-                class="badge border-none"
-                :class="setTagsBg(post.attributes.Category)"
-              >
-                #{{ post.attributes.Category }}
-              </div>
+              {{ event.attributes.Title.substr(0, 16) + "..." }}
             </h2>
-            <p>{{ post.attributes.Content.substr(0, 65) + "..." }}</p>
+            <p>{{ event.attributes.Description.substr(0, 65) + "..." }}</p>
             <div class="flex justify-end">
               <NuxtLink
-                :to="'/posts/' + post.id"
+                :to="' events/' + event.id"
                 class="btn btn-primary btn-outline"
                 >Read More</NuxtLink
               >
@@ -155,7 +140,7 @@ const { find } = useStrapi();
 const mail = reactive({ value: "" });
 const res = ref("");
 
-const posts = await find("posts", {
+const events = await find("events", {
   pagination: {
     pageSize: 2,
     page: 1,
@@ -163,16 +148,6 @@ const posts = await find("posts", {
   populate: "Thumbnail",
   sort: ["publishedAt:desc"],
 });
-
-const setTagsBg = function (value) {
-  if (value === "Temple") {
-    return "bg-orange-600";
-  } else if (value === "Community") {
-    return "bg-blue-600";
-  } else {
-    return "bg-green-600";
-  }
-};
 
 const config = useRuntimeConfig();
 </script>

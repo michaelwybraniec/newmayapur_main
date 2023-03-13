@@ -142,11 +142,11 @@
                 <td>14,00€</td>
               </tr>
               <tr class="border-2">
-                <td class="px-6 py-4">Riz+3 Plats</td>
+                <td class="px-6 py-4">Riz + 3 Plats</td>
                 <td>12,00€</td>
               </tr>
               <tr>
-                <td class="px-6 py-4">Riz+2 Plats</td>
+                <td class="px-6 py-4">Riz + 2 Plats</td>
                 <td>10,00€</td>
               </tr>
             </tbody>
