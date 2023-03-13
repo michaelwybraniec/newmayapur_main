@@ -62,7 +62,7 @@
               </svg>
             </a>
             <ul class="p-2 bg-base-100 shadow-lg space-y-1">
-              <li><NuxtLink>Retreats</NuxtLink></li>
+              <li><NuxtLink to="/retreats">Retreats</NuxtLink></li>
               <li><NuxtLink to="/catering">Catering</NuxtLink></li>
               <li><NuxtLink>Renting Venue</NuxtLink></li>
             </ul>
@@ -144,7 +144,7 @@
             tabindex="0"
             class="dropdown-content menu p-2 border-2 space-y-1 border-base-300 bg-base-100 rounded-box w-52"
           >
-            <li><NuxtLink>Retreats</NuxtLink></li>
+            <li><NuxtLink to="/retreats">Retreats</NuxtLink></li>
             <li><NuxtLink to="/catering">Catering</NuxtLink></li>
             <li><NuxtLink>Renting Venue</NuxtLink></li>
           </ul>
