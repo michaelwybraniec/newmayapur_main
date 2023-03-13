@@ -122,7 +122,7 @@
             <p>{{ event.attributes.Description.substr(0, 65) + "..." }}</p>
             <div class="flex justify-end">
               <NuxtLink
-                :to="' events/' + event.id"
+                :to="'events/' + event.id"
                 class="btn btn-primary btn-outline"
                 >Read More</NuxtLink
               >
