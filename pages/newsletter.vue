@@ -27,6 +27,15 @@
       <input type="text" placeholder="First Name" v-model="fName" />
       <input type="text" placeholder="Last Name" v-model="lName" />
       <input type="text" placeholder="Email" v-model="mail" />
+      <select
+        class="select select-bordered my-2"
+        style="width: 80%"
+        v-model="language"
+      >
+        <option value="" disabled selected>Language</option>
+        <option value="c4e9098dd7">English</option>
+        <option value="20b75dca3e">French</option>
+      </select>
       <button>Send</button>
     </form>
   </div>
@@ -38,6 +47,7 @@ import { ref } from "vue";
 const mail = ref("");
 const fName = ref("");
 const lName = ref("");
+const language = ref("");
 const success = ref(false);
 
 const subscribe = () => {
@@ -47,12 +57,14 @@ const subscribe = () => {
       email: mail.value,
       fName: fName.value,
       lName: lName.value,
+      language: language.value,
     }),
   }).then((data) => {
     console.log(data);
     mail.value = "";
     fName.value = "";
     lName.value = "";
+    language.value = "";
     if (data.status == 200) {
       success.value = true;
     }
