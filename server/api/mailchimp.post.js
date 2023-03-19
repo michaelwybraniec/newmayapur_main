@@ -18,12 +18,15 @@ export default defineEventHandler(async (event) => {
     language: body.language,
   };
 
-  let chosenLanguage;
+  let french;
+  let english;
 
   if (subscribingUser.language === "20b75dca3e") {
-    chosenLanguage = true;
-  } else {
-    chosenLanguage = false;
+    french = true;
+    english = false
+  } else if (subscribingUser.language === "c4e9098dd7") {
+    french = false;
+    english = true
   }
 
   const response = await mailchimp.lists.addListMember(listId, {
@@ -34,8 +37,8 @@ export default defineEventHandler(async (event) => {
     },
     status: "subscribed",
     interests: {
-      "20b75dca3e": chosenLanguage,
-      c4e9098dd7: !chosenLanguage,
+      "20b75dca3e": french,
+      "c4e9098dd7": english,
     },
   });
 
