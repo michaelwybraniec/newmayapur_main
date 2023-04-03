@@ -6,7 +6,7 @@
       >
         <div class="order-2 md:px-24 lg:px-0">
           <h2 class="text-xl uppercase font-bold">A Castle & Temple</h2>
-          <p class="pt-3">
+          <p class="pt-3 text-lg">
             The Château d’Oublaise, now known as New Mayapur, is situated in the
             serene countryside of Centre-Val de Loire, France. It was
             established as a Hare Krishna temple community in 1974 by the
@@ -32,7 +32,7 @@
           <Icon name="ion:home-outline" size="28px" />
         </div>
         <h2 class="text-xl mt-12 uppercase font-bold">Our Temple</h2>
-        <p class="pt-3">
+        <p class="pt-3 text-lg">
           New Mayapur is part of the International Society for Krishna
           Consciousness (ISKCON) — a worldwide movement dedicated to the
           philosophy and practice of Krishna Consciousness, also known as
@@ -44,7 +44,7 @@
           <Icon name="ion:heart-outline" size="28px" />
         </div>
         <h2 class="text-xl mt-12 uppercase font-bold">Our Founder</h2>
-        <p class="pt-3">
+        <p class="pt-3 text-lg">
           The Founder-Acharya of ISKCON is Srila Prabhupada. In eleven years, he
           circled the globe fourteen times, opened around a hundred temples, and
           inspired men and women from all walks of life to take to Krishna
@@ -56,11 +56,11 @@
           <Icon name="ion:location-outline" size="28px" />
         </div>
         <h2 class="text-xl mt-12 uppercase font-bold">Our Location</h2>
-        <p class="pt-3">
+        <p class="pt-3 text-lg">
           Located 3 hours away from Paris in central France, New Mayapur sits on
           over 200 acres of beautiful forests and farmland. The main temple
           building, a chateau or castle, is home to ISKCON Europe’s first
-          Krishna-Balarama Deities and is the heart of the community here.
+          Krishna-Balarama Deities.
         </p>
       </div>
     </div>
@@ -187,7 +187,7 @@
     >
       <div class="order-2 lg:order-1 md:px-24 lg:px-0">
         <h2 class="text-xl uppercase font-bold">Spiritual Life</h2>
-        <p class="pt-3">
+        <p class="pt-3 text-lg">
           In New Mayapur, you will find people practicing what is called
           <i>bhakti-yoga</i>, a timeless tradition rooted in the ancient Vedic
           scriptures such as the Bhagavad-gita, the Upanishads and the Puranas.
@@ -300,7 +300,7 @@
               <Icon name="ion:logo-facebook" class="m-5" size="28px" />
             </div>
             <h2 class="text-xl uppercase mt-4 font-bold">Daily Darshan</h2>
-            <p class="pt-3">
+            <p class="pt-3 text-lg">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam
               porro reprehenderit rerum iste similique voluptates commodi
               distinctio neque, harum quos.
@@ -314,7 +314,7 @@
               <Icon name="ion:logo-youtube" class="m-5" size="28px" />
             </div>
             <h2 class="text-xl uppercase mt-4 font-bold">Online Lectures</h2>
-            <p class="pt-3">
+            <p class="pt-3 text-lg">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam
               porro reprehenderit rerum iste similique voluptates commodi
               distinctio neque, harum quos.

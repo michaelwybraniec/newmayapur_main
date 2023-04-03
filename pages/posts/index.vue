@@ -1,30 +1,16 @@
 <template>
   <div class="py-16">
     <div class="xl:w-[1280px] mx-4 xl:mx-auto">
-      <h1 class="font-bold text-3xl mb-8">Our Blog</h1>
-      <div
-        class="w-full rounded-xl flex border-2 border-base-200 p-2 justify-between"
-      >
-        <div class="flex gap-2">
-          <select
-            v-model="filter"
-            class="select select-bordered w-full max-w-xs"
-          >
-            <option value="" disabled selected>Category</option>
-            <option value="Temple">Temple</option>
-            <option value="Farm">Farm</option>
-            <option value="Community">Community</option>
-          </select>
-        </div>
-        <button
-          class="btn btn-secondary btn-outline"
-          @click="() => (filter = '')"
-        >
-          Clear Filters
-        </button>
-      </div>
+      <h1 class="font-bold text-3xl mb-8 cursor-pointer" @click="filter = ''">
+        Our Blog
+      </h1>
       <div class="grid grid-cols-1 lg:grid-cols-3 items-start gap-16 mt-12">
         <div class="lg:col-span-2 max-lg:order-2 space-y-4">
+          <h2
+            class="font-bold text-xl uppercase pb-2 border-b-2 border-base-300"
+          >
+            Latest Articles
+          </h2>
           <div v-for="post in posts.data">
             <div class="card sm:card-side bg-base-100 border-2 border-base-200">
               <figure class="sm:w-[1200px]">
@@ -50,7 +36,7 @@
                 <div class="card-actions justify-end">
                   <NuxtLink
                     :to="'/posts/' + post.id"
-                    class="btn btn-primary mt-4"
+                    class="btn btn-primary mt-4 btn-outline"
                     >Read More</NuxtLink
                   >
                 </div>
@@ -58,63 +44,113 @@
             </div>
           </div>
         </div>
-        <div
-          class="lg:col-span-1 max-lg:order-1 border-2 border-base-200 py-6 pb-8 rounded-xl"
-        >
-          <img class="h-32 block mx-auto rounded-xl" src="/img/logo.jpg" />
-          <p class="uppercase font-bold text-center mt-2 text-red-800">
-            New Mayapur
-          </p>
-          <div class="grid grid-cols-3 gap-3 mt-8 px-4">
-            <div
-              class="p-2 cursor-pointer rounded-xl bg-base-200 flex items-center justify-center gap-4"
-            >
-              <Icon name="ion:logo-instagram" size="30px" />
+        <div>
+          <div
+            class="lg:col-span-1 max-lg:order-1 border-2 border-base-200 py-6 pb-8 rounded-xl"
+          >
+            <img class="h-32 block mx-auto rounded-xl" src="/img/logo.jpg" />
+            <p class="uppercase font-bold text-center mt-2 text-red-800">
+              New Mayapur
+            </p>
+            <div class="grid grid-cols-3 gap-3 mt-8 px-4">
+              <div
+                class="p-2 cursor-pointer rounded-xl bg-base-200 flex items-center justify-center gap-4"
+              >
+                <Icon name="ion:logo-instagram" size="30px" />
+              </div>
+              <div
+                class="p-2 cursor-pointer rounded-xl bg-base-200 flex items-center justify-center gap-4"
+              >
+                <Icon name="ion:logo-facebook" size="30px" />
+              </div>
+              <div
+                class="p-2 cursor-pointer rounded-xl bg-base-200 flex items-center justify-center gap-4"
+              >
+                <Icon name="ion:logo-youtube" size="30px" />
+              </div>
             </div>
-            <div
-              class="p-2 cursor-pointer rounded-xl bg-base-200 flex items-center justify-center gap-4"
-            >
-              <Icon name="ion:logo-facebook" size="30px" />
-            </div>
-            <div
-              class="p-2 cursor-pointer rounded-xl bg-base-200 flex items-center justify-center gap-4"
-            >
-              <Icon name="ion:logo-youtube" size="30px" />
+            <p class="pl-5 pb-1 pt-7 text-sm uppercase font-bold">
+              Subscribe to our Newsletter
+            </p>
+            <div class="form-control px-4">
+              <form @submit.prevent="subscribe" class="">
+                <input
+                  v-model="mail.value"
+                  type="text"
+                  placeholder="Your Email"
+                  class="input input-bordered w-full"
+                  @change="v$.value.$touch"
+                  :class="{
+                    'border-red-500': v$.value.$error,
+                  }"
+                />
+                <button type="submit" class="btn px-6 py-2 mt-2 w-full">
+                  Submit
+                </button>
+              </form>
+              <p
+                class="text-sm mt-2 text-center"
+                :class="
+                  res.includes('registered') ? 'text-green-600' : 'text-red-600'
+                "
+              >
+                {{ res }}
+              </p>
+              <p
+                v-if="v$.value.$error"
+                class="text-sm mt-2 text-center text-red-600"
+              >
+                Please enter a valid email.
+              </p>
             </div>
           </div>
-          <p class="pl-5 pb-1 pt-7 text-sm uppercase font-bold">
-            Subscribe to our Newsletter
-          </p>
-          <div class="form-control px-4">
-            <form @submit.prevent="subscribe" class="">
-              <input
-                v-model="mail.value"
-                type="text"
-                placeholder="Your Email"
-                class="input input-bordered w-full"
-                @change="v$.value.$touch"
-                :class="{
-                  'border-red-500': v$.value.$error,
-                }"
-              />
-              <button type="submit" class="btn px-6 py-2 mt-2 w-full">
-                Submit
-              </button>
-            </form>
-            <p
-              class="text-sm mt-2 text-center"
-              :class="
-                res.includes('registered') ? 'text-green-600' : 'text-red-600'
-              "
-            >
-              {{ res }}
-            </p>
-            <p
-              v-if="v$.value.$error"
-              class="text-sm mt-2 text-center text-red-600"
-            >
-              Please enter a valid email.
-            </p>
+          <div>
+            <p class="mt-6 mb-2 font-bold text-xl uppercase">Categories</p>
+            <div class="space-y-1.5">
+              <p
+                @click="filter = 'Temple'"
+                class="p-2 px-4 cursor-pointer font-bold rounded-lg border-2"
+              >
+                Temple
+              </p>
+              <p
+                @click="filter = 'Community'"
+                class="p-2 px-4 cursor-pointer font-bold rounded-lg border-2"
+              >
+                Community
+              </p>
+              <p
+                @click="filter = 'Farm'"
+                class="p-2 px-4 cursor-pointer font-bold rounded-lg border-2"
+              >
+                Farm
+              </p>
+            </div>
+          </div>
+          <div>
+            <p class="mt-6 mb-2 font-bold text-xl uppercase">Most Popular</p>
+            <div class="space-y-1.5">
+              <p
+                class="p-2 px-4 cursor-pointer font-bold rounded-lg bg-base-200"
+              >
+                Who is Srila Prabhupada?
+              </p>
+              <p
+                class="p-2 px-4 cursor-pointer font-bold rounded-lg bg-base-200"
+              >
+                What is Vrindavan?
+              </p>
+              <p
+                class="p-2 px-4 cursor-pointer font-bold rounded-lg bg-base-200"
+              >
+                Discovering our Goshala
+              </p>
+              <p
+                class="p-2 px-4 cursor-pointer font-bold rounded-lg bg-base-200"
+              >
+                Prasadam in Jagannatha Puri
+              </p>
+            </div>
           </div>
         </div>
       </div>

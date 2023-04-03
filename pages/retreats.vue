@@ -5,7 +5,7 @@
     >
       <div class="order-2 lg:order-1 md:px-24 lg:px-0">
         <h2 class="text-xl uppercase font-bold">Retreat Center</h2>
-        <p class="pt-3">
+        <p class="pt-3 text-lg">
           New Mayapur is situated in a haven of peace, amongst the forests and
           fields of Indre, in the center of France. What better setting to take
           a break from the hustle and bustle of your everyday life? We organize
@@ -94,7 +94,7 @@
             <Icon name="ion:calendar-outline" size="28px" />
           </div>
           <h2 class="text-xl uppercase font-bold mt-12">Upcoming Events</h2>
-          <p class="pt-3 md:w-3/4">
+          <p class="pt-3 md:w-3/4 text-lg">
             Discover the ancient science of yoga in all of its variety. From
             practicing asanas to learning the ancient philosophy of Sanskrit
             texts, or simply getting introduced to our place, we offer a variety

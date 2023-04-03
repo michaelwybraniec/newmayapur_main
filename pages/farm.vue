@@ -5,7 +5,7 @@
     >
       <div class="order-2 md:px-24 lg:px-0">
         <h2 class="text-xl uppercase font-bold">An Ecological Farm</h2>
-        <p class="pt-3">
+        <p class="pt-3 text-lg">
           New Mayapur runs an ecological, non-violent farm on its domain. Its
           goal is to provide viable solutions for tomorrow’s challenges, by
           empowering individuals with theoretical and practical knowledge
@@ -30,7 +30,7 @@
             <Icon name="ion:leaf-outline" size="28px" />
           </div>
           <h2 class="text-xl mt-12 uppercase font-bold">Self-Sufficiency</h2>
-          <p class="pt-3">
+          <p class="pt-3 text-lg">
             We have set three goals for our farm: the steady production of
             grains and dairy, along with fruits and vegetables. Those are the
             essential items needed for a community to provide for its own
@@ -42,7 +42,7 @@
             <Icon name="ion:heart-outline" size="28px" />
           </div>
           <h2 class="text-xl mt-12 uppercase font-bold">Cow Protection</h2>
-          <p class="pt-3">
+          <p class="pt-3 text-lg">
             Cow protection is an essential part of <i>vaisnava</i> culture. It
             is said that by caring for the cow, all benefits are bestowed upon
             humanity. The cow is compared to a mother as it is maintaining our
@@ -56,11 +56,11 @@
           <h2 class="text-xl mt-12 uppercase font-bold">
             Educational Initiatives
           </h2>
-          <p class="pt-3">
+          <p class="pt-3 text-lg">
             Beyond a production-driven endeavor, the farm is primarily an
             educational initiative. It is an experiment in living closer to
             nature, in harmony with its cycles and inhabitants. As such, we will
-            provide workshops and tours once our infrastructure allows it.
+            provide workshops and guided tours in the future.
           </p>
         </div>
       </div>
@@ -190,15 +190,15 @@
     >
       <div>
         <h2 class="text-xl uppercase font-bold">Volunteering</h2>
-        <p class="pt-3">
+        <p class="pt-3 text-lg">
           If you want to experience community life, pick up new skills, live
           closer to nature, make new friends and create heart-warming memories,
           why not try volunteering in New Mayapur for a couple weeks? We provide
           accommodation and vegetarian meals, and have a wide variety of tasks
-          that need to be taken care of, so that you'll never have a boring day!
+          that need to be taken care of!
         </p>
-        <button class="btn btn-primary btn-outline mt-4">Workaway</button>
-        <button class="btn btn-primary btn-outline ml-2 mt-4">Woofing</button>
+        <button class="btn btn-primary btn-outline mt-6">Workaway</button>
+        <button class="btn btn-primary btn-outline ml-2 mt-6">Woofing</button>
       </div>
       <img class="md:max-w-lg rounded-xl" src="/img/volunteer.jpg" />
     </div>

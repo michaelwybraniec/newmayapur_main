@@ -18,7 +18,10 @@
     <h1 class="text-3xl mt-16 font-bold">
       {{ post.data.attributes.Title }}
     </h1>
-    <div v-html="markdown" class="mt-6 mb-24 markdown"></div>
+    <div v-html="markdown" class="mt-6 mb-12 markdown"></div>
+    <div class="mb-24">
+      <h2 class="text-3xl font-bold">Read More</h2>
+    </div>
   </div>
 </template>
 

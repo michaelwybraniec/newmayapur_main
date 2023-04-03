@@ -64,7 +64,8 @@
             <ul class="p-2 bg-base-100 shadow-lg space-y-1">
               <li><NuxtLink to="/retreats">Retreats</NuxtLink></li>
               <li><NuxtLink to="/catering">Catering</NuxtLink></li>
-              <li><NuxtLink>Renting Venue</NuxtLink></li>
+              <li><NuxtLink to="/renting-venue">Renting Venue</NuxtLink></li>
+              <li><NuxtLink to="/food-for-life">Food For Life</NuxtLink></li>
             </ul>
           </li>
           <li tabindex="0">
@@ -146,7 +147,8 @@
           >
             <li><NuxtLink to="/retreats">Retreats</NuxtLink></li>
             <li><NuxtLink to="/catering">Catering</NuxtLink></li>
-            <li><NuxtLink>Renting Venue</NuxtLink></li>
+            <li><NuxtLink to="/renting-venue">Renting Venue</NuxtLink></li>
+            <li><NuxtLink to="/food-for-life">Food For Life</NuxtLink></li>
           </ul>
         </li>
         <li class="dropdown dropdown-end dropdown-hover">

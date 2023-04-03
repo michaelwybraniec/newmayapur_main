@@ -24,7 +24,7 @@
           <Icon name="ion:map-outline" size="28px" />
         </div>
         <h2 class="text-xl mt-12 uppercase font-bold">How to Come</h2>
-        <p class="pt-3">
+        <p class="pt-3 text-lg">
           New Mayapur is situated in a haven of peace, amongst the forests and
           fields of Indre, in the center of France. As such, it can be sometimes
           a little hard to reach, especially when coming from abroad. Find out
@@ -41,7 +41,7 @@
           <Icon name="ion:bed-outline" size="28px" />
         </div>
         <h2 class="text-xl mt-12 uppercase font-bold">Stay Over</h2>
-        <p class="pt-3">
+        <p class="pt-3 text-lg">
           Experience New Mayapur first-hand by booking a room in our fully
           furnished, comfortable <b>guest-house</b>. We have rooms for singles,
           families, travellers and everything in between. All our rooms are
@@ -54,7 +54,7 @@
           <Icon name="ion:mail-outline" size="28px" />
         </div>
         <h2 class="text-xl mt-12 uppercase font-bold">Keep in Touch</h2>
-        <p class="pt-3">
+        <p class="pt-3 text-lg">
           You have a question, or you would like to share with us your ideas and
           suggestions? Please reach out to us. We are always happy to get our
           guests feedback, and are eager to improve the quality of your stay in
@@ -75,13 +75,10 @@
       <h2 class="text-2xl font-bold border-b-2 border-base-300 pb-2">
         Upcoming Events
       </h2>
-      <ul class="mt-10">
-        <li
-          v-for="event in events.data"
-          class="mt-8 flex flex-col lg:flex-row items-start"
-        >
+      <ul class="">
+        <li v-for="event in events.data" class="mt-3 flex flex-col">
           <div
-            class="bg-primary px-2 py-0.5 rounded-md mt-0.5 text-white font-bold mr-4"
+            class="bg-primary inline-block self-end translate-y-6 lg:translate-y-4 px-4 py-1 rounded-md text-white font-bold -translate-x-8"
           >
             {{
               new Date(event.attributes.Start).toLocaleString("en-GB", {
@@ -91,7 +88,7 @@
               })
             }}
           </div>
-          <div class="lg:w-4/5 mt-2 lg:mt-0">
+          <div class="p-4 px-6 pb-5 border-2 rounded-lg mt-2 lg:mt-0">
             <NuxtLink :to="'/events/' + event.id"
               ><h3 class="font-bold text-xl pb-2">
                 {{ event.attributes.Title }}
@@ -145,7 +142,7 @@
   </div>
   <div class="bg-base-200 mx-auto pt-24 pb-32">
     <h2 class="text-3xl font-bold text-center mb-6">Contributing</h2>
-    <p class="max-w-xl pt-2 pb-2 mx-4 sm:mx-auto text-center">
+    <p class="max-w-xl pt-2 pb-2 mx-4 sm:mx-auto text-center text-lg">
       All contributions made to New Mayapur directly support the maintenance of
       the property and its residents, and are making innovative preaching
       ventures possible. Donate once or <b>become a member</b> today.
@@ -167,7 +164,7 @@
             <Icon name="ion:book-outline" size="28px" />
           </div>
           <h2 class="text-xl uppercase font-bold mt-12">Read Our Blog</h2>
-          <p class="pt-3 md:w-3/4">
+          <p class="pt-3 md:w-3/4 text-lg">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
             unde pariatur quos temporibus, blanditiis cum praesentium at non
             officiis perferendis incidunt molestias sint maiores quisquam itaque

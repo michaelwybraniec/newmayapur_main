@@ -39,7 +39,7 @@
           <Icon name="ion:airplane-outline" size="28px" />
         </div>
         <h2 class="text-xl mt-12 uppercase font-bold">By Plane</h2>
-        <p class="pt-3">
+        <p class="pt-3 text-lg">
           If you are coming from the Paris-Charles de Gaulle airport, TGVs are
           available from the airport directly to the Saint Pierre des Corps
           train station. It is also possible to reach the Paris-Austerlitz train
@@ -52,7 +52,7 @@
           <Icon name="ion:train-outline" size="28px" />
         </div>
         <h2 class="text-xl mt-12 uppercase font-bold">By Train</h2>
-        <p class="pt-3">
+        <p class="pt-3 text-lg">
           If you are coming from the Paris city-center, it is best to take a
           train to Châteauroux from the Paris-Austerlitz train station. From
           Châteauroux, buses are available, going to the following destinations:
@@ -66,7 +66,7 @@
           <Icon name="ion:car-outline" size="28px" />
         </div>
         <h2 class="text-xl mt-12 uppercase font-bold">By Car</h2>
-        <p class="pt-3">
+        <p class="pt-3 text-lg">
           From <b>Paris</b>, follow: Orléans – Vierzon – Châteauroux – Blois –
           Valençay – Luçay-le-Mâle – Ecueillé. From <b>Tours</b>, follow:
           Chateauroux – St Aignan-sur-Cher – Ecueillé. Once in Ecueillé, on the
@@ -84,7 +84,7 @@
     >
       <div class="order-2 lg:order-1 md:px-24 lg:px-0">
         <h2 class="text-xl uppercase font-bold">Contact</h2>
-        <p class="pt-3">
+        <p class="pt-3 text-lg">
           You have a question, or you would like to share with us your ideas and
           suggestions? Please reach out to us using the form below.
         </p>

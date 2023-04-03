@@ -46,7 +46,7 @@
           <Icon name="ion:musical-notes-outline" size="28px" />
         </div>
         <h2 class="text-xl mt-12 uppercase font-bold">Music Festivals</h2>
-        <p class="pt-3">
+        <p class="pt-3 text-lg">
           What better way to give a taste of Krishna Consciousness than by
           sharing prasadam with everyone? We have a dedicated group of cooks who
           are offering wholesome vegetarian meals in France's biggest music
@@ -58,7 +58,7 @@
           <Icon name="ion:pizza-outline" size="28px" />
         </div>
         <h2 class="text-xl mt-12 uppercase font-bold">Private Events</h2>
-        <p class="pt-3">
+        <p class="pt-3 text-lg">
           Are you searching for the perfect meal to compliment your wedding
           ceremony, or any other significant occasion? We also provide
           high-class, vegetarian catering services for all of your private

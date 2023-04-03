@@ -5,7 +5,7 @@
     >
       <div class="order-2 lg:order-1 md:px-24 lg:px-0">
         <h2 class="text-xl uppercase font-bold">A Spiritual Village</h2>
-        <p class="pt-3">
+        <p class="pt-3 text-lg">
           New Mayapur, beyond being a temple, is a village comprising people
           from all walks of life. Our domain is a large property that
           accommodates bhakti-yoga practitioners, volunteers and visitors alike.
@@ -31,12 +31,11 @@
         <h2 class="text-xl mt-12 uppercase font-bold">
           An International Community
         </h2>
-        <p class="pt-3">
+        <p class="pt-3 text-lg">
           There are numerous people engaged in making New Mayapur a vibrant
           society. They are on-site residents, inhabitants of neighboring
-          villages and towns, and even citizens of countries far abroad! As
-          Srila Prabhupada said, New Mayapur should be a house
-          <i>where the whole world can live</i>.
+          villages, and even citizens of countries far abroad! New Mayapur truly
+          is a house <i>where the whole world can live</i>.
         </p>
       </div>
       <div class="md:px-24 lg:px-0 mb-24 lg:mb-0">
@@ -46,7 +45,7 @@
         <h2 class="text-xl mt-12 uppercase font-bold">
           Creating Beautiful Memories
         </h2>
-        <p class="pt-3">
+        <p class="pt-3 text-lg">
           A place would be nothing without the memories and relationships it
           creates. New Mayapur is a positive and engaging environment, where
           every exchange is an opportunity to grow, and where every day is a new
@@ -58,7 +57,7 @@
           <Icon name="ion:leaf-outline" size="28px" />
         </div>
         <h2 class="text-xl mt-12 uppercase font-bold">Striving For Ecology</h2>
-        <p class="pt-3">
+        <p class="pt-3 text-lg">
           According to the <i>Vedas</i>, the Earth is to be considered as a
           mother, supplying everyone with the means for maintaining themselves.
           As such, we are striving to make New Mayapur a shining example of a
@@ -74,7 +73,7 @@
       >
         <div class="order-2 md:px-24 lg:px-0">
           <h2 class="text-xl uppercase font-bold">A Place for Everyone</h2>
-          <p class="pt-3">
+          <p class="pt-3 text-lg">
             New Mayapur is unique, as our community is made of people from
             several generations. From toddlers to seniors, we are learning
             everyday to live and thrive together, by communicating openly and
@@ -92,11 +91,10 @@
   </div>
   <div class="pb-32 py-28 lg:w-[1280px] mx-auto">
     <h2 class="text-2xl font-bold text-center mb-2">Current Projects</h2>
-    <p class="max-w-xl pt-2 pb-2 md:mx-auto text-center mb-16 mx-4lay">
+    <p class="max-w-xl pt-2 pb-2 md:mx-auto text-center mb-16 mx-4 text-lg">
       Meeting the needs of those who are close to us is an essential part of
       <i>vaisnava</i> culture. We are always eager to improve our domain, by
-      making it a place respectul of the environment and self-sustainable in
-      most areas.
+      making it respectul of the environment and self-sustainable.
     </p>
     <div
       class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 container gap-16 mt-20 mb-12"
