@@ -4,14 +4,14 @@
       <h1 class="font-bold text-3xl mb-8 cursor-pointer" @click="filter = ''">
         Our Blog
       </h1>
-      <div class="grid grid-cols-1 lg:grid-cols-3 items-start gap-16 mt-12">
+      <div class="grid grid-cols-1 lg:grid-cols-3 items-start gap-8 mt-12">
         <div class="lg:col-span-2 max-lg:order-2 space-y-4">
           <h2
             class="font-bold text-xl uppercase pb-2 border-b-2 border-base-300"
           >
             All Articles
           </h2>
-          <div v-for="post in posts.data">
+          <div v-if="posts.data.length > 0" v-for="post in posts.data">
             <div class="card sm:card-side bg-base-100 border-2 border-base-200">
               <figure class="sm:w-[1200px]">
                 <img
@@ -41,6 +41,17 @@
                   >
                 </div>
               </div>
+            </div>
+          </div>
+          <div v-else class="mx-auto pt-44 mb-10">
+            <div class="flex items-center flex-col">
+              <div class="p-5 pb-5 mx-auto inline bg-base-200 rounded-xl mb-10">
+                <Icon name="ion:close-outline" size="28px" />
+              </div>
+              <h2 class="text-2xl font-bold uppercase mb-3">Oops!</h2>
+              <p class="text-lg text-center">
+                It looks like what you're searching for does not exist.
+              </p>
             </div>
           </div>
         </div>

@@ -85,7 +85,7 @@
     </div>
   </div>
   <div>
-    <div class="mx-auto pb-32 lg:px-16">
+    <div class="mx-auto pb-32 lg:px-6 2xl:px-16">
       <div class="md:px-24 mx-4 lg:px-0 lg:flex flex-col lg:items-center mb-20">
         <div class="p-5 pb-6 lg:pb-4 inline bg-base-200 rounded-xl">
           <Icon name="ion:calendar-outline" size="28px" />
@@ -99,11 +99,11 @@
         </p>
       </div>
       <div
-        class="grid grid-cols-1 lg:grid-cols-3 mx-auto 2xl:w-[1300px] px-4 lg:px-20 items-center gap-x-4"
+        class="grid grid-cols-1 lg:grid-cols-3 mx-auto 2xl:w-[1300px] px-4 2xl:px-20 items-center gap-x-4"
       >
         <div
           v-for="event in events.data"
-          class="card mt-6 lg:h-[470px] xl:h-[430px] md:mx-auto max-w-sm bg-base-100 shadow-xl"
+          class="card mt-6 h-[430px] md:mx-auto max-w-sm bg-base-100 shadow-xl"
         >
           <figure>
             <img

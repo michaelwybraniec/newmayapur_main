@@ -8,9 +8,9 @@
       class="md:max-w-[750px] mt-20 mb-4 sm:mx-auto rounded-xl"
     />
   </div>
-  <div class="pb-32 py-28 lg:px-10">
+  <div class="pb-32 py-28 2xl:px-10">
     <div
-      class="grid grid-cols-1 lg:grid-cols-2 px-4 lg:px-20 items-start gap-x-16"
+      class="grid grid-cols-1 lg:grid-cols-2 px-4 lg:gap-x-10 2xl:px-20 items-start 2xl:gap-x-16"
     >
       <div class="md:px-36 lg:px-0 mb-24 lg:mb-0">
         <div class="p-5 pb-6 mx-auto inline bg-base-200 rounded-xl mb-16">

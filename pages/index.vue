@@ -15,9 +15,9 @@
       </div>
     </div>
   </div>
-  <div class="pb-24 pt-36 lg:px-10">
+  <div class="pb-24 pt-36 2xl:px-10">
     <div
-      class="grid grid-cols-1 lg:grid-cols-3 px-4 lg:px-20 items-start gap-x-16"
+      class="grid grid-cols-1 lg:grid-cols-3 px-4 lg:gap-x-10 2xl:px-20 items-start 2xl:gap-x-16"
     >
       <div class="order-2 lg:order-1 md:px-24 lg:px-0 mb-24 lg:mb-0">
         <div class="p-5 pb-6 mx-auto inline bg-base-200 rounded-xl mb-16">
@@ -69,7 +69,7 @@
     </div>
   </div>
   <div
-    class="pb-32 lg:pt-24 lg:px-28 grid grid-cols-1 mx-4 lg:mx-0 lg:grid-cols-2 gap-24"
+    class="pb-32 lg:pt-24 lg:px-4 2xl:px-28 grid grid-cols-1 mx-4 lg:mx-0 lg:grid-cols-2 gap-6 2xl:gap-24"
   >
     <div>
       <h2 class="text-2xl font-bold border-b-2 border-base-300 pb-2">
@@ -158,7 +158,7 @@
     </div>
   </div>
   <div class="">
-    <div class="mx-auto py-32 lg:px-16">
+    <div class="mx-auto py-32 lg:px-1.5 xl:px-12 2xl:px-16">
       <div class="md:px-24 mx-4 lg:px-0 lg:flex flex-col lg:items-center mb-20">
         <div class="p-5 pb-6 lg:pb-4 inline bg-base-200 rounded-xl">
           <Icon name="ion:book-outline" size="28px" />
@@ -173,11 +173,11 @@
         </p>
       </div>
       <div
-        class="grid grid-cols-1 lg:grid-cols-3 mx-auto 2xl:w-[1300px] px-4 lg:px-20 items-center gap-x-4"
+        class="grid grid-cols-1 lg:grid-cols-3 mx-auto 2xl:w-[1300px] px-4 2xl:px-20 items-center gap-x-4"
       >
         <div
           v-for="post in posts.data"
-          class="card mt-6 lg:h-[470px] xl:h-[430px] md:mx-auto max-w-sm bg-base-100 shadow-xl"
+          class="card mt-6 h-[430px] md:mx-auto max-w-sm bg-base-100 shadow-xl"
         >
           <figure>
             <img
@@ -193,7 +193,7 @@
             <h2 class="card-title">
               {{ post.attributes.Title.substr(0, 14) + "..." }}
               <div
-                class="badge border-none lg:hidden xl:block"
+                class="badge border-none"
                 :class="setTagsBg(post.attributes.Category)"
               >
                 #{{ post.attributes.Category }}

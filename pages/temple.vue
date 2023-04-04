@@ -23,9 +23,9 @@
       </div>
     </div>
   </div>
-  <div class="pb-32 py-28 lg:px-10 bg-base-200">
+  <div class="pb-32 py-28 2xl:px-10 bg-base-200">
     <div
-      class="grid grid-cols-1 lg:grid-cols-3 px-4 lg:px-20 items-start gap-x-16"
+      class="grid grid-cols-1 lg:grid-cols-3 px-4 lg:gap-x-10 2xl:px-20 items-start 2xl:gap-x-16"
     >
       <div class="order-2 lg:order-1 md:px-24 lg:px-0 mb-24 lg:mb-0">
         <div class="p-5 pb-6 mx-auto inline bg-base-100 rounded-xl mb-16">
@@ -287,9 +287,9 @@
       </div>
     </div>
   </div>
-  <div class="pt-20 pb-36 lg:px-16">
+  <div class="pt-20 pb-36 2xl:px-16">
     <div
-      class="grid grid-rows-1 lg:grid-cols-2 items-center px-4 lg:px-20 gap-x-28"
+      class="grid grid-rows-1 lg:grid-cols-2 items-center px-4 2xl:px-20 gap-x-28"
     >
       <div class="order-2 lg:order-1 md:px-24 lg:px-0">
         <div>

@@ -20,9 +20,9 @@
       />
     </div>
   </div>
-  <div class="pb-32 py-28 lg:px-10">
+  <div class="pb-32 py-28 2xl:px-10">
     <div
-      class="grid grid-cols-1 lg:grid-cols-3 px-4 lg:px-20 items-start gap-x-16"
+      class="grid grid-cols-1 lg:grid-cols-3 px-4 2xl:px-20 items-start lg:gap-x-10 2xl:gap-x-16"
     >
       <div class="md:px-24 lg:px-0 mb-24 lg:mb-0">
         <div class="p-5 pb-6 mx-auto inline bg-base-200 rounded-xl mb-16">
@@ -34,8 +34,8 @@
         <p class="pt-3 text-lg">
           There are numerous people engaged in making New Mayapur a vibrant
           society. They are on-site residents, inhabitants of neighboring
-          villages, and even citizens of countries far abroad! New Mayapur truly
-          is a house <i>where the whole world can live</i>.
+          villages, and even citizens of countries far abroad! New Mayapur is a
+          house <i>where everyone can live</i>.
         </p>
       </div>
       <div class="md:px-24 lg:px-0 mb-24 lg:mb-0">
