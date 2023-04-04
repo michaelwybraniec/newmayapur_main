@@ -1,9 +1,9 @@
 <template>
   <div class="bg-base-200 py-28 lg:px-16">
     <div
-      class="grid grid-rows-1 lg:grid-cols-2 px-4 lg:px-20 items-center gap-x-4"
+      class="grid grid-rows-1 2xl:grid-cols-2 px-4 2xl:px-20 items-center gap-x-4"
     >
-      <div class="order-2 lg:order-1 md:px-24 lg:px-0">
+      <div class="order-2 2xl:order-1 md:px-24 2xl:px-0">
         <h2 class="text-xl uppercase font-bold">Retreat Center</h2>
         <p class="pt-3 text-lg">
           New Mayapur is situated in a haven of peace, amongst the forests and
@@ -15,7 +15,7 @@
         </p>
       </div>
       <img
-        class="order-1 lg:max-w-lg max-w-xs md:max-w-md lg:order-2 mb-12 lg:mb-0 md:mb-24 lg:ml-auto lg:mr-0 mx-auto rounded-lg"
+        class="order-1 lg:max-w-lg max-w-xs md:max-w-md 2xl:order-2 mb-12 2xl:mb-0 md:mb-24 2xl:ml-auto 2xl:mr-0 mx-auto rounded-lg"
         src="/img/meditation.jpg"
       />
     </div>
@@ -85,25 +85,25 @@
     </div>
   </div>
   <div>
-    <div class="mx-auto py-32 pt-8 lg:px-16">
-      <div
-        class="grid grid-cols-1 lg:grid-cols-4 px-4 lg:px-20 items-center gap-x-4"
-      >
-        <div class="md:px-24 lg:px-0 lg:col-span-2">
-          <div class="p-5 pb-6 mx-auto inline bg-base-200 rounded-xl mb-16">
-            <Icon name="ion:calendar-outline" size="28px" />
-          </div>
-          <h2 class="text-xl uppercase font-bold mt-12">Upcoming Events</h2>
-          <p class="pt-3 md:w-3/4 text-lg">
-            Discover the ancient science of yoga in all of its variety. From
-            practicing asanas to learning the ancient philosophy of Sanskrit
-            texts, or simply getting introduced to our place, we offer a variety
-            of events all year round.
-          </p>
+    <div class="mx-auto pb-32 lg:px-16">
+      <div class="md:px-24 mx-4 lg:px-0 lg:flex flex-col lg:items-center mb-20">
+        <div class="p-5 pb-6 lg:pb-4 inline bg-base-200 rounded-xl">
+          <Icon name="ion:calendar-outline" size="28px" />
         </div>
+        <h2 class="text-xl uppercase font-bold mt-8">Upcoming Events</h2>
+        <p class="pt-3 lg:w-[800px] lg:text-center text-lg mt-2">
+          Discover the ancient science of yoga in all of its variety. From
+          practicing asanas to learning the ancient philosophy of Sanskrit
+          texts, or simply getting introduced to our place, we offer a variety
+          of events all year round.
+        </p>
+      </div>
+      <div
+        class="grid grid-cols-1 lg:grid-cols-3 mx-auto 2xl:w-[1300px] px-4 lg:px-20 items-center gap-x-4"
+      >
         <div
           v-for="event in events.data"
-          class="card mt-6 md:mx-auto lg:mx-0 max-w-sm bg-base-100 shadow-xl"
+          class="card mt-6 lg:h-[470px] xl:h-[430px] md:mx-auto max-w-sm bg-base-100 shadow-xl"
         >
           <figure>
             <img
@@ -142,7 +142,7 @@ const res = ref("");
 
 const events = await find("events", {
   pagination: {
-    pageSize: 2,
+    pageSize: 3,
     page: 1,
   },
   populate: "Thumbnail",

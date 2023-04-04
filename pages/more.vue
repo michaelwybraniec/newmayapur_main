@@ -19,7 +19,7 @@
       >
     </l-map>
   </div>
-  <div class="py-24 pb-32 lg:px-10">
+  <div class="py-24 pb-32 2xl:px-10">
     <h2 class="text-3xl font-bold text-center mb-16">How to Reach Us</h2>
     <div
       class="mb-32 border-2 flex gap-4 border-base-300 px-5 py-4 rounded-lg max-w-lg mx-4 md:mx-auto"
@@ -32,7 +32,7 @@
       >
     </div>
     <div
-      class="grid grid-cols-1 lg:grid-cols-3 px-4 lg:px-20 items-start gap-x-16"
+      class="grid grid-cols-1 lg:grid-cols-3 px-4 md:px-12 2xl:px-20 items-start gap-x-16"
     >
       <div class="order-2 lg:order-1 md:px-24 lg:px-0 mb-24 lg:mb-0">
         <div class="p-5 pb-6 mx-auto inline bg-base-200 rounded-xl mb-16">
@@ -78,9 +78,9 @@
       </div>
     </div>
   </div>
-  <div class="bg-base-200 py-32 lg:px-16">
+  <div class="bg-base-200 py-32 2xl:px-16">
     <div
-      class="grid grid-rows-1 lg:grid-cols-2 px-4 lg:px-20 items-start gap-x-32"
+      class="grid grid-rows-1 lg:grid-cols-2 px-4 md:px-12 2xl:px-20 items-start gap-x-32"
     >
       <div class="order-2 lg:order-1 md:px-24 lg:px-0">
         <h2 class="text-xl uppercase font-bold">Contact</h2>
@@ -131,7 +131,7 @@
           </div>
         </div>
         <form class="mt-6" @submit.prevent="sendEmail">
-          <div class="grid grid-cols-2 gap-2">
+          <div class="grid 2xl:grid-cols-2 gap-2">
             <div>
               <input
                 type="text"
@@ -192,7 +192,7 @@
       </div>
       <div class="order-1 lg:order-2 md:px-24 lg:px-0" id="contact">
         <h2 class="text-xl uppercase font-bold">Find us Online</h2>
-        <div class="grid grid-col-1 mb-12 md:grid-cols-3 gap-3 mt-8">
+        <div class="grid grid-col-1 mb-12 2xl:grid-cols-3 gap-3 mt-8">
           <div
             class="p-4 rounded-xl bg-base-100 flex items-center justify-center gap-4"
           >

@@ -41,9 +41,9 @@
   </div>
   <div class="bg-base-200 py-28 lg:px-16">
     <div
-      class="grid grid-rows-1 lg:grid-cols-2 px-4 lg:px-20 items-center gap-x-4"
+      class="grid grid-rows-1 2xl:grid-cols-2 px-4 2xl:px-20 items-center gap-x-4"
     >
-      <div class="order-2 lg:order-1 md:px-24 lg:px-0">
+      <div class="order-2 2xl:order-1 md:px-24 2xl:px-0">
         <h2 class="text-xl uppercase font-bold">What is Food for Life?</h2>
         <p class="pt-3 text-lg">
           Food for Life is an international ISKCON initiative for providing food
@@ -55,12 +55,14 @@
         </p>
       </div>
       <img
-        class="order-1 lg:max-w-lg max-w-xs md:max-w-md lg:order-2 mb-12 lg:mb-0 md:mb-24 lg:ml-auto lg:mr-0 mx-auto rounded-lg"
+        class="order-1 lg:max-w-lg max-w-xs md:max-w-md 2xl:order-2 mb-12 2xl:mb-0 md:mb-24 2xl:ml-auto 2xl:mr-0 mx-auto rounded-lg"
         src="/img/ffl.jpg"
       />
     </div>
   </div>
-  <div class="py-24 px-4 lg:px-44 grid md:grid-cols-2 gap-24 items-center">
+  <div
+    class="py-24 px-4 md:px-12 2xl:px-44 grid md:grid-cols-2 gap-24 items-center"
+  >
     <div>
       <img
         src="/img/prabhupada.jpg"

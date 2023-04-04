@@ -9,7 +9,7 @@
           <h2
             class="font-bold text-xl uppercase pb-2 border-b-2 border-base-300"
           >
-            Latest Articles
+            All Articles
           </h2>
           <div v-for="post in posts.data">
             <div class="card sm:card-side bg-base-100 border-2 border-base-200">

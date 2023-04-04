@@ -1,39 +1,41 @@
 <template>
-  <div class="carousel max-w-[800px] mx-auto rounded-xl mt-20">
-    <div id="slide1" class="carousel-item relative w-full">
-      <img src="https://picsum.photos/1920/1080" class="w-full" />
-      <div
-        class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
-      >
-        <a href="#slide4" class="btn btn-circle">❮</a>
-        <a href="#slide2" class="btn btn-circle">❯</a>
+  <div class="mx-4">
+    <div class="carousel max-w-[800px] mx-auto rounded-xl mt-20">
+      <div id="slide1" class="carousel-item relative w-full">
+        <img src="https://picsum.photos/1920/1080" class="w-full" />
+        <div
+          class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+        >
+          <a href="#slide4" class="btn btn-circle">❮</a>
+          <a href="#slide2" class="btn btn-circle">❯</a>
+        </div>
       </div>
-    </div>
-    <div id="slide2" class="carousel-item relative w-full">
-      <img src="https://picsum.photos/1920/1080" class="w-full" />
-      <div
-        class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
-      >
-        <a href="#slide1" class="btn btn-circle">❮</a>
-        <a href="#slide3" class="btn btn-circle">❯</a>
+      <div id="slide2" class="carousel-item relative w-full">
+        <img src="https://picsum.photos/1920/1080" class="w-full" />
+        <div
+          class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+        >
+          <a href="#slide1" class="btn btn-circle">❮</a>
+          <a href="#slide3" class="btn btn-circle">❯</a>
+        </div>
       </div>
-    </div>
-    <div id="slide3" class="carousel-item relative w-full">
-      <img src="https://picsum.photos/1920/1080" class="w-full" />
-      <div
-        class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
-      >
-        <a href="#slide2" class="btn btn-circle">❮</a>
-        <a href="#slide4" class="btn btn-circle">❯</a>
+      <div id="slide3" class="carousel-item relative w-full">
+        <img src="https://picsum.photos/1920/1080" class="w-full" />
+        <div
+          class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+        >
+          <a href="#slide2" class="btn btn-circle">❮</a>
+          <a href="#slide4" class="btn btn-circle">❯</a>
+        </div>
       </div>
-    </div>
-    <div id="slide4" class="carousel-item relative w-full">
-      <img src="https://picsum.photos/1920/1080" class="w-full" />
-      <div
-        class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
-      >
-        <a href="#slide3" class="btn btn-circle">❮</a>
-        <a href="#slide1" class="btn btn-circle">❯</a>
+      <div id="slide4" class="carousel-item relative w-full">
+        <img src="https://picsum.photos/1920/1080" class="w-full" />
+        <div
+          class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+        >
+          <a href="#slide3" class="btn btn-circle">❮</a>
+          <a href="#slide1" class="btn btn-circle">❯</a>
+        </div>
       </div>
     </div>
   </div>
@@ -70,7 +72,7 @@
   </div>
   <div class="bg-base-200 pb-28 py-28 lg:px-10">
     <h2 class="text-2xl font-bold text-center mb-2">Our Menus</h2>
-    <div class="pb-16 py-16 lg:px-10">
+    <div class="lg:pb-16 pt-16 lg:px-10">
       <div
         class="grid grid-cols-1 lg:grid-cols-2 px-4 lg:px-20 items-start gap-x-16"
       >
@@ -125,7 +127,7 @@
         </div>
       </div>
     </div>
-    <div class="pb-16 py-16 lg:px-10">
+    <div class="lg:pb-16 lg:py-16 lg:px-10">
       <div
         class="grid grid-cols-1 lg:grid-cols-2 px-4 lg:px-20 items-start gap-x-16"
       >
