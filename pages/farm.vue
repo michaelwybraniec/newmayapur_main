@@ -1,9 +1,9 @@
 <template>
-  <div class="mx-auto py-28 lg:px-16">
+  <div class="mx-auto py-28 2xl:px-16">
     <div
-      class="grid grid-rows-1 lg:grid-cols-2 px-4 lg:px-20 items-center gap-x-4"
+      class="grid grid-rows-1 2xl:grid-cols-2 px-4 2xl:px-20 items-center gap-x-4"
     >
-      <div class="order-2 md:px-24 lg:px-0">
+      <div class="order-2 md:px-24 2xl:px-0">
         <h2 class="text-xl uppercase font-bold">An Ecological Farm</h2>
         <p class="pt-3 text-lg">
           New Mayapur runs an ecological, non-violent farm on its domain. Its
@@ -15,7 +15,7 @@
         </p>
       </div>
       <img
-        class="order-1 max-w-xs md:max-w-lg mb-12 lg:mb-0 mx-auto md:mb-24 lg:mr-auto lg:ml-0 rounded-lg"
+        class="order-1 max-w-xs md:max-w-lg mb-12 2xl:mb-0 mx-auto md:mb-24 2xl:mr-auto 2xl:ml-0 rounded-lg"
         src="/img/bulls.jpeg"
       />
     </div>
@@ -186,7 +186,7 @@
   </div>
   <div class="bg-base-200 py-28 lg:px-16">
     <div
-      class="xl:w-[1200px] flex flex-col-reverse xl:flex-row items-center gap-8 lg:gap-20 xl:mx-auto bg-base-100 rounded-2xl p-6 mx-4 md:p-10"
+      class="2xl:w-[1200px] shadow-lg flex flex-col-reverse xl:flex-row items-center gap-8 lg:gap-20 xl:mx-auto bg-base-100 rounded-2xl p-4 md:p-6 mx-4"
     >
       <div>
         <h2 class="text-xl uppercase font-bold">Volunteering</h2>
