@@ -75,8 +75,8 @@
       <h2 class="text-2xl font-bold border-b-2 border-base-300 pb-2">
         Upcoming Events
       </h2>
-      <ul class="">
-        <li v-for="event in events.data" class="mt-3 flex flex-col">
+      <ul>
+        <li v-for="event in events.data" class="flex flex-col">
           <div
             class="bg-primary inline-block self-end translate-y-6 lg:translate-y-4 px-4 py-1 rounded-md text-white font-bold -translate-x-8"
           >
@@ -144,37 +144,40 @@
     <h2 class="text-3xl font-bold text-center mb-6">Contributing</h2>
     <p class="max-w-xl pt-2 pb-2 mx-4 sm:mx-auto text-center text-lg">
       All contributions made to New Mayapur directly support the maintenance of
-      the property and its residents, and are making innovative preaching
-      ventures possible. Donate once or <b>become a member</b> today.
+      and preaching activities of its residents. Donate once or
+      <b>become a member</b> today.
     </p>
-    <div
-      class="p-7 rounded-xl shadow-md bg-base-100 mt-12 mx-4 lg:w-1/3 lg:mx-auto"
-    >
-      <img class="mb-6 mx-auto rounded-lg" src="/img/contribute.jpg" />
-      <button class="btn btn-secondary ml-auto block">Donate Now</button>
+    <div class="mt-12 mx-4 xl:w-1/2 2xl:w-1/3 lg:mx-auto">
+      <img
+        class="mb-12 mx-auto rounded-lg shadow-lg"
+        src="/img/contribute.jpg"
+      />
+      <button class="btn btn-secondary w-64 md:w-96 mx-auto block">
+        Donate Now
+      </button>
     </div>
   </div>
   <div class="">
     <div class="mx-auto py-32 lg:px-16">
-      <div
-        class="grid grid-cols-1 lg:grid-cols-4 px-4 lg:px-20 items-center gap-x-4"
-      >
-        <div class="md:px-24 lg:px-0 lg:col-span-2">
-          <div class="p-5 pb-6 mx-auto inline bg-base-200 rounded-xl mb-16">
-            <Icon name="ion:book-outline" size="28px" />
-          </div>
-          <h2 class="text-xl uppercase font-bold mt-12">Read Our Blog</h2>
-          <p class="pt-3 md:w-3/4 text-lg">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
-            unde pariatur quos temporibus, blanditiis cum praesentium at non
-            officiis perferendis incidunt molestias sint maiores quisquam itaque
-            mollitia est consectetur dignissimos deserunt, omnis iste. Deserunt,
-            quaerat!
-          </p>
+      <div class="md:px-24 mx-4 lg:px-0 lg:flex flex-col lg:items-center mb-20">
+        <div class="p-5 pb-6 lg:pb-4 inline bg-base-200 rounded-xl">
+          <Icon name="ion:book-outline" size="28px" />
         </div>
+        <h2 class="text-xl uppercase font-bold mt-8">Read Our Blog</h2>
+        <p class="pt-3 lg:w-[800px] lg:text-center text-lg mt-2">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
+          unde pariatur quos temporibus, blanditiis cum praesentium at non
+          officiis perferendis incidunt molestias sint maiores quisquam itaque
+          mollitia est consectetur dignissimos deserunt, omnis iste. Deserunt,
+          quaerat!
+        </p>
+      </div>
+      <div
+        class="grid grid-cols-1 lg:grid-cols-3 mx-auto 2xl:w-[1300px] px-4 lg:px-20 items-center gap-x-4"
+      >
         <div
           v-for="post in posts.data"
-          class="card mt-6 md:mx-auto lg:mx-0 max-w-sm bg-base-100 shadow-xl"
+          class="card mt-6 lg:h-[470px] xl:h-[430px] md:mx-auto max-w-sm bg-base-100 shadow-xl"
         >
           <figure>
             <img
@@ -188,9 +191,9 @@
           </figure>
           <div class="card-body">
             <h2 class="card-title">
-              {{ post.attributes.Title.substr(0, 16) + "..." }}
+              {{ post.attributes.Title.substr(0, 14) + "..." }}
               <div
-                class="badge border-none"
+                class="badge border-none lg:hidden xl:block"
                 :class="setTagsBg(post.attributes.Category)"
               >
                 #{{ post.attributes.Category }}
@@ -291,7 +294,7 @@ const events = await find("events", {
 
 const posts = await find("posts", {
   pagination: {
-    pageSize: 2,
+    pageSize: 3,
     page: 1,
   },
   populate: "Thumbnail",

@@ -1,10 +1,10 @@
 <template>
   <div class="">
-    <div class="mx-auto py-28 lg:px-16">
+    <div class="mx-auto py-28 2xl:px-16">
       <div
-        class="grid grid-rows-1 lg:grid-cols-2 px-4 lg:px-20 items-center gap-x-4"
+        class="grid grid-rows-1 xl:grid-cols-2 px-4 lg:px-20 items-center gap-x-4"
       >
-        <div class="order-2 md:px-24 lg:px-0">
+        <div class="order-2 md:px-24 xl:px-0">
           <h2 class="text-xl uppercase font-bold">A Castle & Temple</h2>
           <p class="pt-3 text-lg">
             The Château d’Oublaise, now known as New Mayapur, is situated in the
@@ -17,7 +17,7 @@
           </p>
         </div>
         <img
-          class="order-1 max-w-xs md:max-w-lg mb-12 lg:mb-0 mx-auto md:mb-24 lg:mr-auto lg:ml-0 rounded-lg"
+          class="order-1 max-w-xs md:max-w-lg mb-12 xl:mb-0 mx-auto md:mb-24 lg:mr-auto xl:ml-0 rounded-lg"
           src="/img/deities.jpg"
         />
       </div>
@@ -181,11 +181,11 @@
       </div>
     </div>
   </div>
-  <div class="bg-base-200 py-32 lg:px-16">
+  <div class="bg-base-200 py-32 2xl:px-16">
     <div
-      class="grid grid-rows-1 lg:grid-cols-2 px-4 lg:px-20 items-center gap-x-4"
+      class="grid grid-rows-1 xl:grid-cols-2 px-4 lg:px-20 items-center gap-x-4"
     >
-      <div class="order-2 lg:order-1 md:px-24 lg:px-0">
+      <div class="order-2 xl:order-1 md:px-24 xl:px-0">
         <h2 class="text-xl uppercase font-bold">Spiritual Life</h2>
         <p class="pt-3 text-lg">
           In New Mayapur, you will find people practicing what is called
@@ -200,7 +200,7 @@
         </p>
       </div>
       <img
-        class="order-1 max-w-xs lg:max-w-lg md:max-w-md lg:order-2 mb-12 lg:mb-0 md:mb-24 lg:ml-auto lg:mr-0 mx-auto rounded-lg"
+        class="order-1 max-w-xs xl:max-w-lg md:max-w-md mb-12 xl:mb-0 md:mb-24 xl:ml-auto xl:mr-0 mx-auto rounded-lg"
         src="/img/sanskrit.jpg"
       />
     </div>

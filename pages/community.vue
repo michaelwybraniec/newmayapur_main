@@ -1,9 +1,9 @@
 <template>
   <div class="bg-base-200 py-28 lg:px-16">
     <div
-      class="grid grid-rows-1 lg:grid-cols-2 px-4 lg:px-20 items-center gap-x-4"
+      class="grid grid-rows-1 2xl:grid-cols-2 px-4 xl:px-20 items-center gap-x-4"
     >
-      <div class="order-2 lg:order-1 md:px-24 lg:px-0">
+      <div class="order-2 2xl:order-1 md:px-24 lg:px-0">
         <h2 class="text-xl uppercase font-bold">A Spiritual Village</h2>
         <p class="pt-3 text-lg">
           New Mayapur, beyond being a temple, is a village comprising people
@@ -15,7 +15,7 @@
         </p>
       </div>
       <img
-        class="order-1 lg:max-w-lg max-w-xs md:max-w-md lg:order-2 mb-12 lg:mb-0 md:mb-24 lg:ml-auto lg:mr-0 mx-auto rounded-lg"
+        class="order-1 lg:max-w-lg max-w-xs md:max-w-md 2xl:order-2 mb-12 2xl:mb-0 md:mb-24 2xl:ml-auto 2xl:mr-0 mx-auto rounded-lg"
         src="/img/kids.jpeg"
       />
     </div>
@@ -69,9 +69,9 @@
   <div class="bg-base-200">
     <div class="mx-auto py-28 lg:px-16">
       <div
-        class="grid grid-rows-1 lg:grid-cols-2 px-4 lg:px-20 items-center gap-x-4"
+        class="grid grid-rows-1 2xl:grid-cols-2 px-4 2xl:px-20 items-center gap-x-4"
       >
-        <div class="order-2 md:px-24 lg:px-0">
+        <div class="order-2 md:px-24 2xl:px-0">
           <h2 class="text-xl uppercase font-bold">A Place for Everyone</h2>
           <p class="pt-3 text-lg">
             New Mayapur is unique, as our community is made of people from
@@ -83,23 +83,23 @@
           </p>
         </div>
         <img
-          class="order-1 max-w-xs md:max-w-lg mb-12 lg:mb-0 mx-auto md:mb-24 lg:mr-auto lg:ml-0 rounded-lg"
+          class="order-1 max-w-xs md:max-w-lg mb-12 2xl:mb-0 mx-auto md:mb-24 2xl:mr-auto 2xl:ml-0 rounded-lg"
           src="/img/generations.jpg"
         />
       </div>
     </div>
   </div>
-  <div class="pb-32 py-28 lg:w-[1280px] mx-auto">
+  <div class="pb-32 py-28 2xl:w-[1280px] mx-4 2xl:mx-auto">
     <h2 class="text-2xl font-bold text-center mb-2">Current Projects</h2>
-    <p class="max-w-xl pt-2 pb-2 md:mx-auto text-center mb-16 mx-4 text-lg">
+    <p class="max-w-xl pt-2 pb-2 sm:mx-auto text-center mb-16 mx-4 text-lg">
       Meeting the needs of those who are close to us is an essential part of
       <i>vaisnava</i> culture. We are always eager to improve our domain, by
       making it respectul of the environment and self-sustainable.
     </p>
     <div
-      class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 container gap-16 mt-20 mb-12"
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-auto container gap-4 gap-y-6 2xl:gap-16 mt-20 mb-12"
     >
-      <div class="card w-96 mx-auto bg-base-100 shadow-xl">
+      <div class="card max-w-md mx-auto bg-base-100 shadow-xl">
         <img
           src="/img/kids.jpeg"
           alt="Thumbnail"
@@ -114,7 +114,7 @@
           <button class="btn btn-primary mt-4">Read More</button>
         </div>
       </div>
-      <div class="card w-96 mx-auto bg-base-100 shadow-xl">
+      <div class="card max-w-md mx-auto bg-base-100 shadow-xl">
         <img
           src="/img/kids.jpeg"
           alt="Thumbnail"
@@ -129,7 +129,7 @@
           <button class="btn btn-primary mt-4">Read More</button>
         </div>
       </div>
-      <div class="card w-96 mx-auto bg-base-100 shadow-xl">
+      <div class="card max-w-md mx-auto bg-base-100 shadow-xl">
         <img
           src="/img/kids.jpeg"
           alt="Thumbnail"

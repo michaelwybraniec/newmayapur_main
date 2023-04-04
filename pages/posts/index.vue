@@ -1,6 +1,6 @@
 <template>
   <div class="py-16">
-    <div class="xl:w-[1280px] mx-4 xl:mx-auto">
+    <div class="xl:w-[1200px] mx-4 xl:mx-auto">
       <h1 class="font-bold text-3xl mb-8 cursor-pointer" @click="filter = ''">
         Our Blog
       </h1>

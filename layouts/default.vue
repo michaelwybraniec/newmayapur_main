@@ -179,7 +179,7 @@
   <slot />
 
   <footer
-    class="footer text-base px-8 py-20 lg:px-56 bg-neutral text-neutral-content"
+    class="footer text-base px-8 py-20 md:px-4 lg:px-32 2xl:px-56 bg-neutral text-neutral-content"
   >
     <div>
       <div class="grid grid-flow-col gap-4 mb-4">
