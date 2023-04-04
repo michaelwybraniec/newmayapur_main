@@ -1,6 +1,6 @@
 <template>
   <div class="py-16 mx-4">
-    <div class="xl:w-[1300px] mx-auto">
+    <div class="xl:w-[1250px] mx-auto">
       <h1 class="font-bold uppercase border-b-2 pb-1.5 text-2xl mb-5">
         All Events
       </h1>
@@ -49,7 +49,7 @@
       >
         <div
           v-for="event in events.data"
-          class="card max-w-md max-mdmx-auto bg-base-100 shadow-xl"
+          class="card max-w-md max-md mx-auto bg-base-100 shadow-xl"
         >
           <img
             :src="
