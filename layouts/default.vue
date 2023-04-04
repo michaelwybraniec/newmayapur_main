@@ -26,11 +26,11 @@
           tabindex="0"
           class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
         >
-          <li><NuxtLink to="/posts">Blog</NuxtLink></li>
-          <li>
+          <li @click="handleSelected"><NuxtLink to="/posts">Blog</NuxtLink></li>
+          <li @click="handleSelected">
             <NuxtLink to="/events">Events</NuxtLink>
           </li>
-          <li>
+          <li @click="handleSelected">
             <NuxtLink to="/events">Booking</NuxtLink>
           </li>
           <li tabindex="0">
@@ -127,11 +127,11 @@
     </div>
     <div class="navbar-end hidden lg:flex">
       <ul class="menu menu-horizontal px-1 space-x-1">
-        <li><NuxtLink to="/posts">Blog</NuxtLink></li>
-        <li>
+        <li @click="handleSelected"><NuxtLink to="/posts">Blog</NuxtLink></li>
+        <li @click="handleSelected">
           <NuxtLink to="/events">Events</NuxtLink>
         </li>
-        <li>
+        <li @click="handleSelected">
           <NuxtLink to="/events">Booking</NuxtLink>
         </li>
         <li class="dropdown dropdown-end dropdown-hover">
