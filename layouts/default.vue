@@ -1,7 +1,11 @@
 <template>
   <div class="navbar bg-base-100">
     <div class="navbar-start">
-      <div class="dropdown">
+      <div
+        class="dropdown"
+        :class="{ 'dropdown-hover': enableDropdownHover }"
+        @mouseleave="enableDropdownHover = true"
+      >
         <label tabindex="0" class="btn btn-ghost lg:hidden">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -23,8 +27,12 @@
           class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
         >
           <li><NuxtLink to="/posts">Blog</NuxtLink></li>
-          <li><NuxtLink to="/events">Events</NuxtLink></li>
-          <li><NuxtLink to="/events">Booking</NuxtLink></li>
+          <li>
+            <NuxtLink to="/events">Events</NuxtLink>
+          </li>
+          <li>
+            <NuxtLink to="/events">Booking</NuxtLink>
+          </li>
           <li tabindex="0">
             <a class="justify-between">
               About
@@ -41,9 +49,15 @@
               </svg>
             </a>
             <ul class="p-2 bg-base-100 shadow-lg space-y-1">
-              <li><NuxtLink to="/temple">Temple</NuxtLink></li>
-              <li><NuxtLink to="/community">Community</NuxtLink></li>
-              <li><NuxtLink to="/farm">Farm</NuxtLink></li>
+              <li @click="handleSelected">
+                <NuxtLink to="/temple">Temple</NuxtLink>
+              </li>
+              <li @click="handleSelected">
+                <NuxtLink to="/community">Community</NuxtLink>
+              </li>
+              <li @click="handleSelected">
+                <NuxtLink to="/farm">Farm</NuxtLink>
+              </li>
             </ul>
           </li>
           <li tabindex="0">
@@ -62,10 +76,18 @@
               </svg>
             </a>
             <ul class="p-2 bg-base-100 shadow-lg space-y-1">
-              <li><NuxtLink to="/retreats">Retreats</NuxtLink></li>
-              <li><NuxtLink to="/catering">Catering</NuxtLink></li>
-              <li><NuxtLink to="/renting-venue">Renting Venue</NuxtLink></li>
-              <li><NuxtLink to="/food-for-life">Food For Life</NuxtLink></li>
+              <li @click="handleSelected">
+                <NuxtLink to="/retreats">Retreats</NuxtLink>
+              </li>
+              <li @click="handleSelected">
+                <NuxtLink to="/catering">Catering</NuxtLink>
+              </li>
+              <li @click="handleSelected">
+                <NuxtLink to="/renting-venue">Renting Venue</NuxtLink>
+              </li>
+              <li @click="handleSelected">
+                <NuxtLink to="/food-for-life">Food For Life</NuxtLink>
+              </li>
             </ul>
           </li>
           <li tabindex="0">
@@ -84,8 +106,12 @@
               </svg>
             </a>
             <ul class="p-2 bg-base-100 shadow-lg space-y-1">
-              <li><NuxtLink to="/more#map">Directions</NuxtLink></li>
-              <li><NuxtLink to="/more#contact">Contact</NuxtLink></li>
+              <li @click="handleSelected">
+                <NuxtLink to="/more#map">Directions</NuxtLink>
+              </li>
+              <li @click="handleSelected">
+                <NuxtLink to="/more#contact">Contact</NuxtLink>
+              </li>
             </ul>
           </li>
         </ul>
@@ -102,8 +128,12 @@
     <div class="navbar-end hidden lg:flex">
       <ul class="menu menu-horizontal px-1 space-x-1">
         <li><NuxtLink to="/posts">Blog</NuxtLink></li>
-        <li><NuxtLink to="/events">Events</NuxtLink></li>
-        <li><NuxtLink to="/events">Booking</NuxtLink></li>
+        <li>
+          <NuxtLink to="/events">Events</NuxtLink>
+        </li>
+        <li>
+          <NuxtLink to="/events">Booking</NuxtLink>
+        </li>
         <li class="dropdown dropdown-end dropdown-hover">
           <a class="justify-between">
             About
@@ -122,9 +152,15 @@
           <ul
             class="dropdown-content menu p-2 border-2 space-y-1 border-base-300 bg-base-100 rounded-box w-52"
           >
-            <li><NuxtLink to="/temple">Temple</NuxtLink></li>
-            <li><NuxtLink to="/community">Community</NuxtLink></li>
-            <li><NuxtLink to="/farm">Farm</NuxtLink></li>
+            <li @click="handleSelected">
+              <NuxtLink to="/temple">Temple</NuxtLink>
+            </li>
+            <li @click="handleSelected">
+              <NuxtLink to="/community">Community</NuxtLink>
+            </li>
+            <li @click="handleSelected">
+              <NuxtLink to="/farm">Farm</NuxtLink>
+            </li>
           </ul>
         </li>
         <li class="dropdown dropdown-end dropdown-hover">
@@ -145,10 +181,18 @@
             tabindex="0"
             class="dropdown-content menu p-2 border-2 space-y-1 border-base-300 bg-base-100 rounded-box w-52"
           >
-            <li><NuxtLink to="/retreats">Retreats</NuxtLink></li>
-            <li><NuxtLink to="/catering">Catering</NuxtLink></li>
-            <li><NuxtLink to="/renting-venue">Renting Venue</NuxtLink></li>
-            <li><NuxtLink to="/food-for-life">Food For Life</NuxtLink></li>
+            <li @click="handleSelected">
+              <NuxtLink to="/retreats">Retreats</NuxtLink>
+            </li>
+            <li @click="handleSelected">
+              <NuxtLink to="/catering">Catering</NuxtLink>
+            </li>
+            <li @click="handleSelected">
+              <NuxtLink to="/renting-venue">Renting Venue</NuxtLink>
+            </li>
+            <li @click="handleSelected">
+              <NuxtLink to="/food-for-life">Food For Life</NuxtLink>
+            </li>
           </ul>
         </li>
         <li class="dropdown dropdown-end dropdown-hover">
@@ -169,8 +213,12 @@
             tabindex="0"
             class="dropdown-content menu p-2 border-2 space-y-1 border-base-300 bg-base-100 rounded-box w-52"
           >
-            <li><NuxtLink to="/more">Directions</NuxtLink></li>
-            <li><NuxtLink to="/more#contact">Contact</NuxtLink></li>
+            <li @click="handleSelected">
+              <NuxtLink to="/more">Directions</NuxtLink>
+            </li>
+            <li @click="handleSelected">
+              <NuxtLink to="/more#contact">Contact</NuxtLink>
+            </li>
           </ul>
         </li>
       </ul>
@@ -212,3 +260,13 @@
     </div>
   </footer>
 </template>
+
+<script setup>
+const enableDropdownHover = ref(true);
+const handleSelected = () => {
+  if (document.activeElement instanceof HTMLElement) {
+    document.activeElement.blur();
+  }
+  enableDropdownHover.value = false;
+};
+</script>
