@@ -1,4 +1,10 @@
 <template>
+  <div
+    class="p-2 fixed bottom-0 w-full bg-base-100 z-50 2xl:hidden"
+    style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px"
+  >
+    <TheSearch></TheSearch>
+  </div>
   <div class="navbar bg-base-100">
     <div class="navbar-start">
       <div
@@ -6,7 +12,7 @@
         :class="{ 'dropdown-hover': enableDropdownHover }"
         @mouseleave="enableDropdownHover = true"
       >
-        <label tabindex="0" class="btn btn-ghost lg:hidden">
+        <label tabindex="0" class="btn btn-ghost 2xl:hidden">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="h-5 w-5"
@@ -24,7 +30,7 @@
         </label>
         <ul
           tabindex="0"
-          class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+          class="menu menu-compact space-y-1 dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
         >
           <li @click="handleSelected"><NuxtLink to="/posts">Blog</NuxtLink></li>
           <li @click="handleSelected">
@@ -126,12 +132,12 @@
         >New Mayapur</NuxtLink
       >
     </div>
-    <div class="navbar-center hidden lg:flex">
+    <div class="navbar-center hidden 2xl:flex">
       <div class="form-control">
         <TheSearch></TheSearch>
       </div>
     </div>
-    <div class="navbar-end hidden lg:flex">
+    <div class="navbar-end hidden 2xl:flex">
       <ul class="menu menu-horizontal px-1 space-x-1">
         <li @click="handleSelected"><NuxtLink to="/posts">Blog</NuxtLink></li>
         <li @click="handleSelected">
@@ -236,9 +242,7 @@
       </ul>
     </div>
   </div>
-  <div class="p-2 border-y-2 lg:hidden">
-    <TheSearch></TheSearch>
-  </div>
+
   <slot />
 
   <footer
