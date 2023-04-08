@@ -1,6 +1,6 @@
 <template>
   <ais-instant-search :search-client="client" index-name="event">
-    <ais-configure :hits-per-page.camel="10" />
+    <ais-configure :hits-per-page.camel="6" />
     <ais-search-box>
       <template v-slot="{ currentRefinement, isSearchStalled, refine }">
         <input
