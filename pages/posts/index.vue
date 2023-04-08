@@ -283,5 +283,3 @@ const setTagsBg = function (value) {
 
 const config = useRuntimeConfig();
 </script>
-
-<style lang="postcss"></style>

@@ -1,7 +1,7 @@
 <template>
   <div class="py-16 mx-4">
     <div class="xl:w-[1250px] mx-auto">
-      <h1 class="font-bold uppercase border-b-2 pb-1.5 text-2xl mb-5">
+      <h1 class="font-bold uppercase border-b-2 pb-1.5 text-xl mb-5">
         All Events
       </h1>
       <div

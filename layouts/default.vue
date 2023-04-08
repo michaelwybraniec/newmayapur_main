@@ -30,6 +30,12 @@
           <li @click="handleSelected">
             <NuxtLink to="/events">Events</NuxtLink>
           </li>
+          <li
+            @click="handleSelected"
+            class="bg-primary text-white font-bold rounded-lg"
+          >
+            <a href="https://donations.newmayapur.com">Donate</a>
+          </li>
           <li @click="handleSelected">
             <NuxtLink to="/events">Booking</NuxtLink>
           </li>
@@ -220,6 +226,12 @@
               <NuxtLink to="/more#contact">Contact</NuxtLink>
             </li>
           </ul>
+        </li>
+        <li
+          @click="handleSelected"
+          class="bg-primary text-white font-bold rounded-lg"
+        >
+          <a href="https://donations.newmayapur.com">Donate</a>
         </li>
       </ul>
     </div>

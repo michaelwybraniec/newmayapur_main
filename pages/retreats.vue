@@ -84,18 +84,57 @@
       </div>
     </div>
   </div>
+  <div class="bg-base-200 py-28 lg:px-16">
+    <div
+      class="grid grid-rows-1 2xl:grid-cols-2 px-4 2xl:px-20 items-center gap-x-4"
+    >
+      <div class="order-2 2xl:order-2 md:px-24 2xl:px-0">
+        <h2 class="text-xl uppercase font-bold">On-site Accomodation</h2>
+        <p class="pt-3 text-lg">
+          Book a room in our fully furnished, comfortable guest-house for the
+          duration of your stay.
+        </p>
+        <div class="grid md:grid-cols-2 gap-12 lg:gap-x-8 xl:gap-x-16 mt-10">
+          <div>
+            <h2 class="font-bold uppercase text-xl">47 Beds</h2>
+            <h3 class="italic text-lg">Shared Bathroom</h3>
+            <ul class="mt-4 text-lg">
+              <li>💤 1 Single Room</li>
+              <li>💤 8 Double Rooms</li>
+              <li>💤 1 Triple Room</li>
+              <li>💤 6 Family Rooms (3 to 5 Beds)</li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="font-bold uppercase text-xl">22 Beds</h2>
+            <h3 class="italic text-lg">Private Bathrooms</h3>
+            <ul class="mt-4 text-lg">
+              <li>💤 1 Single Room</li>
+              <li>💤 6 Double Rooms</li>
+              <li>💤 1 Triple Room</li>
+              <li>💤 1 Four Beds Room</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <img
+        class="order-1 lg:max-w-lg max-w-xs md:max-w-md 2xl:order-1 mb-12 2xl:mb-0 md:mb-24 2xl:mr-auto 2xl:ml-0 mx-auto rounded-lg"
+        src="/img/bed.jpg"
+      />
+    </div>
+  </div>
   <div>
-    <div class="mx-auto pb-32 lg:px-6 2xl:px-16">
+    <div class="mx-auto pt-24 pb-32 lg:px-6 2xl:px-16">
       <div class="md:px-24 mx-4 lg:px-0 lg:flex flex-col lg:items-center mb-20">
         <div class="p-5 pb-6 lg:pb-4 inline bg-base-200 rounded-xl">
           <Icon name="ion:calendar-outline" size="28px" />
         </div>
         <h2 class="text-xl uppercase font-bold mt-8">Upcoming Events</h2>
         <p class="pt-3 lg:w-[800px] lg:text-center text-lg mt-2">
-          Discover the ancient science of yoga in all of its variety. From
-          practicing asanas to learning the ancient philosophy of Sanskrit
-          texts, or simply getting introduced to our place, we offer a variety
-          of events all year round.
+          Discover the science of yoga in all of its variety. From practicing
+          asanas to learning the ancient philosophy of Sanskrit texts, or simply
+          getting introduced to our place, we offer a variety of events all year
+          round.
         </p>
       </div>
       <div

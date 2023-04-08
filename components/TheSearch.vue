@@ -24,19 +24,25 @@
           <NuxtLink
             :to="
               '/' +
-              id.replace('-', '').replace(/[0-9]/g, '') +
+              item._meilisearch_id
+                .toString()
+                .replace('-', '')
+                .replace(/[0-9]/g, '') +
               's/' +
-              id.replace(/\D/g, '').replace('-', '')
+              item._meilisearch_id
+                .toString()
+                .replace(/\D/g, '')
+                .replace('-', '')
             "
-            v-for="{ id, Title } in items"
-            :key="id"
+            v-for="item in items"
+            :key="item"
           >
             <li
               class="px-4 py-4 flex justify-between border-bottom hover:bg-base-200 hover:cursor-pointer"
             >
-              <p>{{ Title }}</p>
+              <p>{{ item.Title }}</p>
               <span
-                v-if="id.includes('event')"
+                v-if="item._meilisearch_id.toString().includes('event')"
                 class="px-2 py-0.5 font-bold rounded-md text-white bg-primary"
                 >Event</span
               >
@@ -46,7 +52,16 @@
                 >Blog</span
               >
             </li>
+            <li v-if="!item.Title">Nothing</li>
           </NuxtLink>
+          <ais-state-results>
+            <template v-slot="{ state: { query }, results: { hits } }">
+              <div v-show="!hits.length" class="p-4 flex items-center gap-2">
+                <Icon name="ion:close-circle-outline" size="28px" />
+                No results found for this query.
+              </div>
+            </template>
+          </ais-state-results>
         </ul>
       </template>
     </ais-hits>
@@ -59,6 +74,7 @@ import {
   AisHits,
   AisSearchBox,
   AisConfigure,
+  AisStateResults,
 } from "vue-instantsearch/vue3/es";
 import { ref } from "vue";
 const client = useMeilisearchClient();
