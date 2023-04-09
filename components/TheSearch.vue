@@ -12,6 +12,8 @@
           @input="refine($event.currentTarget.value)"
           @focus="focused = true"
           @blur="delay"
+          role="presentation"
+          autocomplete="off"
         />
         <span :hidden="!isSearchStalled">Loading...</span>
       </template>
