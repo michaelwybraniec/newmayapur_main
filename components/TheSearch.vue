@@ -20,7 +20,7 @@
       <template v-slot="{ items }">
         <div class="relative">
           <ul
-            class="mt-4 border-2 border-base-300 bg-base-100 rounded-xl max-2xl:w-full w-[400px] max-2xl:bottom-[62px] absolute left-1/2 overflow-auto -translate-x-1/2"
+            class="mt-4 z-50 border-2 border-base-300 bg-base-100 rounded-xl max-2xl:w-full w-[400px] absolute left-1/2 overflow-auto -translate-x-1/2"
           >
             <NuxtLink
               :to="

@@ -172,9 +172,9 @@
       </div>
     </div>
   </div>
-  <div class="py-32 pb-36 lg:px-10">
+  <div class="py-32 pb-36 2xl:px-10">
     <div
-      class="grid grid-cols-1 lg:grid-cols-4 px-4 lg:px-20 items-start gap-16"
+      class="grid grid-cols-1 lg:grid-cols-4 px-4 2xl:px-20 items-start gap-16"
     >
       <img src="/img/prasad.jpg" class="rounded-xl mx-auto" alt="" />
       <img src="/img/prasad1.jpg" class="rounded-xl mx-auto" alt="" />
@@ -184,6 +184,38 @@
       <img src="/img/prasad5.jpg" class="rounded-xl mx-auto" alt="" />
       <img src="/img/prasad6.jpg" class="rounded-xl mx-auto" alt="" />
       <img src="/img/prasad7.jpg" class="rounded-xl mx-auto" alt="" />
+    </div>
+  </div>
+  <div class="pb-32 py-28 2xl:px-10 bg-base-200">
+    <div
+      class="grid grid-cols-1 lg:grid-cols-2 px-4 lg:gap-x-10 2xl:px-20 items-start 2xl:gap-x-16"
+    >
+      <div class="order-2 lg:order-1 md:px-24 lg:px-0 mb-24 lg:mb-0">
+        <img
+          src="/img/le-gout-superieur.jpg"
+          class="rounded-xl max-w-sm"
+          alt=""
+        />
+
+        <h2 class="text-xl mt-12 uppercase font-bold">Recipe Books</h2>
+        <p class="pt-3 text-lg">
+          If you're after delicious vegetarian recipes, you've come to the right
+          place! The <b>Hare Krishna</b> movement is famous for its authentic
+          indian & continental cuisine worldwide. Shop our recipe books online.
+        </p>
+        <button class="btn btn-outline btn-primary mt-5">Shop Now</button>
+      </div>
+      <div class="order-2 lg:order-1 md:px-24 lg:px-0 mb-24 lg:mb-0">
+        <img src="/img/gopal.jpg" class="rounded-xl max-w-sm" alt="" />
+        <h2 class="text-xl mt-12 uppercase font-bold">Le Gopal</h2>
+        <p class="pt-3 text-lg">
+          <b>Le Gopal</b> is a restaurant ran by members of the New Mayapur
+          congregation in the center of Tours, France. They host regular kirtan
+          and mantra meditation events, along with serving an ever growing
+          customer base.
+        </p>
+        <button class="btn btn-outline btn-primary mt-5">Learn More</button>
+      </div>
     </div>
   </div>
 </template>

@@ -1,16 +1,11 @@
 <template>
-  <div
-    class="p-2 fixed bottom-0 w-full bg-base-100 z-50 2xl:hidden"
-    style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px"
-  >
-    <TheSearch></TheSearch>
-  </div>
   <div class="navbar bg-base-100">
     <div class="navbar-start">
       <div
         class="dropdown"
         :class="{ 'dropdown-hover': enableDropdownHover }"
         @mouseleave="enableDropdownHover = true"
+        style="z-index: 1000"
       >
         <label tabindex="0" class="btn btn-ghost 2xl:hidden">
           <svg
@@ -38,6 +33,9 @@
           </li>
           <li @click="handleSelected">
             <NuxtLink to="/events">Booking</NuxtLink>
+          </li>
+          <li @click="handleSelected">
+            <a href="https://shop.newmayapur.com">Shop</a>
           </li>
           <li tabindex="0">
             <a class="justify-between">
@@ -132,19 +130,24 @@
         >New Mayapur</NuxtLink
       >
     </div>
-    <div class="navbar-center hidden 2xl:flex">
+    <div class="navbar-center hidden 2xl:flex mr-20">
       <div class="form-control">
         <TheSearch></TheSearch>
       </div>
     </div>
     <div class="navbar-end hidden 2xl:flex">
       <ul class="menu menu-horizontal px-1 space-x-1">
-        <li @click="handleSelected"><NuxtLink to="/posts">Blog</NuxtLink></li>
-        <li @click="handleSelected">
+        <li @click="handleSelected" class="pr-1.5">
+          <NuxtLink to="/posts">Blog</NuxtLink>
+        </li>
+        <li @click="handleSelected" class="pr-1.5">
           <NuxtLink to="/events">Events</NuxtLink>
         </li>
-        <li @click="handleSelected">
+        <li @click="handleSelected" class="pr-1.5">
           <NuxtLink to="/events">Booking</NuxtLink>
+        </li>
+        <li @click="handleSelected" class="pr-1.5">
+          <a href="https://shop.newmayapur.com">Shop</a>
         </li>
         <li class="dropdown dropdown-end dropdown-hover">
           <a class="justify-between">
@@ -241,6 +244,9 @@
         </li>
       </ul>
     </div>
+  </div>
+  <div class="p-2 sticky top-0 w-full bg-base-100 2xl:hidden shadow-md z-50">
+    <TheSearch></TheSearch>
   </div>
 
   <slot />
