@@ -2,19 +2,87 @@
   <div>
     <div class="glide">
       <div class="glide__track" data-glide-el="track">
-        <ul class="glide__slides h-[850px]">
-          <li
-            class="glide__slide flex justify-center items-center bg-green-500"
-          >
-            <p class="font-bold">0</p>
+        <ul class="glide__slides">
+          <li class="glide__slide bg-base-200">
+            <div class="grid grid-cols-2">
+              <div class="p-44 flex justify-center flex-col h-full">
+                <div class="mb-8 bg-white w-[5rem] p-4 rounded-lg">
+                  <Icon name="ion:musical-notes-outline" size="44px" />
+                </div>
+                <h2 class="text-5xl font-bold">Harinam Sankirtan</h2>
+                <p class="text-xl mt-4 leading-9">
+                  In this age of Kali, there is no other way than chanting the
+                  Holy Name of God to attain <b>spiritual realization</b>. We
+                  are going out regularly to spread Lord Caitanya's mercy, all
+                  over <b>France</b>.
+                </p>
+                <button
+                  class="btn w-44 mt-10 bg-red-700 border-0 hover:bg-red-900"
+                >
+                  Find Out More
+                </button>
+              </div>
+              <div class="flex justify-center items-center">
+                <img
+                  src="/img/harinam.jpg"
+                  class="max-w-2xl rounded-2xl shadow-xl mx-auto"
+                />
+              </div>
+            </div>
           </li>
-          <li class="glide__slide flex justify-center items-center bg-red-500">
-            <p class="font-bold">1</p>
+          <li class="glide__slide bg-base-200">
+            <div class="grid grid-cols-2">
+              <div class="p-44 flex justify-center flex-col h-full">
+                <div class="mb-8 bg-white w-[4.9rem] p-4 rounded-lg">
+                  <Icon name="ion:pizza-outline" size="46px" />
+                </div>
+                <h2 class="text-5xl font-bold">Food For Life</h2>
+                <p class="text-xl mt-4 leading-9">
+                  There are <b>5 to 7 million</b> people who at least partially
+                  rely on food banks for their subsistance in present-day
+                  France. We are here to make a difference, by providing meals
+                  <b>free of charge</b>.
+                </p>
+                <button
+                  class="btn w-44 mt-10 bg-orange-700 border-0 hover:bg-orange-900"
+                >
+                  Find Out More
+                </button>
+              </div>
+              <div class="flex justify-center items-center">
+                <img
+                  src="/img/food.jpg"
+                  class="max-w-2xl rounded-2xl shadow-xl mx-auto"
+                />
+              </div>
+            </div>
           </li>
-          <li
-            class="glide__slide flex justify-center items-center bg-orange-500"
-          >
-            <p class="font-bold">2</p>
+          <li class="glide__slide bg-base-200">
+            <div class="grid grid-cols-2">
+              <div class="p-44 flex justify-center flex-col h-full">
+                <div class="mb-8 bg-white w-[4.9rem] p-4 rounded-lg">
+                  <Icon name="ion:leaf-outline" size="46px" />
+                </div>
+                <h2 class="text-5xl font-bold">Volunteering</h2>
+                <p class="text-xl mt-4 leading-9">
+                  Volunteering is a great way to meet new people and create
+                  beautiful <b>relationships</b>. We provide plenty of
+                  opportunities for you to learn, be it in our <b>gardens</b>,
+                  our <b>dairy farm</b>, or our <b>forests</b>.
+                </p>
+                <button
+                  class="btn w-44 mt-10 bg-green-700 border-0 hover:bg-green-900"
+                >
+                  Find Out More
+                </button>
+              </div>
+              <div class="flex justify-center items-center">
+                <img
+                  src="/img/gardening.jpg"
+                  class="max-w-2xl rounded-2xl shadow-xl mx-auto"
+                />
+              </div>
+            </div>
           </li>
         </ul>
         <div data-glide-el="controls">
