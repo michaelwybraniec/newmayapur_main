@@ -1,17 +1,36 @@
 <template>
-  <div
-    class="hero min-h-screen"
-    style="background-image: url(https://placeimg.com/1920/1080/arch)"
-  >
-    <div class="hero-overlay bg-opacity-60"></div>
-    <div class="hero-content text-center text-neutral-content">
-      <div class="max-w-md">
-        <h1 class="mb-5 text-5xl font-bold">Hello there</h1>
-        <p class="mb-5">
-          Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-          excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a
-          id nisi.
-        </p>
+  <div>
+    <div class="glide">
+      <div class="glide__track" data-glide-el="track">
+        <ul class="glide__slides h-[850px]">
+          <li
+            class="glide__slide flex justify-center items-center bg-green-500"
+          >
+            <p class="font-bold">0</p>
+          </li>
+          <li class="glide__slide flex justify-center items-center bg-red-500">
+            <p class="font-bold">1</p>
+          </li>
+          <li
+            class="glide__slide flex justify-center items-center bg-orange-500"
+          >
+            <p class="font-bold">2</p>
+          </li>
+        </ul>
+        <div data-glide-el="controls">
+          <button
+            class="glide__arrow glide__arrow--left absolute left-0 top-1/2 -translate-y-1/2 mx-4"
+            data-glide-dir="<"
+          >
+            <Icon name="ion:arrow-back-circle-outline" size="40px" />
+          </button>
+          <button
+            class="glide__arrow glide__arrow--right absolute right-0 top-1/2 -translate-y-1/2 mx-4"
+            data-glide-dir=">"
+          >
+            <Icon name="ion:arrow-forward-circle-outline" size="40px" />
+          </button>
+        </div>
       </div>
     </div>
   </div>
@@ -313,3 +332,20 @@ const setTagsBg = function (value) {
 
 const config = useRuntimeConfig();
 </script>
+
+<script>
+import Glide from "@glidejs/glide";
+import { Autoplay } from "@glidejs/glide/dist/glide.modular.esm";
+
+export default {
+  mounted() {
+    let glide = new Glide(".glide", {
+      autoplay: 5000,
+    }).mount({ Autoplay });
+  },
+};
+</script>
+
+<style scoped>
+@import "@glidejs/glide/dist/css/glide.core.min.css";
+</style>
