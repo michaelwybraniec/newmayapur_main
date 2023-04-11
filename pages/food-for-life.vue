@@ -70,7 +70,7 @@
       />
       <blockquote class="rounded-lg">
         <p class="text-lg italic">
-          Nobody should go hungry within a ten miles radius of an ISKCON temple.
+          Nobody should go hungry within a ten mile radius of an ISKCON temple.
         </p>
       </blockquote>
       <p class="text-right mt-6">
