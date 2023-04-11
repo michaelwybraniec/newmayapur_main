@@ -8,7 +8,7 @@
               title="Harinam Sankirtan"
               icon="ion:musical-notes-outline"
               btn-bg="bg-red-700"
-              btn-bg-hover="bg-red-900"
+              btn-bg-hover="hover:bg-red-900"
               img="/img/harinam.jpg"
               text="In this age of Kali, there is no other way
                     than chanting the Holy Name of God to attain <b>spiritual realization</b>. 
@@ -24,7 +24,7 @@
                     <b>free of charge</b>."
               icon="ion:pizza-outline"
               btn-bg="bg-orange-700"
-              btn-bg-hover="bg-orange-900"
+              btn-bg-hover="hover:bg-orange-900"
               img="/img/food.jpg"
             />
           </li>
@@ -37,8 +37,43 @@
                   our <b>dairy farm</b>, or our <b>forests</b>."
               icon="ion:leaf-outline"
               btn-bg="bg-green-700"
-              btn-bg-hover="bg-green-900"
+              btn-bg-hover="hover:bg-green-900"
               img="/img/gardening.jpg"
+            />
+          </li>
+          <li class="glide__slide bg-base-200">
+            <Slide
+              title="Visit Us"
+              icon="ion:heart-outline"
+              btn-bg="bg-gray-600"
+              btn-bg-hover="hover:bg-gray-900"
+              img="/img/smiles.jpeg"
+              text="Come for our <b>Open House Sundays</b> or stay over for an <b>Immersion Weekend</b>.
+                    It is said that guests are a <b>gift of God</b>, therefore we are striving to provide all of
+                    our visitors with an amazing experience of New Mayapur!"
+            />
+          </li>
+          <li class="glide__slide bg-base-200">
+            <Slide
+              title="The Temple"
+              icon="ion:sparkles-outline"
+              btn-bg="bg-pink-600"
+              btn-bg-hover="hover:bg-pink-900"
+              img="/img/deities.jpg"
+              text="The Deities are the <b>heart</b> of our community. New Mayapur has been established
+                    in 1974, and <b>Sri-Sri-Krishna-Balarama</b> have been installed here by Srila Prabhupada himself."
+            />
+          </li>
+          <li class="glide__slide bg-base-200">
+            <Slide
+              title="Ahimsa Goshala"
+              icon="ion:flower-outline"
+              btn-bg="bg-yellow-700"
+              btn-bg-hover="hover:bg-yellow-900"
+              img="/img/cow_devotee.jpg"
+              text="Cow protection is an essential part of <b>vedic</b> culture. Our cows are taken care 
+              of with <b>love</b> and devotion all throughout their lives, and will <b>never</b> be sent 
+              to a slaughterhouse."
             />
           </li>
         </ul>

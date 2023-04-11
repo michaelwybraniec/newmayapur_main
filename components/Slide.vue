@@ -10,7 +10,7 @@
       <p class="max-sm:text-lg text-xl mt-4 leading-9" v-html="props.text"></p>
       <button
         class="btn w-44 max-sm:mt-6 mt-10 border-0"
-        :class="props.btnBg + ' hover:' + props.btnBgHover"
+        :class="props.btnBg + ' ' + props.btnBgHover"
       >
         Find Out More
       </button>
