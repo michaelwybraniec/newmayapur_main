@@ -7,9 +7,9 @@
         <Icon :name="props.icon" size="46px" />
       </div>
       <h2 class="max-xl:text-4xl text-5xl font-bold">{{ props.title }}</h2>
-      <p class="text-xl mt-4 leading-9" v-html="props.text"></p>
+      <p class="max-sm:text-lg text-xl mt-4 leading-9" v-html="props.text"></p>
       <button
-        class="btn w-44 mt-10 border-0"
+        class="btn w-44 max-sm:mt-6 mt-10 border-0"
         :class="props.btnBg + ' hover:' + props.btnBgHover"
       >
         Find Out More
