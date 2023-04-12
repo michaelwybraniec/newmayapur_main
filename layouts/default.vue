@@ -25,7 +25,7 @@
         </label>
         <ul
           tabindex="0"
-          class="menu menu-compact space-y-1 dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+          class="menu menu-compact space-y-1 dropdown-content p-2 shadow bg-base-100 rounded-box w-52"
         >
           <li @click="handleSelected"><NuxtLink to="/posts">Blog</NuxtLink></li>
           <li @click="handleSelected">
