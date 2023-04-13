@@ -29,7 +29,7 @@
       </div>
     </div>
   </div>
-  <div class="xl:w-[1280px] mx-4 xl:mx-auto pt-28 pb-44">
+  <div class="xl:w-[1280px] mx-4 xl:mx-auto pt-28 pb-44" v-if="days.length > 0">
     <h2 class="text-3xl font-bold text-center mb-6">Schedule</h2>
     <p class="max-w-xl pt-2 pb-2 mx-auto text-center mb-16">
       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore fugit
