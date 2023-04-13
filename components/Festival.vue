@@ -73,7 +73,7 @@
       </div>
     </div>
   </div>
-  <div class="bg-base-200">
+  <div :class="days.length > 0 ? 'bg-base-200' : ''">
     <div class="lg:w-[900px] mx-4 lg:mx-auto pt-28 pb-36">
       <h2 class="text-3xl font-bold text-center mb-6">Interested?</h2>
       <p class="max-w-xl pt-2 pb-2 mx-auto text-center mb-16">

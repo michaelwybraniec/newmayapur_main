@@ -216,11 +216,13 @@ const start = new Date(event.data.attributes.Start).toLocaleString("en-GB", {
   year: "numeric",
 });
 
-const end = new Date(event.data.attributes.End).toLocaleString("en-GB", {
-  day: "numeric",
-  month: "short",
-  year: "numeric",
-});
+const end = event.data.attributes.End
+  ? new Date(event.data.attributes.End).toLocaleString("en-GB", {
+      day: "numeric",
+      month: "short",
+      year: "numeric",
+    })
+  : "";
 
 const config = useRuntimeConfig();
 </script>
