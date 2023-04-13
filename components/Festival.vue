@@ -12,8 +12,8 @@
           >
             <Icon name="ion:calendar-outline" size="26px" class="mr-1" />
             <span class="font-bold">{{ props.start }} </span>
-            <span class="font-bold">/</span>
-            <span class="font-bold">{{ props.end }}</span>
+            <span class="font-bold" v-if="props.end">/</span>
+            <span class="font-bold" v-if="props.end">{{ props.end }}</span>
           </div>
         </div>
         <h1 class="text-5xl font-bold">{{ props.title }}</h1>

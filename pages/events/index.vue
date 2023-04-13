@@ -160,8 +160,8 @@
                     })
                   }}
                 </span>
-                <span class="font-bold">/</span>
-                <span class="font-bold">{{
+                <span class="font-bold" v-if="event.attributes.End">/</span>
+                <span class="font-bold" v-if="event.attributes.End">{{
                   new Date(event.attributes.End).toLocaleString("en-GB", {
                     day: "numeric",
                     month: "short",
@@ -177,7 +177,7 @@
         </div>
         <div v-else class="mx-auto mt-44 mb-10">
           <div class="flex items-center flex-col">
-            <div class="p-5 pb-5 mx-auto inline bg-base-200 rounded-xl mb-10">
+            <div class="p-5 pb-5 mx-auto inline bg-base-100 rounded-xl mb-10">
               <Icon name="ion:close-outline" size="28px" />
             </div>
             <h2 class="text-2xl font-bold uppercase mb-3">Oops!</h2>
