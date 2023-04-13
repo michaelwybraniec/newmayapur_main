@@ -363,11 +363,15 @@ const subscribe = async () => {
 };
 
 const events = await find("events", {
-  sort: ["Start:desc"],
+  sort: ["Start:asc"],
   filters: {
     Start: {
       $gt: new Date(),
     },
+  },
+  pagination: {
+    pageSize: 3,
+    page: 1,
   },
 });
 
