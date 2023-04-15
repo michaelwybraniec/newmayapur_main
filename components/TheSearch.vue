@@ -43,7 +43,7 @@
               <li
                 class="px-4 py-4 flex justify-between border-bottom hover:bg-base-200 hover:cursor-pointer"
               >
-                <p>{{ item.Title }}</p>
+                <p>{{ formatTitle(item.Title) }}</p>
                 <span
                   v-if="item._meilisearch_id.toString().includes('event')"
                   class="px-2 py-0.5 font-bold rounded-md text-white bg-primary"
@@ -87,5 +87,13 @@ let focused = ref(false);
 
 const delay = function () {
   setTimeout(() => (focused.value = false), 180);
+};
+
+const formatTitle = function (string) {
+  if (string.length > 35) {
+    return string.substring(0, 34) + "...";
+  }
+
+  return string;
 };
 </script>
