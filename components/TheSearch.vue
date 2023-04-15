@@ -90,8 +90,8 @@ const delay = function () {
 };
 
 const formatTitle = function (string) {
-  if (string.length > 35) {
-    return string.substring(0, 34) + "...";
+  if (string.length > 28) {
+    return string.substring(0, 27) + "...";
   }
 
   return string;
