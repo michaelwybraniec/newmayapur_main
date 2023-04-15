@@ -102,7 +102,7 @@ const markdown = computed(() => marked.parse(post.data.attributes.Content));
 const config = useRuntimeConfig();
 </script>
 
-<style lang="postcss">
+<style lang="postcss" scoped>
 .markdown h2 {
   @apply font-bold text-xl mt-6 -mb-2;
 }
