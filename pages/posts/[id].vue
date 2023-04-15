@@ -118,4 +118,8 @@ const config = useRuntimeConfig();
 .markdown ul {
   @apply list-disc mt-4 ml-3;
 }
+
+a {
+  @apply underline text-blue-600 hover:text-blue-800 visited:text-purple-600;
+}
 </style>
