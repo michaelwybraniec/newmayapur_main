@@ -141,26 +141,27 @@
           <div>
             <p class="mt-6 mb-2 font-bold text-xl uppercase">Most Popular</p>
             <div class="space-y-1.5">
-              <p
-                class="p-2 px-4 cursor-pointer font-bold rounded-lg bg-base-200"
-              >
-                Who is Srila Prabhupada?
-              </p>
-              <p
-                class="p-2 px-4 cursor-pointer font-bold rounded-lg bg-base-200"
-              >
-                What is Vrindavan?
-              </p>
-              <p
-                class="p-2 px-4 cursor-pointer font-bold rounded-lg bg-base-200"
-              >
-                Discovering our Goshala
-              </p>
-              <p
-                class="p-2 px-4 cursor-pointer font-bold rounded-lg bg-base-200"
-              >
-                Prasadam in Jagannatha Puri
-              </p>
+              <NuxtLink to="https://staging.newmayapur.com/posts/6">
+                <p
+                  class="p-2 px-4 cursor-pointer font-bold rounded-lg bg-base-200"
+                >
+                  Who is Sri Balarama?
+                </p>
+              </NuxtLink>
+              <NuxtLink to="https://staging.newmayapur.com/posts/5">
+                <p
+                  class="p-2 px-4 cursor-pointer font-bold rounded-lg bg-base-200"
+                >
+                  Cows, Climate Change and Clever Solutions
+                </p>
+              </NuxtLink>
+              <NuxtLink to="https://staging.newmayapur.com/posts/7">
+                <p
+                  class="p-2 px-4 cursor-pointer font-bold rounded-lg bg-base-200"
+                >
+                  The Lord Who Protects
+                </p>
+              </NuxtLink>
             </div>
           </div>
         </div>
