@@ -141,25 +141,25 @@
           <div>
             <p class="mt-6 mb-2 font-bold text-xl uppercase">Most Popular</p>
             <div class="space-y-1.5">
-              <a
+              <p
                 href="https://staging.newmayapur.com/posts/6"
                 class="p-2 px-4 cursor-pointer font-bold rounded-lg bg-base-200"
               >
                 Who is Sri Balarama?
-              </a>
+              </p>
 
-              <a
+              <p
                 href="https://staging.newmayapur.com/posts/5"
                 class="p-2 px-4 cursor-pointer font-bold rounded-lg bg-base-200"
               >
                 Cows, Climate Change and Clever Solutions
-              </a>
-              <a
+              </p>
+              <p
                 href="https://staging.newmayapur.com/posts/7"
                 class="p-2 px-4 cursor-pointer font-bold rounded-lg bg-base-200"
               >
                 The Lord Who Protects
-              </a>
+              </p>
             </div>
           </div>
         </div>
