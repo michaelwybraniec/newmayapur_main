@@ -141,32 +141,23 @@
           <div>
             <p class="mt-6 mb-2 font-bold text-xl uppercase">Most Popular</p>
             <div class="space-y-1.5">
-              <NuxtLink to="https://staging.newmayapur.com/posts/6">
-                <p
-                  class="p-2 px-4 cursor-pointer font-bold rounded-lg bg-base-200"
-                >
-                  Who is Sri Balarama?
-                </p>
+              <NuxtLink
+                to="https://staging.newmayapur.com/posts/6"
+                class="p-2 px-4 cursor-pointer font-bold rounded-lg bg-base-200"
+              >
+                Who is Sri Balarama?
               </NuxtLink>
               <NuxtLink
                 to="https://staging.newmayapur.com/posts/5"
-                class="mt-1"
+                class="p-2 px-4 cursor-pointer font-bold rounded-lg bg-base-200"
               >
-                <p
-                  class="p-2 px-4 cursor-pointer font-bold rounded-lg bg-base-200"
-                >
-                  Cows, Climate Change and Clever Solutions
-                </p>
+                Cows, Climate Change and Clever Solutions
               </NuxtLink>
               <NuxtLink
                 to="https://staging.newmayapur.com/posts/7"
-                class="mt-1"
+                class="p-2 px-4 cursor-pointer font-bold rounded-lg bg-base-200"
               >
-                <p
-                  class="p-2 px-4 cursor-pointer font-bold rounded-lg bg-base-200"
-                >
-                  The Lord Who Protects
-                </p>
+                The Lord Who Protects
               </NuxtLink>
             </div>
           </div>
