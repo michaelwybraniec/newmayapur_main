@@ -148,14 +148,20 @@
                   Who is Sri Balarama?
                 </p>
               </NuxtLink>
-              <NuxtLink to="https://staging.newmayapur.com/posts/5">
+              <NuxtLink
+                to="https://staging.newmayapur.com/posts/5"
+                class="mt-1"
+              >
                 <p
                   class="p-2 px-4 cursor-pointer font-bold rounded-lg bg-base-200"
                 >
                   Cows, Climate Change and Clever Solutions
                 </p>
               </NuxtLink>
-              <NuxtLink to="https://staging.newmayapur.com/posts/7">
+              <NuxtLink
+                to="https://staging.newmayapur.com/posts/7"
+                class="mt-1"
+              >
                 <p
                   class="p-2 px-4 cursor-pointer font-bold rounded-lg bg-base-200"
                 >
