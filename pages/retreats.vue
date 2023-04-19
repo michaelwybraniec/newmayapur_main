@@ -131,10 +131,10 @@
         </div>
         <h2 class="text-xl uppercase font-bold mt-8">Upcoming Events</h2>
         <p class="pt-3 lg:w-[800px] lg:text-center text-lg mt-2">
-          Discover the science of yoga in all of its variety. From practicing
-          asanas to learning the ancient philosophy of Sanskrit texts, or simply
-          getting introduced to our place, we offer a variety of events all year
-          round.
+          Discover the science of <i>yoga</i> in all of its variety. From
+          practicing asanas to learning the ancient philosophy of
+          <b>Sanskrit</b> texts, or simply getting introduced to our place, we
+          offer a variety of events all year round.
         </p>
       </div>
       <div

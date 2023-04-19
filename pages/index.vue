@@ -244,11 +244,11 @@
         </div>
         <h2 class="text-xl uppercase font-bold mt-8">Read Our Blog</h2>
         <p class="pt-3 lg:w-[800px] lg:text-center text-lg mt-2">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
-          unde pariatur quos temporibus, blanditiis cum praesentium at non
-          officiis perferendis incidunt molestias sint maiores quisquam itaque
-          mollitia est consectetur dignissimos deserunt, omnis iste. Deserunt,
-          quaerat!
+          Keep up to date with our latest news, and learn more about
+          <b>Krishna Consciousnesss</b>. Our articles are not only informative
+          about New Mayapur's events and development but also a wealth of
+          information about <i>bhakti-yoga</i>, as taught by
+          <b>Sri Srila A.C. Bhaktivedanta Swami Prabhupada</b>.
         </p>
       </div>
       <div

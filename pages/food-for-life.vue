@@ -87,9 +87,10 @@
           </div>
           <h2 class="text-xl uppercase mt-4 font-bold">Official Website</h2>
           <p class="pt-3 text-lg">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam
-            porro reprehenderit rerum iste similique voluptates commodi
-            distinctio neque, harum quos.
+            <b>Food for Life Global</b> (FFLG) serves as the international
+            headquarters for an international network of over 250 affiliate
+            projects in <b>65 countries</b> serving over
+            <b>1 million</b> plant-based meals daily.
           </p>
           <button class="btn-primary btn mt-4">Learn More</button>
         </div>
@@ -101,9 +102,10 @@
           </div>
           <h2 class="text-xl uppercase mt-4 font-bold">Contribute</h2>
           <p class="pt-3 text-lg">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam
-            porro reprehenderit rerum iste similique voluptates commodi
-            distinctio neque, harum quos.
+            Do you want to <b>contribute</b> to Food For Life's effort in
+            France? We will gladly receive any help you can offer, be it your
+            <b>service</b> or a financial contribution. Do not hesitate to
+            <b>contact</b> us.
           </p>
           <button
             class="bg-red-600 text-white border-0 hover:bg-red-700 btn mt-4"

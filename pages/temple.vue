@@ -301,9 +301,9 @@
             </div>
             <h2 class="text-xl uppercase mt-4 font-bold">Daily Darshan</h2>
             <p class="pt-3 text-lg">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam
-              porro reprehenderit rerum iste similique voluptates commodi
-              distinctio neque, harum quos.
+              Get <b>Sri-Sri Gaura-Nitai</b>, <b>Sri-Sri Krishna-Balarama</b>,
+              <b>Sri Varahadeva</b>, and <b>Sri-Sri Radha-Govinda-Madhava</b>'s
+              <i>darshan</i> regularly, straight from your social media feed.
             </p>
             <button class="btn-primary btn mt-4">See on Facebook</button>
           </div>
@@ -315,9 +315,10 @@
             </div>
             <h2 class="text-xl uppercase mt-4 font-bold">Online Lectures</h2>
             <p class="pt-3 text-lg">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam
-              porro reprehenderit rerum iste similique voluptates commodi
-              distinctio neque, harum quos.
+              Want to learn more about <b>Krishna Consciousness</b>? Our YouTube
+              channel has hundreds of recordings of lectures from holy
+              scriptures, like <i>Srimad-Bhagavatam</i> and
+              <i>Bhagavad-Gita</i>.
             </p>
             <button
               class="bg-red-600 text-white border-0 hover:bg-red-700 btn mt-4"
