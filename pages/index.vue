@@ -10,8 +10,8 @@
               btn-bg="bg-red-700"
               btn-bg-hover="hover:bg-red-900"
               img="/img/harinam.jpg"
-              text="In this age of Kali, there is no other way
-                    than chanting the Holy Name of God to attain <b>spiritual realization</b>. 
+              text="In this age of Kali, there is no other way to attain 
+                    <b>spiritual realization</b> than by chanting the Holy Name of God. 
                     We are going out regularly to spread Lord Caitanya's mercy, all over <b>France</b>."
             />
           </li>
@@ -122,7 +122,7 @@
         <h2 class="text-xl mt-12 uppercase font-bold">Stay Over</h2>
         <p class="pt-3 text-lg">
           Experience New Mayapur first-hand by booking a room in our fully
-          furnished, comfortable <b>guest-house</b>. We have rooms for singles,
+          furnished, comfortable <b>guesthouse</b>. We have rooms for singles,
           families, travellers and everything in between. All our rooms are
           available all year round.
         </p>
@@ -134,10 +134,10 @@
         </div>
         <h2 class="text-xl mt-12 uppercase font-bold">Keep in Touch</h2>
         <p class="pt-3 text-lg">
-          You have a question, or you would like to share with us your ideas and
-          suggestions? Please reach out to us. We are always happy to get our
-          guests feedback, and are eager to improve the quality of your stay in
-          New Mayapur.
+          You have a question, or you would like to share your ideas and
+          suggestions with us? Please reach out to us! We are always happy to
+          get our guests' feedback, and are eager to improve the quality of your
+          stay in New Mayapur.
         </p>
         <NuxtLink to="/more#contact">
           <button class="btn btn-primary btn-outline mt-6 w-44">
