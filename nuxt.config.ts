@@ -17,7 +17,7 @@ export default defineNuxtConfig({
     adminApiKey: process.env.NUXT_MEILISEARCH_KEY,
   },
   strapi: {
-    url: process.env.STRAPI_URL || "http://127.0.0.1:1337",
+    url: process.env.NUXT_STRAPI_BASE_URL || "http://127.0.0.1:1337",
     prefix: "/api",
     version: "v4",
     cookie: {},
