@@ -55,9 +55,6 @@
       </div>
     </div>
   </div>
-  <div>
-    {{ post1.id }}
-  </div>
 </template>
 
 <script setup>
