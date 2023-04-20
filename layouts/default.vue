@@ -32,7 +32,7 @@
             <NuxtLink to="/events">Events</NuxtLink>
           </li>
           <li @click="handleSelected">
-            <NuxtLink to="/events">Booking</NuxtLink>
+            <NuxtLink to="https://booking.newmayapur.com">Booking</NuxtLink>
           </li>
           <li @click="handleSelected">
             <a href="https://shop.newmayapur.com">Shop</a>
@@ -144,7 +144,7 @@
           <NuxtLink to="/events">Events</NuxtLink>
         </li>
         <li @click="handleSelected" class="pr-1.5">
-          <NuxtLink to="/events">Booking</NuxtLink>
+          <NuxtLink to="https://booking.newmayapur.com">Booking</NuxtLink>
         </li>
         <li @click="handleSelected" class="pr-1.5">
           <a href="https://shop.newmayapur.com">Shop</a>
