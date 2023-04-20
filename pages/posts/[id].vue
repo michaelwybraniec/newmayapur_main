@@ -55,6 +55,9 @@
       </div>
     </div>
   </div>
+  <div>
+    {{ post1.id }}
+  </div>
 </template>
 
 <script setup>
@@ -62,6 +65,7 @@ import { marked } from "marked";
 
 const route = useRoute();
 const { findOne, find } = useStrapi();
+
 function between(min, max) {
   return Math.floor(Math.random() * (max - min) + min);
 }
@@ -76,10 +80,14 @@ const posts = await find("posts", {
     pageSize: 10,
     page: 1,
   },
+  filters: {
+    id: {
+      $ne: route.params.id,
+    },
+  },
 });
 
 const id = between(1, posts.data.length);
-
 const post1 = posts.data[id - 1];
 const post2 = posts.data[id];
 
