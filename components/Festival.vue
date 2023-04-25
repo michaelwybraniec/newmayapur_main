@@ -20,22 +20,18 @@
         <p class="py-6">
           {{ props.description }}
         </p>
-        <button
+        <NuxtLink
+          to="https://booking.newmayapur.com"
           class="btn btn-primary w-44"
           :class="new Date(props.start) < new Date() ? 'btn-disabled' : ''"
         >
-          Book Now
-        </button>
+          Book Your Stay
+        </NuxtLink>
       </div>
     </div>
   </div>
   <div class="xl:w-[1280px] mx-4 xl:mx-auto pt-28 pb-44" v-if="days.length > 0">
     <h2 class="text-3xl font-bold text-center mb-6">Schedule</h2>
-    <p class="max-w-xl pt-2 pb-2 mx-auto text-center mb-16">
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore fugit
-      quos reprehenderit ab vero, dolorem blanditiis officiis! Eligendi, vitae
-      laborum.
-    </p>
     <div class="grid grid-cols-1 max-md:space-y-8 md:grid-cols-2 gap-6">
       <div v-for="day in days" class="flex items-center flex-col">
         <div
@@ -77,9 +73,9 @@
     <div class="lg:w-[900px] mx-4 lg:mx-auto pt-28 pb-36">
       <h2 class="text-3xl font-bold text-center mb-6">Interested?</h2>
       <p class="max-w-xl pt-2 pb-2 mx-auto text-center mb-16">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore fugit
-        quos reprehenderit ab vero, dolorem blanditiis officiis! Eligendi, vitae
-        laborum.
+        Book your stay in our fully furnished guesthouse. We provide a variety
+        of rooms; both <b>en suite</b> and with shared bathrooms, for families
+        and individuals alike.
       </p>
       <div
         class="p-6 rounded-xl shadow-lg mt-20 grid md:grid-cols-2 gap-4 bg-base-100"
@@ -97,7 +93,11 @@
         <div
           class="border-2 rounded-md border-base-300 flex max-md:flex-col justify-center items-center p-4 gap-2"
         >
-          <button class="btn btn-secondary w-full">Book Now</button>
+          <NuxtLink
+            to="https://booking.newmayapur.com"
+            class="btn btn-secondary w-full"
+            >Book Your Stay</NuxtLink
+          >
         </div>
       </div>
     </div>

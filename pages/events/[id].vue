@@ -50,7 +50,8 @@
           <p class="py-6">
             {{ event.data.attributes.Description }}
           </p>
-          <button
+          <NuxtLink
+            to="https://booking.newmayapur.com"
             class="btn btn-primary w-44"
             :class="
               new Date(event.data.attributes.Start) < new Date()
@@ -58,8 +59,8 @@
                 : ''
             "
           >
-            Book Now
-          </button>
+            Book Your Stay
+          </NuxtLink>
         </div>
       </div>
     </div>
@@ -106,11 +107,6 @@
     >
       <div class="xl:w-[1280px] mx-4 xl:mx-auto pt-28 pb-44">
         <h2 class="text-3xl font-bold text-center mb-6">Your Schedule</h2>
-        <p class="max-w-xl pt-2 pb-2 mx-auto text-center mb-16">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore
-          fugit quos reprehenderit ab vero, dolorem blanditiis officiis!
-          Eligendi, vitae laborum.
-        </p>
         <div class="grid grid-cols-1 max-md:space-y-8 md:grid-cols-2 gap-6">
           <div
             v-for="day in event.data.attributes.Days.data"
@@ -155,9 +151,9 @@
     <div class="lg:w-[900px] mx-4 lg:mx-auto pt-28 pb-36">
       <h2 class="text-3xl font-bold text-center mb-6">Interested?</h2>
       <p class="max-w-xl pt-2 pb-2 mx-auto text-center mb-16">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore fugit
-        quos reprehenderit ab vero, dolorem blanditiis officiis! Eligendi, vitae
-        laborum.
+        Book your stay in our fully furnished guesthouse. We provide a variety
+        of rooms; both <b>en suite</b> and with shared bathrooms, for families
+        and individuals alike.
       </p>
       <div class="p-6 rounded-xl shadow-lg mt-20 grid md:grid-cols-2 gap-4">
         <div
@@ -183,7 +179,12 @@
             class="btn btn-primary max-md:w-full"
             >Download the Program</a
           >
-          <button class="btn btn-secondary max-md:w-full">Book Now</button>
+          <NuxtLink
+            to="https://booking.newmayapur.com"
+            class="btn btn-secondary max-md:w-full"
+          >
+            Book Your Stay
+          </NuxtLink>
         </div>
       </div>
     </div>
