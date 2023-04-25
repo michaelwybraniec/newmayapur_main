@@ -237,6 +237,7 @@ watch(options, async (newValue, oldValue) => {
     events.value = await find("events", {
       populate: ["Thumbnail"],
       pagination: newValue,
+      sort: ["Start:asc"],
     });
   } else if (filter.value !== "" && date.month === "") {
     events.value = await find("events", {
@@ -247,11 +248,13 @@ watch(options, async (newValue, oldValue) => {
           $eq: filter.value,
         },
       },
+      sort: ["Start:asc"],
     });
   } else if (filter.value === "" && date.month !== "") {
     events.value = await find("events", {
       populate: ["Thumbnail"],
       pagination: newValue,
+      sort: ["Start:asc"],
       filters: {
         Start: {
           $gte: new Date(date.year + "-" + date.month + "-" + date.firstDay),
@@ -269,6 +272,7 @@ watch(options, async (newValue, oldValue) => {
     events.value = await find("events", {
       populate: ["Thumbnail"],
       pagination: newValue,
+      sort: ["Start:asc"],
       filters: {
         Start: {
           $gte: new Date(date.year + "-" + date.month + "-" + date.firstDay),
@@ -294,6 +298,7 @@ watch(date, async (newValue, oldValue) => {
     events.value = await find("events", {
       populate: ["Thumbnail"],
       pagination: options,
+      sort: ["Start:asc"],
       filters: {
         Start: {
           $gte: new Date(
@@ -314,6 +319,7 @@ watch(date, async (newValue, oldValue) => {
     events.value = await find("events", {
       populate: ["Thumbnail"],
       pagination: options,
+      sort: ["Start:asc"],
       filters: {
         Start: {
           $gte: new Date(
@@ -336,6 +342,7 @@ watch(date, async (newValue, oldValue) => {
     options.page = 1;
     events.value = await find("events", {
       populate: ["Thumbnail"],
+      sort: ["Start:asc"],
       pagination: options,
     });
   }
@@ -347,12 +354,14 @@ watch(filter, async (newValue, oldValue) => {
     events.value = await find("events", {
       populate: ["Thumbnail"],
       pagination: options,
+      sort: ["Start:asc"],
     });
   } else if (newValue !== "" && date.month === "") {
     options.page = 1;
     events.value = await find("events", {
       populate: ["Thumbnail"],
       pagination: options,
+      sort: ["Start:asc"],
       filters: {
         Tag: {
           $eq: newValue,
@@ -363,6 +372,7 @@ watch(filter, async (newValue, oldValue) => {
     options.page = 1;
     events.value = await find("events", {
       populate: ["Thumbnail"],
+      sort: ["Start:asc"],
       pagination: options,
       filters: {
         Start: {
@@ -382,6 +392,7 @@ watch(filter, async (newValue, oldValue) => {
     events.value = await find("events", {
       populate: ["Thumbnail"],
       pagination: options,
+      sort: ["Start:asc"],
       filters: {
         Start: {
           $gte: new Date(date.year + "-" + date.month + "-" + date.firstDay),
