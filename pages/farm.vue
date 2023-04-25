@@ -184,7 +184,7 @@
       </div>
     </div>
   </div>
-  <div class="bg-base-200 py-28 lg:px-16">
+  <div class="bg-base-200 py-28 lg:px-16" id="volunteer">
     <div
       class="2xl:w-[1200px] shadow-lg flex flex-col-reverse xl:flex-row items-center gap-8 lg:gap-20 xl:mx-auto bg-base-100 rounded-2xl p-4 md:p-6 mx-4"
     >

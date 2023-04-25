@@ -1,5 +1,4 @@
 module.exports = {
-  plugins: [require("daisyui")],
   theme: {
     screens: {
       sm: "640px",
@@ -18,4 +17,8 @@ module.exports = {
       // => @media (min-width: 1536px) { ... }
     },
   },
+  daisyui: {
+    themes: false,
+  },
+  plugins: [require("daisyui")],
 };

@@ -8,12 +8,13 @@
       </div>
       <h2 class="max-xl:text-4xl text-5xl font-bold">{{ props.title }}</h2>
       <p class="max-sm:text-lg text-xl mt-4 leading-9" v-html="props.text"></p>
-      <button
+      <NuxtLink
         class="btn w-44 max-sm:mt-6 mt-10 border-0"
         :class="props.btnBg + ' ' + props.btnBgHover"
+        :to="props.link"
       >
         Find Out More
-      </button>
+      </NuxtLink>
     </div>
     <div class="flex justify-center items-center">
       <img
@@ -32,5 +33,6 @@ const props = defineProps([
   "btn-bg-hover",
   "img",
   "icon",
+  "link",
 ]);
 </script>

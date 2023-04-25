@@ -287,7 +287,30 @@
       </div>
     </div>
   </div>
-  <div class="pt-20 pb-36 2xl:px-16">
+  <div class="bg-base-200 py-32 2xl:px-16" id="harinama">
+    <div
+      class="grid grid-rows-1 2xl:grid-cols-2 px-4 lg:px-20 items-center gap-x-4"
+    >
+      <div class="order-2 2xl:order-1 md:px-24 2xl:px-0">
+        <h2 class="text-xl uppercase font-bold">Harinama Sankirtana</h2>
+        <p class="pt-3 text-lg">
+          In this age of Kali, there is no other way to attain
+          <b>spiritual realization</b> than by chanting the Holy Name of God. A
+          dedicated team of New Mayapur's devotees is going weekly to the
+          neighboring town of Tours to chant and dance in ecstasy. We are also
+          sponsoring a book distribution <i>asram</i> made of several
+          <i>brahmacaris</i> in the city of Lyon.
+        </p>
+        <p class="pt-3 text-lg uppercase">📅 <b>Tours Harinama Schedule</b></p>
+        <p class="text-lg">&#8226; Every <b>Saturday</b> at <b>4PM</b></p>
+      </div>
+      <img
+        class="order-1 max-w-xs 2xl:max-w-lg md:max-w-md mb-12 2xl:mb-0 md:mb-24 2xl:ml-auto 2xl:mr-0 mx-auto rounded-lg"
+        src="/img/harinam.jpg"
+      />
+    </div>
+  </div>
+  <div class="pt-28 pb-36 2xl:px-16">
     <div
       class="grid grid-rows-1 lg:grid-cols-2 items-center px-4 2xl:px-20 gap-x-28"
     >

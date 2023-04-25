@@ -228,6 +228,7 @@ const events = ref(
         $gte: new Date(date.year, 0, 1),
       },
     },
+    sort: ["Start:asc"],
   })
 );
 

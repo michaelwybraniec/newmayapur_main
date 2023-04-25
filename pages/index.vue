@@ -10,6 +10,7 @@
               btn-bg="bg-red-700"
               btn-bg-hover="hover:bg-red-900"
               img="/img/harinam.jpg"
+              link="/temple#harinama"
               text="In this age of Kali, there is no other way to attain 
                     <b>spiritual realization</b> than by chanting the Holy Name of God. 
                     We are going out regularly to spread Lord Caitanya's mercy, all over <b>France</b>."
@@ -26,6 +27,7 @@
               btn-bg="bg-orange-700"
               btn-bg-hover="hover:bg-orange-900"
               img="/img/food.jpg"
+              link="/food-for-life"
             />
           </li>
           <li class="glide__slide bg-base-200">
@@ -39,6 +41,7 @@
               btn-bg="bg-green-700"
               btn-bg-hover="hover:bg-green-900"
               img="/img/gardening.jpg"
+              link="/farm#volunteer"
             />
           </li>
           <li class="glide__slide bg-base-200">
@@ -48,6 +51,7 @@
               btn-bg="bg-gray-600"
               btn-bg-hover="hover:bg-gray-900"
               img="/img/smiles.jpeg"
+              link="/events"
               text="Come for our <b>Open House Sundays</b> or stay over for an <b>Immersion Weekend</b>.
                     It is said that guests are a <b>gift of God</b>, therefore we are striving to provide all of
                     our visitors with an amazing experience of New Mayapur!"
@@ -60,6 +64,7 @@
               btn-bg="bg-pink-600"
               btn-bg-hover="hover:bg-pink-900"
               img="/img/deities.jpg"
+              link="/temple"
               text="The Deities are the <b>heart</b> of our community. New Mayapur has been established
                     in 1974, and <b>Sri-Sri-Krishna-Balarama</b> have been installed here by Srila Prabhupada himself."
             />
@@ -71,6 +76,7 @@
               btn-bg="bg-yellow-700"
               btn-bg-hover="hover:bg-yellow-900"
               img="/img/cow_devotee.jpg"
+              link="/farm"
               text="Cow protection is an essential part of <b>vedic</b> culture. Our cows are taken care 
               of with <b>love</b> and devotion all throughout their lives, and will <b>never</b> be sent 
               to a slaughterhouse."
