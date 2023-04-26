@@ -66,7 +66,7 @@
               img="/img/deities.jpg"
               link="/temple"
               text="The Deities are the <b>heart</b> of our community. New Mayapur has been established
-                    in 1974, and <b>Sri-Sri-Krishna-Balarama</b> have been installed here by Srila Prabhupada himself."
+                    in 1975, and <b>Sri-Sri-Krishna-Balarama</b> have been installed here by Srila Prabhupada himself."
             />
           </li>
           <li class="glide__slide bg-base-200">

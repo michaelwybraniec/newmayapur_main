@@ -256,9 +256,15 @@
   >
     <div>
       <div class="grid grid-flow-col gap-4 mb-4">
-        <Icon name="ion:logo-instagram" size="28px" />
-        <Icon name="ion:logo-facebook" size="28px" />
-        <Icon name="ion:logo-youtube" size="28px" />
+        <NuxtLink to="https://www.instagram.com/lanouvellemayapur/"
+          ><Icon name="ion:logo-instagram" size="28px"
+        /></NuxtLink>
+        <NuxtLink to="https://www.facebook.com/nouvellemayapur"
+          ><Icon name="ion:logo-facebook" size="28px"
+        /></NuxtLink>
+        <NuxtLink to="https://www.youtube.com/@NewMayapur">
+          <Icon name="ion:logo-youtube" size="28px" />
+        </NuxtLink>
       </div>
       <p>
         <b>ISKCON New Mayapur</b><br />A spiritual eco-village in the heart of
@@ -267,21 +273,44 @@
     </div>
     <div>
       <span class="footer-title">Navigation</span>
-      <a class="link link-hover">Events</a>
-      <a class="link link-hover">Temple</a>
-      <a class="link link-hover">Donate</a>
-      <a class="link link-hover">Farm</a>
-      <a class="link link-hover">Blog</a>
+      <NuxtLink to="/blog" class="link link-hover">Blog</NuxtLink>
+      <NuxtLink to="https://www.vedalivres.com/" class="link link-hover"
+        >Shop</NuxtLink
+      >
+      <NuxtLink to="https://booking.newmayapur.com" class="link link-hover"
+        >Booking</NuxtLink
+      >
+      <NuxtLink to="/events" class="link link-hover">Events</NuxtLink>
+      <a href="https://donations.newmayapur.com" class="link link-hover"
+        >Donate</a
+      >
+      <NuxtLink to="/more" class="link link-hover">Directions</NuxtLink>
+      <NuxtLink to="/more#contact" class="link link-hover">Contact</NuxtLink>
     </div>
     <div>
-      <span class="footer-title">Information</span>
-      <p>Château d'Oublaise, <br />36360 Luçay-Le-Mâle, France</p>
-      <p>+33 6 67 97 55 03</p>
+      <span class="footer-title">About</span>
+      <NuxtLink to="/temple" class="link link-hover">Temple</NuxtLink>
+      <NuxtLink to="/farm" class="link link-hover">Farm</NuxtLink>
+      <NuxtLink to="/community" class="link link-hover">Community</NuxtLink>
+      <span class="footer-title mt-4">Services</span>
+      <NuxtLink to="/retreats" class="link link-hover">Retreats</NuxtLink>
+      <NuxtLink to="/catering" class="link link-hover">Catering</NuxtLink>
+      <NuxtLink to="/renting-venue" class="link link-hover"
+        >Renting Venue</NuxtLink
+      >
+      <NuxtLink to="/food-for-life" class="link link-hover"
+        >Food For Life</NuxtLink
+      >
     </div>
     <div>
       <span class="footer-title">More</span>
-      <a class="link link-hover">Le Gopal</a>
-      <a class="link link-hover">New Bahulavan</a>
+      <a href="https://legopal.fr/" class="link link-hover">Le Gopal</a>
+      <a href="https://newbahulavan.fr/" class="link link-hover"
+        >New Bahulavan</a
+      >
+      <span class="footer-title mt-4">Information</span>
+      <p>Château d'Oublaise, <br />36360 Luçay-Le-Mâle, France</p>
+      <a href="tel:33783207004" class="link link-hover">+33 7 83 20 70 04</a>
     </div>
   </footer>
 </template>

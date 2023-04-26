@@ -9,7 +9,7 @@
           <p class="pt-3 text-lg">
             The Château d’Oublaise, now known as New Mayapur, is situated in the
             serene countryside of Centre-Val de Loire, France. It was
-            established as a Hare Krishna temple community in 1974 by the
+            established as a Hare Krishna temple community in 1975 by the
             followers of His Divine Grace A. C. Bhaktivedanta Swami Prabhupada,
             founder of the International Society for Krishna Consciousness. The
             temple shrine is home to Their Lordships Sri Sri Gaura-Nitai, Sri
@@ -88,7 +88,7 @@
             selected Château d’Oublaise, and the devotees had Srila Prabhupada
             visit here for his advice and support. Srila Prabhupada felt that
             this place would be ideal for the devotees and it was purchased in
-            1974.
+            1975.
           </p>
         </div>
       </div>
@@ -110,7 +110,7 @@
             commander, Jean-François Perrette, who gathered unemployed and sick
             French war veterans here after World War II. Perette decided to sell
             it to the Hare Krishna devotees when he reached the age of 80 in
-            1974. To this day, it belongs to the International Society for
+            1975. To this day, it belongs to the International Society for
             Krishna Consciousness.
           </p>
           <p class="mt-2">
@@ -147,7 +147,7 @@
         <div class="collapse-title text-xl font-medium">Devotees</div>
         <div class="collapse-content">
           <p>
-            Devotees moved onto the property in 1974 and arranged the castle as
+            Devotees moved onto the property in 1975 and arranged the castle as
             a temple for their Lordships Sri-Sri Gaura-Nitai, installed that
             year. In 1975, Srila Prabhupada installed Krishna-Balarama Deities,
             and in 1979, under Bhagavan Dasa, Sri-Sri-Radha-Govinda-Madhava were
@@ -302,7 +302,9 @@
           <i>brahmacaris</i> in the city of Lyon.
         </p>
         <p class="pt-3 text-lg uppercase">📅 <b>Tours Harinama Schedule</b></p>
-        <p class="text-lg">&#8226; Every <b>Saturday</b> at <b>4PM</b></p>
+        <p class="text-lg">
+          &#8226; Every <b>Saturday</b> at <b>4PM</b>, Avenue de la Tranchée.
+        </p>
       </div>
       <img
         class="order-1 max-w-xs 2xl:max-w-lg md:max-w-md mb-12 2xl:mb-0 md:mb-24 2xl:ml-auto 2xl:mr-0 mx-auto rounded-lg"
@@ -328,7 +330,11 @@
               <b>Sri Varahadeva</b>, and <b>Sri-Sri Radha-Govinda-Madhava</b>'s
               <i>darshan</i> regularly, straight from your social media feed.
             </p>
-            <button class="btn-primary btn mt-4">See on Facebook</button>
+            <NuxtLink
+              to="https://www.facebook.com/people/Daily-darsan-New-Mayapur-Iskcon-France/100064249227219/"
+              class="btn-primary btn mt-4"
+              >See on Facebook</NuxtLink
+            >
           </div>
           <div class="mt-12">
             <div
@@ -343,11 +349,12 @@
               scriptures, like <i>Srimad-Bhagavatam</i> and
               <i>Bhagavad-Gita</i>.
             </p>
-            <button
+            <NuxtLink
+              to="https://www.youtube.com/@NewMayapur"
               class="bg-red-600 text-white border-0 hover:bg-red-700 btn mt-4"
             >
               Watch Now
-            </button>
+            </NuxtLink>
           </div>
         </div>
       </div>
