@@ -244,9 +244,11 @@
         class="mb-12 mx-auto rounded-lg shadow-lg"
         src="/img/contribute.jpg"
       />
-      <button class="btn btn-secondary w-64 md:w-96 mx-auto block">
-        Donate Now
-      </button>
+      <NuxtLink
+        to="https://donations.newmayapur.com"
+        class="btn btn-secondary w-44 mx-auto block pt-4"
+        >Donate Now</NuxtLink
+      >
     </div>
   </div>
   <div class="">
