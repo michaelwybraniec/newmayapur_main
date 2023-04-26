@@ -132,7 +132,11 @@
           families, travellers and everything in between. All our rooms are
           available all year round.
         </p>
-        <button class="btn btn-primary btn-outline mt-6 w-44">Book Now</button>
+        <NuxtLink
+          to="https://booking.newmayapur.com"
+          class="btn btn-primary btn-outline mt-6 w-44"
+          >Book Now</NuxtLink
+        >
       </div>
       <div class="order-2 lg:order-1 md:px-24 lg:px-0 mb-24 lg:mb-0">
         <div class="p-5 pb-6 mx-auto inline bg-base-200 rounded-xl mb-16">
@@ -198,7 +202,7 @@
       <h2 class="text-2xl font-bold border-b-2 border-base-300 pb-2">
         Our Shop
       </h2>
-      <div class="grid grid-cols-2 gap-2 mt-10 md:w-[423px] mx-auto">
+      <div class="grid grid-cols-2 gap-2 mt-10 md:w-[423px] mx-auto mb-8">
         <img
           src="/img/bhagavad-gita.jpg"
           alt="Bhagavad-Gita"
@@ -220,9 +224,12 @@
           class="h-44 sm:h-52 rounded-md"
         />
       </div>
-      <button class="btn btn-secondary mx-auto block mt-8">
+      <NuxtLink
+        to="https://www.vedalivres.com"
+        class="btn btn-secondary w-44 mx-auto block pt-4"
+      >
         View All Products
-      </button>
+      </NuxtLink>
     </div>
   </div>
   <div class="bg-base-200 mx-auto pt-24 pb-32">

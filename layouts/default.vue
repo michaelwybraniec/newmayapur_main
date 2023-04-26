@@ -35,7 +35,7 @@
             <NuxtLink to="https://booking.newmayapur.com">Booking</NuxtLink>
           </li>
           <li @click="handleSelected">
-            <a href="https://shop.newmayapur.com">Shop</a>
+            <a href="https://www.vedalivres.com/">Shop</a>
           </li>
           <li tabindex="0">
             <a class="justify-between">
@@ -147,7 +147,7 @@
           <NuxtLink to="https://booking.newmayapur.com">Booking</NuxtLink>
         </li>
         <li @click="handleSelected" class="pr-1.5">
-          <a href="https://shop.newmayapur.com">Shop</a>
+          <a href="https://www.vedalivres.com/">Shop</a>
         </li>
         <li class="dropdown dropdown-end dropdown-hover">
           <a class="justify-between">

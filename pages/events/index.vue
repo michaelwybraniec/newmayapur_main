@@ -54,10 +54,10 @@
         </div>
         <h2 class="text-xl mt-12 uppercase font-bold">Temple Festivals</h2>
         <p class="pt-3 text-lg">
-          Festivals are the highlights of New Mayapur, and an integral part of
-          <i>vaisnava</i> culture. They celebrate the appearance of Krishna, the
-          Supreme Personality of Godhead, into our material realm, and are
-          always a joyous occurence.
+          Festivals are the highlights of New Mayapur. They celebrate the
+          appearance of <b>Krishna</b>, the Supreme Personality of Godhead, and
+          his associates into our material realm, and are always a joyous
+          occurence.
         </p>
       </div>
     </div>
