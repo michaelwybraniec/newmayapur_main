@@ -16,7 +16,30 @@
     <h1 class="text-3xl mt-16 font-bold">
       {{ post.data.attributes.Title }}
     </h1>
-    <div v-html="markdown" class="mt-6 mb-16 markdown"></div>
+    <div v-html="markdown" class="mt-6 mb-12 markdown"></div>
+    <!-- <div>
+      <h2 class="font-bold text-xl uppercase pb-2 border-b-2 border-base-300">
+        About the Author
+      </h2>
+      <div
+        class="bg-base-200 flex items-center gap-16 justify-between mt-4 mb-20 py-8 px-8 rounded-2xl"
+      >
+        <img
+          src="/img/portrait.webp"
+          alt="Portrait of the author"
+          class="rounded-xl w-56"
+        />
+        <div>
+          <h3 class="text-lg uppercase font-bold mb-2">Vidura Dasa</h3>
+          <p class="text-lg">
+            Vidura Dasa is a full-time temple resident. He is engaged in various
+            services, such as performing <i>puja</i>, managing New Mayapur's
+            social media, and IT support. He has a Bachelor of Fine Arts, and is
+            passionate about music and everything computer-related.
+          </p>
+        </div>
+      </div>
+    </div> -->
     <div class="lg:col-span-2 max-lg:order-2 space-y-4">
       <h2 class="font-bold text-xl uppercase pb-2 border-b-2 border-base-300">
         Read More

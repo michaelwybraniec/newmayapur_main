@@ -323,4 +323,6 @@ const handleSelected = () => {
   }
   enableDropdownHover.value = false;
 };
+
+const route = useRoute();
 </script>

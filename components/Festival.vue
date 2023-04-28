@@ -32,7 +32,10 @@
   </div>
   <div class="xl:w-[1280px] mx-4 xl:mx-auto pt-28 pb-44" v-if="days.length > 0">
     <h2 class="text-3xl font-bold text-center mb-6">Schedule</h2>
-    <div class="grid grid-cols-1 max-md:space-y-8 md:grid-cols-2 gap-6">
+    <div
+      class="grid grid-cols-1 max-md:space-y-8 gap-6"
+      :class="days.length !== 1 ? 'md:grid-cols-2' : 'mx-auto md:w-[620px]'"
+    >
       <div v-for="day in days" class="flex items-center flex-col">
         <div
           class="py-1 px-3 rounded-md bg-primary text-white font-bold text-center inline"
