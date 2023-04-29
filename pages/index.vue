@@ -312,12 +312,12 @@
         <img
           src="/img/mail.jpg"
           alt="Album"
-          class="max-sm:h-[225px] md:h-[365px] max-md:w-full object-cover"
+          class="max-sm:h-[225px] md:h-[345px] max-md:w-full object-cover"
         />
       </figure>
       <div class="card-body">
         <h2 class="card-title">Get our Latest News</h2>
-        <p class="text-lg">
+        <p class="text-lg max-md:mb-6">
           Keep up to date with what's happening in New Mayapur.
         </p>
         <form @submit.prevent="subscribe">
@@ -354,33 +354,38 @@
             </div>
           </div>
           <div class="grid md:grid-cols-2 gap-2 mt-3">
-            <input
-              type="text"
-              placeholder="Email"
-              class="input input-bordered w-full"
-              v-model="data.value.email"
-              @input="v$.value.email.$touch"
-            />
-            <select
-              class="select select-bordered w-full"
-              v-model="data.value.language"
-              @input="v$.value.language.$touch"
-            >
-              <option disabled selected value="">Language</option>
-              <option value="20b75dca3e">French</option>
-              <option value="c4e9098dd7">English</option>
-            </select>
-          </div>
-          <div class="grid grid-cols-2">
-            <p v-if="v$.value.email.$error" class="text-sm mt-0.5 text-red-600">
-              Please enter a valid email.
-            </p>
-            <p
-              v-if="v$.value.language.$error"
-              class="text-sm mt-0.5 text-red-600"
-            >
-              Please enter a language.
-            </p>
+            <div>
+              <input
+                type="text"
+                placeholder="Email"
+                class="input input-bordered w-full"
+                v-model="data.value.email"
+                @input="v$.value.email.$touch"
+              />
+              <p
+                v-if="v$.value.email.$error"
+                class="text-sm mt-0.5 text-red-600"
+              >
+                Please enter a valid email.
+              </p>
+            </div>
+            <div>
+              <select
+                class="select select-bordered w-full"
+                v-model="data.value.language"
+                @input="v$.value.language.$touch"
+              >
+                <option disabled selected value="">Language</option>
+                <option value="20b75dca3e">French</option>
+                <option value="c4e9098dd7">English</option>
+              </select>
+              <p
+                v-if="v$.value.language.$error"
+                class="text-sm mt-0.5 text-red-600"
+              >
+                Please enter a language.
+              </p>
+            </div>
           </div>
           <div class="card-actions mt-3 items-center">
             <button class="btn btn-primary max-md:w-full">Subscribe</button>
