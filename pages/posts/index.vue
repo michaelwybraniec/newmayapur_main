@@ -227,6 +227,7 @@ let posts = ref(
   await find("posts", {
     populate: ["Thumbnail"],
     pagination: options,
+    sort: ["publishedAt:desc"],
   })
 );
 
@@ -235,11 +236,13 @@ watch(options, async (newValue, oldValue) => {
     posts.value = await find("posts", {
       populate: ["Thumbnail"],
       pagination: newValue,
+      sort: ["publishedAt:desc"],
     });
   } else {
     posts.value = await find("posts", {
       populate: ["Thumbnail"],
       pagination: newValue,
+      sort: ["publishedAt:desc"],
       filters: {
         Category: {
           $eq: filter.value,
@@ -255,11 +258,13 @@ watch(filter, async (newValue, oldValue) => {
     posts.value = await find("posts", {
       populate: ["Thumbnail"],
       pagination: options,
+      sort: ["publishedAt:desc"],
     });
   } else {
     options.page = 1;
     posts.value = await find("posts", {
       populate: ["Thumbnail"],
+      sort: ["publishedAt:desc"],
       pagination: options,
       filters: {
         Category: {
