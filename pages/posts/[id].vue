@@ -17,29 +17,32 @@
       {{ post.data.attributes.Title }}
     </h1>
     <div v-html="markdown" class="mt-6 mb-12 markdown"></div>
-    <!-- <div>
+    <div v-if="post.data.attributes.Author.data">
       <h2 class="font-bold text-xl uppercase pb-2 border-b-2 border-base-300">
         About the Author
       </h2>
       <div
-        class="bg-base-200 flex items-center gap-16 justify-between mt-4 mb-20 py-8 px-8 rounded-2xl"
+        class="bg-base-200 flex flex-col md:flex-row items-center gap-16 justify-between mt-4 mb-20 py-8 px-8 rounded-2xl"
       >
         <img
-          src="/img/portrait.webp"
+          :src="
+            config.public.strapiBase +
+            post.data.attributes.Author.data.attributes.Picture.data.attributes
+              .formats.small.url
+          "
           alt="Portrait of the author"
           class="rounded-xl w-56"
         />
         <div>
-          <h3 class="text-lg uppercase font-bold mb-2">Vidura Dasa</h3>
+          <h3 class="text-lg uppercase font-bold mb-2">
+            {{ post.data.attributes.Author.data.attributes.Name }}
+          </h3>
           <p class="text-lg">
-            Vidura Dasa is a full-time temple resident. He is engaged in various
-            services, such as performing <i>puja</i>, managing New Mayapur's
-            social media, and IT support. He has a Bachelor of Fine Arts, and is
-            passionate about music and everything computer-related.
+            {{ post.data.attributes.Author.data.attributes.Description }}
           </p>
         </div>
       </div>
-    </div> -->
+    </div>
     <div class="lg:col-span-2 max-lg:order-2 space-y-4">
       <h2 class="font-bold text-xl uppercase pb-2 border-b-2 border-base-300">
         Read More
@@ -91,7 +94,12 @@ function between(min, max) {
 }
 
 const post = await findOne("posts", route.params.id, {
-  populate: ["Thumbnail"],
+  populate: {
+    Thumbnail: "*",
+    Author: {
+      populate: ["Picture"],
+    },
+  },
 });
 
 const posts = await find("posts", {

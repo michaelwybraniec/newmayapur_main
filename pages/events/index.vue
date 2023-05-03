@@ -3,9 +3,7 @@
     <div class="container lg:w-[800px] sm:mx-auto mt-24 mb-8">
       <div class="md:mx-auto w-full bg-blue-500 rounded-xl grid md:grid-cols-2">
         <div class="flex md:ml-12 mx-16 max-md:mt-8 justify-center flex-col">
-          <h2 class="text-white font-bold text-2xl md:text-3xl mb-3">
-            Open House Sundays
-          </h2>
+          <h2 class="text-white font-bold text-2xl mb-3">Open House Sundays</h2>
           <p class="text-lg text-white">
             New Mayapur is <b>open for all</b> to visit every Sunday, from 12am
             to 4pm. Join in the kirtan and enjoy a delicious vegetarian lunch,
