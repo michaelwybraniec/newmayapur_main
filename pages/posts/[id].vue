@@ -17,7 +17,7 @@
       {{ post.data.attributes.Title }}
     </h1>
     <div v-html="markdown" class="mt-6 mb-12 markdown"></div>
-    <!-- <div v-if="post.data.attributes.author.data">
+    <div v-if="post.data.attributes.author.data">
       <h2 class="font-bold text-xl uppercase pb-2 border-b-2 border-base-300">
         About the Author
       </h2>
@@ -42,7 +42,7 @@
           </p>
         </div>
       </div>
-    </div> -->
+    </div>
     <div class="lg:col-span-2 max-lg:order-2 space-y-4">
       <h2 class="font-bold text-xl uppercase pb-2 border-b-2 border-base-300">
         Read More
@@ -96,7 +96,7 @@ function between(min, max) {
 const post = await findOne("posts", route.params.id, {
   populate: {
     Thumbnail: "*",
-    Author: {
+    author: {
       populate: ["Picture"],
     },
   },
