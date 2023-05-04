@@ -17,7 +17,7 @@
       {{ post.data.attributes.Title }}
     </h1>
     <div v-html="markdown" class="mt-6 mb-12 markdown"></div>
-    <!-- <div v-if="post.data.attributes.Author.data">
+    <div v-if="post.data.attributes.author.data">
       <h2 class="font-bold text-xl uppercase pb-2 border-b-2 border-base-300">
         About the Author
       </h2>
@@ -27,7 +27,7 @@
         <img
           :src="
             config.public.strapiBase +
-            post.data.attributes.Author.data.attributes.Picture.data.attributes
+            post.data.attributes.author.data.attributes.Picture.data.attributes
               .formats.small.url
           "
           alt="Portrait of the author"
@@ -35,14 +35,14 @@
         />
         <div>
           <h3 class="text-lg uppercase font-bold mb-2">
-            {{ post.data.attributes.Author.data.attributes.Name }}
+            {{ post.data.attributes.author.data.attributes.Name }}
           </h3>
           <p class="text-lg">
-            {{ post.data.attributes.Author.data.attributes.Description }}
+            {{ post.data.attributes.author.data.attributes.Description }}
           </p>
         </div>
       </div>
-    </div> -->
+    </div>
     <div class="lg:col-span-2 max-lg:order-2 space-y-4">
       <h2 class="font-bold text-xl uppercase pb-2 border-b-2 border-base-300">
         Read More
