@@ -251,7 +251,7 @@
       >
     </div>
   </div>
-  <div class="">
+  <div>
     <div class="mx-auto py-32 lg:px-1.5 xl:px-12 2xl:px-16">
       <div class="md:px-24 mx-4 lg:px-0 lg:flex flex-col lg:items-center mb-20">
         <div class="p-5 pb-6 lg:pb-4 inline bg-base-200 rounded-xl">
