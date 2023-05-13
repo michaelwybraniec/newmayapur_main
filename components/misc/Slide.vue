@@ -5,7 +5,7 @@
     <div class="flex justify-center flex-col h-full">
       <h2 class="max-xl:text-4xl text-5xl font-bold">{{ props.title }}</h2>
       <div
-        class="max-sm:text-lg text-xl mt-4 leading-9"
+        class="max-sm:text-lg text-xl mt-4 leading-9 whitespace-normal"
         v-html="markdown"
       ></div>
       <NuxtLink
