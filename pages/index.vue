@@ -1,523 +1,73 @@
 <template>
-  <div>
-    <div class="glide">
-      <div class="glide__track" data-glide-el="track">
-        <ul class="glide__slides">
-          <li class="glide__slide bg-base-200">
-            <Slide
-              title="Harinam Sankirtan"
-              icon="ion:musical-notes-outline"
-              btn-bg="bg-red-700"
-              btn-bg-hover="hover:bg-red-900"
-              img="/img/harinam.jpg"
-              link="/temple#harinama"
-              text="In this age of Kali, there is no other way to attain 
-                    <b>spiritual realization</b> than by chanting the Holy Name of God. 
-                    We are going out regularly to spread Lord Caitanya's mercy, all over <b>France</b>."
-            />
-          </li>
-          <li class="glide__slide bg-base-200">
-            <Slide
-              title="Food For Life"
-              text="There are <b>5 to 7 million</b> people who at least partially
-                    rely on food banks for their subsistance in present-day
-                    France. We are here to make a difference, by providing meals
-                    <b>free of charge</b>."
-              icon="ion:pizza-outline"
-              btn-bg="bg-orange-700"
-              btn-bg-hover="hover:bg-orange-900"
-              img="/img/food.jpg"
-              link="/food-for-life"
-            />
-          </li>
-          <li class="glide__slide bg-base-200">
-            <Slide
-              title="Volunteering"
-              text="Volunteering is a great way to meet new people and create
-                  beautiful <b>relationships</b>. We provide plenty of
-                  opportunities for you to learn, be it in our <b>gardens</b>,
-                  our <b>dairy farm</b>, or our <b>forests</b>."
-              icon="ion:leaf-outline"
-              btn-bg="bg-green-700"
-              btn-bg-hover="hover:bg-green-900"
-              img="/img/gardening.jpg"
-              link="/farm#volunteer"
-            />
-          </li>
-          <li class="glide__slide bg-base-200">
-            <Slide
-              title="Visit Us"
-              icon="ion:heart-outline"
-              btn-bg="bg-gray-600"
-              btn-bg-hover="hover:bg-gray-900"
-              img="/img/smiles.jpeg"
-              link="/events"
-              text="Come for our <b>Open House Sundays</b> or stay over for an <b>Immersion Weekend</b>.
-                    It is said that guests are a <b>gift of God</b>, therefore we are striving to provide all of
-                    our visitors with an amazing experience of New Mayapur!"
-            />
-          </li>
-          <li class="glide__slide bg-base-200">
-            <Slide
-              title="The Temple"
-              icon="ion:sparkles-outline"
-              btn-bg="bg-pink-600"
-              btn-bg-hover="hover:bg-pink-900"
-              img="/img/deities.jpg"
-              link="/temple"
-              text="The Deities are the <b>heart</b> of our community. New Mayapur has been established
-                    in 1975, and <b>Sri-Sri-Krishna-Balarama</b> have been installed here by Srila Prabhupada himself."
-            />
-          </li>
-          <li class="glide__slide bg-base-200">
-            <Slide
-              title="Ahimsa Goshala"
-              icon="ion:flower-outline"
-              btn-bg="bg-yellow-700"
-              btn-bg-hover="hover:bg-yellow-900"
-              img="/img/cow_devotee.jpg"
-              link="/farm"
-              text="Cow protection is an essential part of <b>vedic</b> culture. Our cows are taken care 
-              of with <b>love</b> and devotion all throughout their lives, and will <b>never</b> be sent 
-              to a slaughterhouse."
-            />
-          </li>
-        </ul>
-        <div data-glide-el="controls" class="max-lg:hidden">
-          <button
-            class="glide__arrow glide__arrow--left absolute left-0 top-1/2 -translate-y-1/2 mx-4"
-            data-glide-dir="<"
-          >
-            <Icon name="ion:arrow-back-circle-outline" size="40px" />
-          </button>
-          <button
-            class="glide__arrow glide__arrow--right absolute right-0 top-1/2 -translate-y-1/2 mx-4"
-            data-glide-dir=">"
-          >
-            <Icon name="ion:arrow-forward-circle-outline" size="40px" />
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="pb-24 pt-36 2xl:px-10">
-    <div
-      class="grid grid-cols-1 lg:grid-cols-3 px-4 lg:gap-x-10 2xl:px-20 items-start 2xl:gap-x-16"
+  <Hero v-if="'Hero' in content.data.attributes">
+    <li
+      class="glide__slide bg-base-200"
+      v-for="slide in content.data.attributes.Hero"
     >
-      <div class="order-2 lg:order-1 md:px-24 lg:px-0 mb-24 lg:mb-0">
-        <div class="p-5 pb-6 mx-auto inline bg-base-200 rounded-xl mb-16">
-          <Icon name="ion:map-outline" size="28px" />
-        </div>
-        <h2 class="text-xl mt-12 uppercase font-bold">How to Come</h2>
-        <p class="pt-3 text-lg">
-          New Mayapur is situated in a haven of peace, amongst the forests and
-          fields of Indre, in the center of France. As such, it can be sometimes
-          a little hard to reach, especially when coming from abroad. Find out
-          how to come right here.
-        </p>
-        <NuxtLink to="/more#map">
-          <button class="btn btn-primary btn-outline mt-6 w-44">
-            Get Directions
-          </button>
-        </NuxtLink>
-      </div>
-      <div class="order-2 lg:order-1 md:px-24 lg:px-0 mb-24 lg:mb-0">
-        <div class="p-5 pb-6 mx-auto inline bg-base-200 rounded-xl mb-16">
-          <Icon name="ion:bed-outline" size="28px" />
-        </div>
-        <h2 class="text-xl mt-12 uppercase font-bold">Stay Over</h2>
-        <p class="pt-3 text-lg">
-          Experience New Mayapur first-hand by booking a room in our fully
-          furnished, comfortable <b>guesthouse</b>. We have rooms for singles,
-          families, travellers and everything in between. All our rooms are
-          available all year round.
-        </p>
-        <NuxtLink
-          to="https://booking.newmayapur.com"
-          class="btn btn-primary btn-outline mt-6 w-44"
-          >Book Now</NuxtLink
-        >
-      </div>
-      <div class="order-2 lg:order-1 md:px-24 lg:px-0 mb-24 lg:mb-0">
-        <div class="p-5 pb-6 mx-auto inline bg-base-200 rounded-xl mb-16">
-          <Icon name="ion:mail-outline" size="28px" />
-        </div>
-        <h2 class="text-xl mt-12 uppercase font-bold">Keep in Touch</h2>
-        <p class="pt-3 text-lg">
-          You have a question, or you would like to share your ideas and
-          suggestions with us? Please reach out to us! We are always happy to
-          get our guests' feedback, and are eager to improve the quality of your
-          stay in New Mayapur.
-        </p>
-        <NuxtLink to="/more#contact">
-          <button class="btn btn-primary btn-outline mt-6 w-44">
-            Contact Us
-          </button>
-        </NuxtLink>
-      </div>
-    </div>
-  </div>
-  <div
-    class="pb-32 lg:pt-24 lg:px-4 2xl:px-28 grid grid-cols-1 mx-4 lg:mx-0 lg:grid-cols-2 gap-6 2xl:gap-24"
-  >
-    <div class="max-lg:pb-20">
-      <h2 class="text-2xl font-bold border-b-2 border-base-300 pb-2">
-        Upcoming Events
-      </h2>
-      <ul>
-        <li v-for="event in events.data" class="flex flex-col">
-          <div
-            class="bg-primary inline-block self-end translate-y-6 lg:translate-y-4 px-4 py-1 rounded-md text-white font-bold -translate-x-8"
-          >
-            {{
-              new Date(event.attributes.Start).toLocaleString("en-GB", {
-                day: "numeric",
-                month: "short",
-                year: "numeric",
-              })
-            }}
-          </div>
-          <div class="p-4 px-6 pb-5 border-2 rounded-lg mt-2 lg:mt-0">
-            <NuxtLink :to="'/events/' + event.id"
-              ><h3 class="font-bold text-xl pb-2">
-                {{ event.attributes.Title }}
-              </h3></NuxtLink
-            >
-            <p>
-              {{
-                event.attributes.Description.split(" ").splice(0, 35).join(" ")
-              }}
-              ...
-            </p>
-          </div>
-        </li>
-      </ul>
-      <NuxtLink to="/events">
-        <button class="btn btn-primary btn-outline mx-auto block mt-8">
-          View All Events
-        </button>
-      </NuxtLink>
-    </div>
-    <div>
-      <h2 class="text-2xl font-bold border-b-2 border-base-300 pb-2">
-        Our Shop
-      </h2>
-      <div class="grid grid-cols-2 gap-2 mt-10 md:w-[423px] mx-auto mb-8">
-        <img
-          src="/img/bhagavad-gita.jpg"
-          alt="Bhagavad-Gita"
-          class="h-44 sm:h-52 rounded-md"
-        />
-        <img
-          src="/img/perfection-du-yoga.jpg"
-          alt="Bhagavad-Gita"
-          class="h-44 sm:h-52 rounded-md"
-        />
-        <img
-          src="/img/sri-isopanisad.jpg"
-          alt="Bhagavad-Gita"
-          class="h-44 sm:h-52 rounded-md"
-        />
-        <img
-          src="/img/gloire-mysteres-inde.jpg"
-          alt="Bhagavad-Gita"
-          class="h-44 sm:h-52 rounded-md"
-        />
-      </div>
-      <NuxtLink
-        to="https://www.vedalivres.com"
-        class="btn btn-secondary w-44 mx-auto block pt-4"
-      >
-        View All Products
-      </NuxtLink>
-    </div>
-  </div>
-  <div class="bg-base-200 mx-auto pt-24 pb-32">
-    <h2 class="text-3xl font-bold text-center mb-6">Contributing</h2>
-    <p class="max-w-xl pt-2 pb-2 mx-4 sm:mx-auto text-center text-lg">
-      All contributions made to New Mayapur directly support the maintenance of
-      and preaching activities of its residents. Donate once or
-      <b>become a member</b> today.
-    </p>
-    <div class="mt-12 mx-4 xl:w-1/2 2xl:w-1/3 lg:mx-auto">
-      <img
-        class="mb-12 mx-auto rounded-lg shadow-lg"
-        src="/img/contribute.jpg"
+      <MiscSlide
+        :title="slide.Title"
+        :img="
+          config.public.strapiBase +
+          slide.Image.data.attributes.formats.medium.url
+        "
+        :link="slide.Link"
+        :text="slide.Description"
       />
-      <NuxtLink
-        to="https://donations.newmayapur.com"
-        class="btn btn-secondary w-44 mx-auto block pt-4"
-        >Donate Now</NuxtLink
-      >
-    </div>
+    </li>
+  </Hero>
+  <MiscSectionWrapperThird
+    :section0="content.data.attributes.SectionWrapperThird.Section0"
+    :section1="content.data.attributes.SectionWrapperThird.Section1"
+    :section2="content.data.attributes.SectionWrapperThird.Section2"
+    :bg-color="content.data.attributes.SectionWrapperThird.BgColor"
+  />
+  <div
+    class="pb-32 lg:pt-4 lg:px-4 2xl:px-28 grid grid-cols-1 mx-4 lg:mx-0 lg:grid-cols-2 gap-6 2xl:gap-24"
+  >
+    <UpcomingEvents v-if="content.data.attributes.ShowUpcomingEvents" />
+    <Gallery v-if="content.data.attributes.ShowShopGallery" />
   </div>
-  <div>
-    <div class="mx-auto py-32 lg:px-1.5 xl:px-12 2xl:px-16">
-      <div class="md:px-24 mx-4 lg:px-0 lg:flex flex-col lg:items-center mb-20">
-        <div class="p-5 pb-6 lg:pb-4 inline bg-base-200 rounded-xl">
-          <Icon name="ion:book-outline" size="28px" />
-        </div>
-        <h2 class="text-xl uppercase font-bold mt-8">Read Our Blog</h2>
-        <p class="pt-3 lg:w-[800px] lg:text-center text-lg mt-2">
-          Keep up to date with our latest news, and learn more about
-          <b>Krishna Consciousnesss</b>. Our articles are not only informative
-          about New Mayapur's events and development but also a wealth of
-          information about <i>bhakti-yoga</i>, as taught by
-          <b>Sri Srila A.C. Bhaktivedanta Swami Prabhupada</b>.
-        </p>
-      </div>
-      <div
-        class="grid grid-cols-1 lg:grid-cols-3 mx-auto 2xl:w-[1300px] px-4 2xl:px-20 items-center gap-x-4"
-      >
-        <div
-          v-for="post in posts.data"
-          class="card mt-6 h-[430px] md:mx-auto max-w-sm bg-base-100 shadow-xl"
-        >
-          <figure>
-            <img
-              :src="
-                config.public.strapiBase +
-                post.attributes.Thumbnail.data.attributes.formats.small.url
-              "
-              class="h-52 w-full object-cover"
-              alt="Shoes"
-            />
-          </figure>
-          <div class="card-body">
-            <h2 class="card-title">
-              {{ post.attributes.Title.substr(0, 14) + "..." }}
-              <div
-                class="badge border-none"
-                :class="setTagsBg(post.attributes.Category)"
-              >
-                #{{ post.attributes.Category }}
-              </div>
-            </h2>
-            <p>{{ post.attributes.Content.substr(0, 65) + "..." }}</p>
-            <div class="flex justify-end">
-              <NuxtLink
-                :to="'/posts/' + post.id"
-                class="btn btn-primary btn-outline"
-                >Read More</NuxtLink
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="lg:w-[900px] xl:w-[1000px] mx-4 lg:mx-auto mt-16 mb-48">
-    <div class="card sm:card-side bg-base-100 border-2 border-base-200">
-      <figure class="sm:w-[400px]">
-        <img
-          src="/img/mail.jpg"
-          alt="Album"
-          class="max-sm:h-[225px] md:h-[345px] max-md:w-full object-cover"
-        />
-      </figure>
-      <div class="card-body">
-        <h2 class="card-title">Get our Latest News</h2>
-        <p class="text-lg max-md:mb-6">
-          Keep up to date with what's happening in New Mayapur.
-        </p>
-        <form @submit.prevent="subscribe">
-          <div class="grid md:grid-cols-2 gap-2">
-            <div>
-              <input
-                type="text"
-                v-model="data.value.fName"
-                placeholder="First Name"
-                class="input input-bordered w-full"
-                @input="v$.value.fName.$touch"
-              />
-              <p
-                v-if="v$.value.fName.$error"
-                class="text-sm mt-0.5 text-red-600"
-              >
-                Please enter a valid first name.
-              </p>
-            </div>
-            <div>
-              <input
-                v-model="data.value.lName"
-                type="text"
-                placeholder="Last Name"
-                class="input input-bordered w-full"
-                @input="v$.value.lName.$touch"
-              />
-              <p
-                v-if="v$.value.lName.$error"
-                class="text-sm mt-0.5 text-red-600"
-              >
-                Please enter a valid last name.
-              </p>
-            </div>
-          </div>
-          <div class="grid md:grid-cols-2 gap-2 mt-3">
-            <div>
-              <input
-                type="text"
-                placeholder="Email"
-                class="input input-bordered w-full"
-                v-model="data.value.email"
-                @input="v$.value.email.$touch"
-              />
-              <p
-                v-if="v$.value.email.$error"
-                class="text-sm mt-0.5 text-red-600"
-              >
-                Please enter a valid email.
-              </p>
-            </div>
-            <div>
-              <select
-                class="select select-bordered w-full"
-                v-model="data.value.language"
-                @input="v$.value.language.$touch"
-              >
-                <option disabled selected value="">Language</option>
-                <option value="20b75dca3e">French</option>
-                <option value="c4e9098dd7">English</option>
-              </select>
-              <p
-                v-if="v$.value.language.$error"
-                class="text-sm mt-0.5 text-red-600"
-              >
-                Please enter a language.
-              </p>
-            </div>
-          </div>
-          <div class="card-actions mt-3 items-center">
-            <button class="btn btn-primary max-md:w-full">Subscribe</button>
-            <p
-              class="2xl:text-center"
-              :class="
-                res.includes('registered') ? 'text-green-600' : 'text-red-600'
-              "
-            >
-              {{ res }}
-            </p>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
+  <MiscFullScreenSection
+    v-if="'FullScreenSection' in content.data.attributes"
+    :title="content.data.attributes.FullScreenSection.Title"
+    :description="content.data.attributes.FullScreenSection.Description"
+    :image="
+      config.public.strapiBase +
+      content.data.attributes.FullScreenSection.Image.data.attributes.formats
+        .medium.url
+    "
+    :buttonText="content.data.attributes.FullScreenSection.ButtonText"
+    :buttonLink="content.data.attributes.FullScreenSection.ButtonLink"
+    :bgColor="content.data.attributes.FullScreenSection.BgColor"
+  />
+  <MiscBlogPreview
+    :title="content.data.attributes.BlogPreview.Title"
+    :ionIcon="content.data.attributes.BlogPreview.IonIcon"
+    :description="content.data.attributes.BlogPreview.Description"
+    :showArticles="content.data.attributes.BlogPreview.ShowArticles"
+  />
+  <NewsletterForm v-if="content.data.attributes.ShowNewsletterForm" />
 </template>
 
 <script setup>
-import { required, email } from "@vuelidate/validators";
-import { useVuelidate } from "@vuelidate/core";
-
-const rules = computed(() => {
-  return {
-    value: {
-      email: { required, email },
-      fName: { required },
-      lName: { required },
-      language: { required },
-    },
-  };
-});
-
 const { find } = useStrapi();
 
-const data = reactive({
-  value: {
-    email: "",
-    fName: "",
-    lName: "",
-    language: "",
-  },
-});
-
-const res = ref("");
-
-const v$ = useVuelidate(rules, data);
-
-const subscribe = async () => {
-  const isCorrect = await v$.value.$validate();
-  if (!isCorrect) return;
-
-  console.log(data);
-
-  const { _, pending, error, refresh } = await useFetch("/api/mailchimp", {
-    method: "POST",
-    body: {
-      email: data.value.email,
-      fName: data.value.fName,
-      lName: data.value.lName,
-      language: data.value.language,
-      birthday: null,
-      address: {
-        addr1: "",
-        city: "",
-        state: "",
-        zip: "",
-        country: "",
-      },
+const content = await find("Homepage", {
+  populate: {
+    Hero: {
+      populate: "*",
     },
-  });
-
-  res.value = error.value
-    ? "Oops! Something went wrong. Please try again later."
-    : "Your subscription has been registered.";
-
-  data.value.email = "";
-  data.value.fName = "";
-  data.value.lName = "";
-  data.value.language = "";
-
-  v$.value.$reset();
-};
-
-const events = await find("events", {
-  sort: ["Start:asc"],
-  filters: {
-    Start: {
-      $gt: new Date(),
+    SectionWrapperThird: {
+      populate: "*",
+    },
+    FullScreenSection: {
+      populate: "*",
+    },
+    BlogPreview: {
+      populate: "*",
     },
   },
-  pagination: {
-    pageSize: 3,
-    page: 1,
-  },
 });
-
-const posts = await find("posts", {
-  pagination: {
-    pageSize: 3,
-    page: 1,
-  },
-  populate: "Thumbnail",
-  sort: ["publishedAt:desc"],
-});
-
-const setTagsBg = function (value) {
-  if (value === "Temple") {
-    return "bg-orange-600";
-  } else if (value === "Community") {
-    return "bg-blue-600";
-  } else {
-    return "bg-green-600";
-  }
-};
 
 const config = useRuntimeConfig();
 </script>
-
-<script>
-import Glide from "@glidejs/glide";
-import { Autoplay } from "@glidejs/glide/dist/glide.modular.esm";
-
-export default {
-  mounted() {
-    let glide = new Glide(".glide", {
-      autoplay: 5000,
-    }).mount({ Autoplay });
-  },
-};
-</script>
-
-<style scoped>
-@import "@glidejs/glide/dist/css/glide.core.min.css";
-</style>
