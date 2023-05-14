@@ -21,6 +21,7 @@
           {{ props.description }}
         </p>
         <NuxtLink
+          :disabled="props.full ? true : false"
           to="https://booking.newmayapur.com"
           class="btn btn-primary w-44"
           :class="new Date(props.start) < new Date() ? 'btn-disabled' : ''"
@@ -88,7 +89,7 @@
             <p class="text-2xl font-bold">Price</p>
             <span
               class="text-xl uppercase font-bold bg-red-300 rounded-md px-2 py-0.5"
-              >Free</span
+              >{{ props.full ? "FULL" : "FREE" }}</span
             >
           </div>
           <p class="italic">Without Accomodation</p>
@@ -97,6 +98,7 @@
           class="border-2 rounded-md border-base-300 flex max-md:flex-col justify-center items-center p-4 gap-2"
         >
           <NuxtLink
+            :disabled="props.full ? true : false"
             to="https://booking.newmayapur.com"
             class="btn btn-secondary w-full"
             >Book Your Stay</NuxtLink
@@ -115,5 +117,6 @@ const props = defineProps([
   "title",
   "description",
   "days",
+  "full",
 ]);
 </script>

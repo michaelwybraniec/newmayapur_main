@@ -10,6 +10,7 @@
     :title="event.data.attributes.Title"
     :description="event.data.attributes.Description"
     :days="event.data.attributes.Days.data"
+    :full="event.data.attributes.Full"
   />
   <div v-else>
     <div class="hero py-32 bg-base-200">
