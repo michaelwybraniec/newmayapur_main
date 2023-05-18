@@ -73,7 +73,10 @@
       </div>
     </div>
   </div>
-  <div :class="days.length > 0 ? 'bg-base-200' : ''">
+  <div
+    :class="days.length > 0 ? 'bg-base-200' : ''"
+    v-if="!props.organizerContact"
+  >
     <div class="lg:w-[900px] mx-4 lg:mx-auto pt-28 pb-36">
       <h2 class="text-3xl font-bold text-center mb-6">Interested?</h2>
       <p class="max-w-xl pt-2 pb-2 mx-auto text-center mb-16">
@@ -107,6 +110,32 @@
       </div>
     </div>
   </div>
+  <div :class="days.length > 0 ? 'bg-base-200' : ''" v-else>
+    <div class="lg:w-[900px] mx-4 lg:mx-auto pt-28 pb-36">
+      <h2 class="text-3xl font-bold text-center mb-6">Interested?</h2>
+      <p class="max-w-xl pt-2 pb-2 mx-auto text-center mb-16">
+        Book your stay in our fully furnished guesthouse. We provide a variety
+        of rooms; both <b>en suite</b> and with shared bathrooms, for families
+        and individuals alike.
+      </p>
+      <div
+        class="p-6 rounded-xl shadow-lg mt-20 grid md:grid-cols-2 gap-4 bg-base-100"
+      >
+        <div>
+          <h2
+            class="uppercase text-lg font-bold text-center flex items-center justify-center h-full bg-base-200 rounded-lg"
+          >
+            Contact the Organizers
+          </h2>
+        </div>
+        <div
+          class="border-2 rounded-md border-base-300 flex max-md:flex-col justify-center items-center p-4 gap-2 text-lg italic"
+        >
+          {{ props.organizerContact.replace("@", "[at]") }}
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script setup>
@@ -118,5 +147,6 @@ const props = defineProps([
   "description",
   "days",
   "full",
+  "organizerContact",
 ]);
 </script>
