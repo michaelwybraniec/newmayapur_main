@@ -1,13 +1,24 @@
 <template>
+  <div class="pt-24 2xl:px-10">
+    <div
+      class="mb-12 border-2 flex gap-4 border-base-300 px-5 py-4 rounded-lg max-w-lg mx-4 md:mx-auto"
+    >
+      <Icon name="ion:information-circle-outline" size="50px" />
+      <span
+        >We are open between 10am and 5pm from <b>Monday</b> to <b>Saturday</b>.
+        See our <i>Open House Sundays</i> below.</span
+      >
+    </div>
+  </div>
   <div class="mx-4">
     <div class="container lg:w-[800px] sm:mx-auto mt-24 mb-8">
       <div class="md:mx-auto w-full bg-blue-500 rounded-xl grid md:grid-cols-2">
         <div class="flex md:ml-12 mx-16 max-md:mt-8 justify-center flex-col">
           <h2 class="text-white font-bold text-2xl mb-3">Open House Sundays</h2>
           <p class="text-lg text-white">
-            New Mayapur is <b>open for all</b> to visit every Sunday, from 12am
-            to 4pm. Join in the kirtan and enjoy a delicious vegetarian lunch,
-            all free of charge!
+            New Mayapur is <b>open for all</b> to visit every Sunday, from
+            12:30am to 7:30pm. Join in the kirtan, visit the domain, and get a
+            delicious vegetarian lunch, all free of charge!
           </p>
         </div>
         <img
@@ -53,8 +64,8 @@
         <h2 class="text-xl mt-12 uppercase font-bold">Temple Festivals</h2>
         <p class="pt-3 text-lg">
           Festivals are the highlights of New Mayapur. They celebrate the
-          appearance of <b>Krishna</b>, the Supreme Personality of Godhead, and
-          his associates into our material realm, and are always a joyous
+          appearance of <b>Krishna</b> or His various incarnations, along with
+          His associates into our material realm, and are always a joyous
           occurence.
         </p>
       </div>
