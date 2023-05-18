@@ -26,6 +26,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       strapiBase: process.env.NUXT_STRAPI_BASE_URL,
+      env: process.env.ENV,
     },
     mailchimpKey: process.env.MAILCHIMP_API_KEY,
     mailchimpServer: process.env.MAILCHIMP_SERVER,

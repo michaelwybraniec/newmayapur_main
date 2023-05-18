@@ -19,62 +19,78 @@
       >
     </l-map>
   </div>
-  <div class="py-24 pb-32 2xl:px-10">
-    <h2 class="text-3xl font-bold text-center mb-16">How to Reach Us</h2>
+  <div class="pt-24 2xl:px-10">
+    <h2 class="text-3xl font-bold text-center mb-12">How to Reach Us</h2>
     <div
-      class="mb-32 border-2 flex gap-4 border-base-300 px-5 py-4 rounded-lg max-w-lg mx-4 md:mx-auto"
+      class="mb-12 border-2 flex gap-4 border-base-300 px-5 py-4 rounded-lg max-w-lg mx-4 md:mx-auto"
     >
       <Icon name="ion:information-circle-outline" size="72px" />
       <span
         >We can make a bus reservation for you on demand, and provide a pick-up
-        service from anywhere. To request a lift, please do so when booking your
-        room.</span
+        service from different places. To request a lift, please do so when
+        booking your room.</span
       >
     </div>
-    <div
-      class="grid grid-cols-1 lg:grid-cols-3 px-4 md:px-12 2xl:px-20 items-start gap-x-16"
-    >
-      <div class="order-2 lg:order-1 md:px-24 lg:px-0 mb-24 lg:mb-0">
-        <div class="p-5 pb-6 mx-auto inline bg-base-200 rounded-xl mb-16">
-          <Icon name="ion:airplane-outline" size="28px" />
+  </div>
+  <div class="pb-32 lg:px-10 lg:w-[1000px] mx-auto">
+    <div class="mx-4">
+      <div
+        tabindex="0"
+        class="collapse collapse-plus border border-base-300 bg-base-100 rounded-box"
+      >
+        <input type="checkbox" />
+        <div class="collapse-title text-xl font-medium">By Plane</div>
+        <div class="collapse-content">
+          <p>
+            If you are coming from the <b>Paris-Charles de Gaulle</b> airport,
+            TGVs are available from the airport directly to the Saint Pierre des
+            Corps train station. It is also possible to reach the
+            Paris-Austerlitz train station by metro, to then take a train to
+            Chateauroux. Once in Chateauroux, a bus can drop you off in front of
+            New Mayapur. <br /><br />
+            There is an airport in <b>Tours</b> from which we provide pick-up
+            services. <b>Limoges</b> and <b>Poitiers</b> airports are nearby New
+            Mayapur.
+          </p>
         </div>
-        <h2 class="text-xl mt-12 uppercase font-bold">By Plane</h2>
-        <p class="pt-3 text-lg">
-          If you are coming from the Paris-Charles de Gaulle airport, TGVs are
-          available from the airport directly to the Saint Pierre des Corps
-          train station. It is also possible to reach the Paris-Austerlitz train
-          station by metro, to then take a train to Chateauroux. Once in
-          Chateauroux, a bus can drop you off in front of New Mayapur.
-        </p>
       </div>
-      <div class="order-2 lg:order-1 md:px-24 lg:px-0 mb-24 lg:mb-0">
-        <div class="p-5 pb-6 mx-auto inline bg-base-200 rounded-xl mb-16">
-          <Icon name="ion:train-outline" size="28px" />
+      <div
+        tabindex="0"
+        class="collapse collapse-plus border border-base-300 bg-base-100 rounded-box mt-4"
+      >
+        <input type="checkbox" />
+        <div class="collapse-title text-xl font-medium">By Train</div>
+        <div class="collapse-content">
+          <p>
+            If you are coming from the Paris city-center, it is best to take a
+            train to Châteauroux from the Paris-Austerlitz train station. From
+            Châteauroux, buses are available, going to the following
+            destinations: Ecueillé/Luçay-le-Mâle at 5.30 pm & 6:25pm (Monday to
+            Friday, Saturday 5:30pm only). <br /><br />For booking your trip,
+            call this number the day before (and Friday for next Monday):
+            <b>+33 800 77 86 21</b>. <br />
+            Ask to be dropped off at the <b>Château d'Oublaise</b>.
+          </p>
         </div>
-        <h2 class="text-xl mt-12 uppercase font-bold">By Train</h2>
-        <p class="pt-3 text-lg">
-          If you are coming from the Paris city-center, it is best to take a
-          train to Châteauroux from the Paris-Austerlitz train station. From
-          Châteauroux, buses are available, going to the following destinations:
-          Ecueillé/Luçay-le-Mâle at 5.30 pm & 6:25pm (Monday to Friday, Saturday
-          5:30pm only). <br />For booking your trip, call the day before:
-          <b>+33 800 77 86 21</b>
-        </p>
       </div>
-      <div class="order-2 lg:order-1 md:px-24 lg:px-0 mb-24 lg:mb-0">
-        <div class="p-5 pb-6 mx-auto inline bg-base-200 rounded-xl mb-16">
-          <Icon name="ion:car-outline" size="28px" />
+      <div
+        tabindex="0"
+        class="collapse collapse-plus border border-base-300 bg-base-100 rounded-box mt-4"
+      >
+        <input type="checkbox" />
+        <div class="collapse-title text-xl font-medium">By Car</div>
+        <div class="collapse-content">
+          <p>
+            From <b>Paris</b>, follow: Orléans – Vierzon – Châteauroux – Blois –
+            Valençay – Luçay-le-Mâle – Ecueillé. <br /><br />
+            From <b>Tours</b>, follow: Chateauroux – St Aignan-sur-Cher –
+            Ecueillé. Once in Ecueillé, on the main square, look for the Credit
+            Agricole bank and drive down the road facing it (D13). Stay on this
+            road for about 2km, then turn right on the D109 (you will cross a
+            small railroad). Follow this road for about 4km and you will see the
+            castle on your right.
+          </p>
         </div>
-        <h2 class="text-xl mt-12 uppercase font-bold">By Car</h2>
-        <p class="pt-3 text-lg">
-          From <b>Paris</b>, follow: Orléans – Vierzon – Châteauroux – Blois –
-          Valençay – Luçay-le-Mâle – Ecueillé. From <b>Tours</b>, follow:
-          Chateauroux – St Aignan-sur-Cher – Ecueillé. Once in Ecueillé, on the
-          main square, look for the Credit Agricole bank and drive down the road
-          facing it (D13). Stay on this road for about 2km, then turn right on
-          the D109 (you will cross a small railroad). Follow this road for about
-          4km and you will see the castle on your right.
-        </p>
       </div>
     </div>
   </div>
