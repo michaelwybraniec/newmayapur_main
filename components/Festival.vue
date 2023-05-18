@@ -21,7 +21,7 @@
           {{ props.description }}
         </p>
         <NuxtLink
-          :disabled="props.full ? true : false"
+          :disabled="props.full"
           to="https://booking.newmayapur.com"
           class="btn btn-primary w-44"
           :class="new Date(props.start) < new Date() ? 'btn-disabled' : ''"
@@ -98,7 +98,7 @@
           class="border-2 rounded-md border-base-300 flex max-md:flex-col justify-center items-center p-4 gap-2"
         >
           <NuxtLink
-            :disabled="props.full ? true : false"
+            :disabled="props.full"
             to="https://booking.newmayapur.com"
             class="btn btn-secondary w-full"
             >Book Your Stay</NuxtLink
