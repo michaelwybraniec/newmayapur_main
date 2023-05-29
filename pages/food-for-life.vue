@@ -92,7 +92,9 @@
             projects in <b>65 countries</b> serving over
             <b>1 million</b> plant-based meals daily.
           </p>
-          <button class="btn-primary btn mt-4">Learn More</button>
+          <a href="https://ffl.org/">
+            <button class="btn-primary btn mt-4">Learn More</button>
+          </a>
         </div>
         <div class="mt-12">
           <div
@@ -107,11 +109,13 @@
             <b>service</b> or a financial contribution. Do not hesitate to
             <b>contact</b> us.
           </p>
-          <button
-            class="bg-red-600 text-white border-0 hover:bg-red-700 btn mt-4"
-          >
-            Contact Us
-          </button>
+          <NuxtLink to="/more#contact">
+            <button
+              class="bg-red-600 text-white border-0 hover:bg-red-700 btn mt-4"
+            >
+              Contact Us
+            </button>
+          </NuxtLink>
         </div>
       </div>
     </div>

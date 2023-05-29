@@ -197,8 +197,12 @@
           accommodation and vegetarian meals, and have a wide variety of tasks
           that need to be taken care of!
         </p>
-        <button class="btn btn-primary btn-outline mt-6">Workaway</button>
-        <button class="btn btn-primary btn-outline ml-2 mt-6">Woofing</button>
+        <a href="https://www.workaway.info/en/host/981887541472">
+          <button class="btn btn-primary btn-outline mt-6">Workaway</button>
+        </a>
+        <a href="https://wwoof.fr/en/host/9117-Bhakti-Yoga-eco-community">
+          <button class="btn btn-primary btn-outline ml-2 mt-6">Woofing</button>
+        </a>
       </div>
       <img class="md:max-w-lg rounded-xl" src="/img/volunteer.jpg" />
     </div>

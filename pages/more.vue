@@ -209,24 +209,27 @@
       <div class="order-1 lg:order-2 md:px-24 lg:px-0" id="contact">
         <h2 class="text-xl uppercase font-bold">Find us Online</h2>
         <div class="grid grid-col-1 mb-12 2xl:grid-cols-3 gap-3 mt-8">
-          <div
+          <a
+            href="https://www.instagram.com/lanouvellemayapur/"
             class="p-4 rounded-xl bg-base-100 flex items-center justify-center gap-4"
           >
             <Icon name="ion:logo-instagram" size="38px" />
             <p class="font-bold uppercase">Instagram</p>
-          </div>
-          <div
+          </a>
+          <a
+            href="https://www.facebook.com/nouvellemayapur"
             class="p-4 rounded-xl bg-base-100 flex items-center justify-center gap-4"
           >
             <Icon name="ion:logo-facebook" size="38px" />
             <p class="font-bold uppercase">Facebook</p>
-          </div>
-          <div
+          </a>
+          <a
+            href="https://www.youtube.com/c/NewMayapur"
             class="p-4 rounded-xl bg-base-100 flex items-center justify-center gap-4"
           >
             <Icon name="ion:logo-youtube" size="38px" />
             <p class="font-bold uppercase">YouTube</p>
-          </div>
+          </a>
         </div>
       </div>
     </div>

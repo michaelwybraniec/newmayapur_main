@@ -283,7 +283,9 @@
         class="flex mt-4 p-2 pl-4 pr-3 justify-between items-center border border-base-300 bg-base-100 rounded-box"
       >
         <h3 class="text-xl">Want to Learn More?</h3>
-        <button class="btn btn-primary btn-outline">Read More</button>
+        <a href="https://prabhupadavani.org/">
+          <button class="btn btn-primary btn-outline">Read More</button>
+        </a>
       </div>
     </div>
   </div>

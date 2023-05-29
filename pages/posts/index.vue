@@ -64,21 +64,24 @@
               New Mayapur
             </p>
             <div class="grid grid-cols-3 gap-3 mt-8 px-4">
-              <div
+              <a
+                href="https://www.instagram.com/lanouvellemayapur/"
                 class="p-2 cursor-pointer rounded-xl bg-base-200 flex items-center justify-center gap-4"
               >
                 <Icon name="ion:logo-instagram" size="30px" />
-              </div>
-              <div
+              </a>
+              <a
+                href="https://www.facebook.com/nouvellemayapur"
                 class="p-2 cursor-pointer rounded-xl bg-base-200 flex items-center justify-center gap-4"
               >
                 <Icon name="ion:logo-facebook" size="30px" />
-              </div>
-              <div
+              </a>
+              <a
+                href="https://www.youtube.com/c/NewMayapur"
                 class="p-2 cursor-pointer rounded-xl bg-base-200 flex items-center justify-center gap-4"
               >
                 <Icon name="ion:logo-youtube" size="30px" />
-              </div>
+              </a>
             </div>
             <p class="pl-5 pb-1 pt-7 text-sm uppercase font-bold">
               Subscribe to our Newsletter
@@ -142,23 +145,26 @@
             <p class="mt-6 mb-2 font-bold text-xl uppercase">Most Popular</p>
             <div class="space-y-1.5">
               <p
-                href="https://staging.newmayapur.com/posts/6"
                 class="p-2 px-4 cursor-pointer font-bold rounded-lg bg-base-200"
               >
-                Who is Sri Balarama?
+                <a href="https://newmayapur.com/posts/6"
+                  >Who is Sri Balarama?</a
+                >
               </p>
 
               <p
-                href="https://staging.newmayapur.com/posts/5"
                 class="p-2 px-4 cursor-pointer font-bold rounded-lg bg-base-200"
               >
-                Cows, Climate Change and Clever Solutions
+                <a href="https://newmayapur.com/posts/5"
+                  >Cows, Climate Change and Clever Solutions</a
+                >
               </p>
               <p
-                href="https://staging.newmayapur.com/posts/7"
                 class="p-2 px-4 cursor-pointer font-bold rounded-lg bg-base-200"
               >
-                The Lord Who Protects
+                <a href="https://newmayapur.com/posts/7"
+                  >The Lord Who Protects</a
+                >
               </p>
             </div>
           </div>

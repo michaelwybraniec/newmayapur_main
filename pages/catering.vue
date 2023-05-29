@@ -203,7 +203,9 @@
           place! The <b>Hare Krishna</b> movement is famous for its authentic
           indian & continental cuisine worldwide. Shop our recipe books online.
         </p>
-        <button class="btn btn-outline btn-primary mt-5">Shop Now</button>
+        <a href="https://www.vedalivres.com/">
+          <button class="btn btn-outline btn-primary mt-5">Shop Now</button>
+        </a>
       </div>
       <div class="order-2 lg:order-1 md:px-24 lg:px-0 mb-24 lg:mb-0">
         <img src="/img/gopal.jpg" class="rounded-xl max-w-sm" alt="" />
@@ -214,7 +216,9 @@
           and mantra meditation events, along with serving an ever growing
           customer base.
         </p>
-        <button class="btn btn-outline btn-primary mt-5">Learn More</button>
+        <a href="https://legopal.fr/">
+          <button class="btn btn-outline btn-primary mt-5">Learn More</button>
+        </a>
       </div>
     </div>
   </div>

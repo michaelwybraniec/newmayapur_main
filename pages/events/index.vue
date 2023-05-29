@@ -42,7 +42,12 @@
           Our immersion weekends are a great way to get a head start on
           <i>vaisnava</i> traditions and culture. Spanning over the course of
           two days, those weekends are an introduction to the practice of
-          timeless wisdom, and to show its relevance up to now.
+          timeless wisdom. Learn more
+          <a
+            href="https://decouverte.newmayapur.com"
+            class="text-blue-600 hover:text-blue-800 visited:text-purple-600 underline"
+            >here</a
+          >.
         </p>
       </div>
       <div class="md:px-24 lg:px-0 mb-24 lg:mb-0">
