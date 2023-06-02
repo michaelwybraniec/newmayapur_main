@@ -1,5 +1,5 @@
 <template>
-  <Festival
+  <UIMiscFestival
     v-if="event.data.attributes.Tag === 'Temple'"
     :img="
       config.public.strapiBase +
@@ -192,8 +192,6 @@
 </template>
 
 <script setup>
-import Festival from "~~/components/Festival.vue";
-
 const route = useRoute();
 const { findOne } = useStrapi();
 
