@@ -1,10 +1,10 @@
 <template>
-  <Hero v-if="'Hero' in content.data.attributes">
+  <UISliderWrapper v-if="'Hero' in content.data.attributes">
     <li
       class="glide__slide bg-base-200"
       v-for="slide in content.data.attributes.Hero"
     >
-      <MiscSlide
+      <UISliderItem
         :title="slide.Title"
         :img="
           config.public.strapiBase +
@@ -14,8 +14,8 @@
         :text="slide.Description"
       />
     </li>
-  </Hero>
-  <MiscSectionWrapperThird
+  </UISliderWrapper>
+  <UISectionParagraphWrapperThree
     :section0="content.data.attributes.SectionWrapperThird.Section0"
     :section1="content.data.attributes.SectionWrapperThird.Section1"
     :section2="content.data.attributes.SectionWrapperThird.Section2"
@@ -24,10 +24,10 @@
   <div
     class="pb-32 lg:pt-4 lg:px-4 2xl:px-28 grid grid-cols-1 mx-4 lg:mx-0 lg:grid-cols-2 gap-6 2xl:gap-24"
   >
-    <UpcomingEvents v-if="content.data.attributes.ShowUpcomingEvents" />
-    <Gallery v-if="content.data.attributes.ShowShopGallery" />
+    <UIMiscUpcomingEvents v-if="content.data.attributes.ShowUpcomingEvents" />
+    <UIMiscGallery v-if="content.data.attributes.ShowShopGallery" />
   </div>
-  <MiscFullScreenSection
+  <UISectionFullScreen
     v-if="'FullScreenSection' in content.data.attributes"
     :title="content.data.attributes.FullScreenSection.Title"
     :description="content.data.attributes.FullScreenSection.Description"
@@ -40,13 +40,13 @@
     :buttonLink="content.data.attributes.FullScreenSection.ButtonLink"
     :bgColor="content.data.attributes.FullScreenSection.BgColor"
   />
-  <MiscBlogPreview
+  <UIMiscBlogPreview
     :title="content.data.attributes.BlogPreview.Title"
     :ionIcon="content.data.attributes.BlogPreview.IonIcon"
     :description="content.data.attributes.BlogPreview.Description"
     :showArticles="content.data.attributes.BlogPreview.ShowArticles"
   />
-  <NewsletterForm v-if="content.data.attributes.ShowNewsletterForm" />
+  <UIMiscNewsletterForm v-if="content.data.attributes.ShowNewsletterForm" />
 </template>
 
 <script setup>

@@ -132,7 +132,7 @@
     </div>
     <div class="navbar-center hidden 2xl:flex mr-20">
       <div class="form-control">
-        <TheSearch></TheSearch>
+        <UIMiscTheSearch></UIMiscTheSearch>
       </div>
     </div>
     <div class="navbar-end hidden 2xl:flex">
@@ -246,7 +246,7 @@
     </div>
   </div>
   <div class="p-2 sticky top-0 w-full bg-base-100 2xl:hidden shadow-md z-50">
-    <TheSearch></TheSearch>
+    <UIMiscTheSearch></UIMiscTheSearch>
   </div>
 
   <slot />

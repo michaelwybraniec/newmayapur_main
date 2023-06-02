@@ -6,9 +6,18 @@
     <div
       class="grid grid-cols-1 px-4 lg:gap-x-10 2xl:px-20 items-start 2xl:gap-x-16 lg:grid-cols-3"
     >
-      <MiscSections :data="props.section0" :bg-color="props.bgColor" />
-      <MiscSections :data="props.section1" :bg-color="props.bgColor" />
-      <MiscSections :data="props.section2" :bg-color="props.bgColor" />
+      <UISectionParagraphItem
+        :data="props.section0"
+        :bg-color="props.bgColor"
+      />
+      <UISectionParagraphItem
+        :data="props.section1"
+        :bg-color="props.bgColor"
+      />
+      <UISectionParagraphItem
+        :data="props.section2"
+        :bg-color="props.bgColor"
+      />
     </div>
   </div>
 </template>

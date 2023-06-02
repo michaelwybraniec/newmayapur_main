@@ -10,7 +10,7 @@
     <p class="pt-3 text-lg">
       {{ data.Text }}
     </p>
-    <NuxtLink :to="data.ButtonLink">
+    <NuxtLink :to="data.ButtonLink" v-if="data.ButtonLink">
       <button class="btn btn-primary btn-outline mt-6 w-44">
         {{ data.ButtonText }}
       </button>
