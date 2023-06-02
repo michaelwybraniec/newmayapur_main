@@ -1,8 +1,8 @@
 <template>
-  <div>
-    <div class="mx-auto py-32 lg:px-1.5 xl:px-12 2xl:px-16">
+  <div class="bg-base-200">
+    <div class="mx-auto pt-20 pb-32 lg:px-1.5 xl:px-12 2xl:px-16">
       <div class="md:px-24 mx-4 lg:px-0 lg:flex flex-col lg:items-center mb-20">
-        <div class="p-5 pb-6 lg:pb-4 inline bg-base-200 rounded-xl">
+        <div class="p-5 pb-6 lg:pb-4 inline rounded-xl bg-white">
           <Icon :name="'ion:' + props.ionIcon" size="28px" />
         </div>
         <h2 class="text-xl uppercase font-bold mt-8">{{ props.title }}</h2>

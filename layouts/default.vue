@@ -138,13 +138,13 @@
     <div class="navbar-end hidden 2xl:flex">
       <ul class="menu menu-horizontal px-1 space-x-1">
         <li @click="handleSelected" class="pr-1.5">
-          <NuxtLink to="/posts">Blog</NuxtLink>
-        </li>
-        <li @click="handleSelected" class="pr-1.5">
           <NuxtLink to="/events">Events</NuxtLink>
         </li>
         <li @click="handleSelected" class="pr-1.5">
           <NuxtLink to="https://booking.newmayapur.com">Booking</NuxtLink>
+        </li>
+        <li @click="handleSelected" class="pr-1.5">
+          <NuxtLink to="/posts">Blog</NuxtLink>
         </li>
         <li @click="handleSelected" class="pr-1.5">
           <a href="https://www.vedalivres.com/">Shop</a>
@@ -255,7 +255,7 @@
     class="footer text-base px-8 py-20 md:px-4 lg:px-32 2xl:px-56 bg-neutral text-neutral-content"
   >
     <div>
-      <div class="grid grid-flow-col gap-4 mb-4">
+      <div class="grid grid-flow-col gap-4 mb-1">
         <NuxtLink to="https://www.instagram.com/lanouvellemayapur/"
           ><Icon name="ion:logo-instagram" size="28px"
         /></NuxtLink>
@@ -270,6 +270,16 @@
         <b>ISKCON New Mayapur</b><br />A spiritual eco-village in the heart of
         France.
       </p>
+      <div class="mt-8">
+        <img
+          src="https://image.jimcdn.com/app/cms/image/transf/dimension=704x10000:format=jpg/path/sb0bb6130fe7c9de0/image/iba5d44f3108bb87f/version/1583667139/image.jpg"
+          class="w-52 rounded-xl"
+        />
+        <p class="mt-2 text-gray-400">
+          <i>Sri Srila A.C. Bhaktivedanta Swami Prabhupada</i>, <br />
+          <b>ISKCON</b> Founder-Acarya
+        </p>
+      </div>
     </div>
     <div>
       <span class="footer-title">Navigation</span>

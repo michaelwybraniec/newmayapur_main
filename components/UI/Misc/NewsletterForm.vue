@@ -1,5 +1,5 @@
 <template>
-  <div class="lg:w-[900px] xl:w-[1000px] mx-4 lg:mx-auto mt-16 mb-48">
+  <div class="lg:w-[900px] xl:w-[1000px] mx-4 lg:mx-auto my-32">
     <div class="card sm:card-side bg-base-100 border-2 border-base-200">
       <figure class="sm:w-[400px]">
         <img
