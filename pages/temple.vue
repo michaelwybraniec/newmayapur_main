@@ -61,7 +61,6 @@
   <UIMiscBottomTemplePage
     v-if="content.data.attributes.ShowScheduleAndSocials"
   />
-  >>>>>>> templePage
 </template>
 
 <script setup>
