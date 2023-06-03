@@ -17,9 +17,7 @@
           </div>
         </div>
         <h1 class="text-5xl font-bold">{{ props.title }}</h1>
-        <p class="py-6">
-          {{ props.description }}
-        </p>
+        <UtilitiesMarkdown :content="props.description" class="py-6" />
         <NuxtLink
           :disabled="props.full || props.organizerContact"
           to="https://booking.newmayapur.com"

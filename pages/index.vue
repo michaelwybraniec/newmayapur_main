@@ -19,6 +19,7 @@
         :title="slide.Title"
         :description="slide.Description"
         :link="slide.Link"
+        class="md:text-lg"
       />
     </UISectionGridWrapper>
   </UISectionImgColWrapper>
