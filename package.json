@@ -13,6 +13,7 @@
     "@vue-leaflet/vue-leaflet": "^0.7.0",
     "leaflet": "^1.9.3",
     "nuxt": "3.1.1",
+    "nuxt-gtag": "^0.5.7",
     "nuxt-icon": "^0.2.10",
     "nuxt-meilisearch": "^0.1.7"
   },

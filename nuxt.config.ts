@@ -7,6 +7,7 @@ export default defineNuxtConfig({
     "nuxt-icon",
     "nuxt-meilisearch",
     "nuxt-mail",
+    "nuxt-gtag",
   ],
   build: {
     transpile: ["vue-instantsearch", "marked", "@glidejs/glide"],
@@ -15,6 +16,9 @@ export default defineNuxtConfig({
     hostUrl: process.env.NUXT_MEILISEARCH_URL,
     searchApiKey: process.env.NUXT_MEILISEARCH_KEY,
     adminApiKey: process.env.NUXT_MEILISEARCH_KEY,
+  },
+  gtag: {
+    id: process.env.GTAG_ID,
   },
   strapi: {
     url: process.env.NUXT_STRAPI_BASE_URL || "http://127.0.0.1:1337",
