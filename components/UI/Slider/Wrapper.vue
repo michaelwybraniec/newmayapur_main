@@ -37,7 +37,7 @@ export default {
 
 <script setup>
 const props = defineProps(["width"]);
-const style = computed(() => "width: " + props.width);
+const style = computed(() => "max-width: " + props.width);
 </script>
 
 <style scoped>
