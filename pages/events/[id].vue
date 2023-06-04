@@ -233,4 +233,8 @@ const end = event.attributes.End
   : "";
 
 const config = useRuntimeConfig();
+
+useHead({
+  title: "New Mayapur - " + event.attributes.Title,
+});
 </script>

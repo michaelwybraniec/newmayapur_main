@@ -292,4 +292,8 @@ const setTagsBg = function (value) {
 };
 
 const config = useRuntimeConfig();
+
+useHead({
+  title: "New Mayapur - Blog",
+});
 </script>

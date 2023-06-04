@@ -189,4 +189,8 @@ const events = await find("events", {
 });
 
 const config = useRuntimeConfig();
+
+useHead({
+  title: "New Mayapur - Retreats",
+});
 </script>

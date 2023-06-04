@@ -39,3 +39,9 @@
     </div>
   </div>
 </template>
+
+<script setup>
+useHead({
+  title: "New Mayapur - Renting Venue",
+});
+</script>

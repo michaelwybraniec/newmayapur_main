@@ -223,3 +223,9 @@
     </div>
   </div>
 </template>
+
+<script setup>
+useHead({
+  title: "New Mayapur - Catering",
+});
+</script>

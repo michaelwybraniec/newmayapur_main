@@ -90,4 +90,8 @@ const content = await find("temple-page", {
 });
 
 const config = useRuntimeConfig();
+
+useHead({
+  title: "New Mayapur - Temple",
+});
 </script>

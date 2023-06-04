@@ -306,6 +306,10 @@ const sendEmail = async function () {
 
   v$.value.$reset();
 };
+
+useHead({
+  title: "New Mayapur - More",
+});
 </script>
 
 <style>

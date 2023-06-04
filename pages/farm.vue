@@ -209,4 +209,8 @@
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+useHead({
+  title: "New Mayapur - Farm",
+});
+</script>

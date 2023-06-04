@@ -141,3 +141,9 @@ blockquote p {
   display: inline;
 }
 </style>
+
+<script setup>
+useHead({
+  title: "New Mayapur - Food For Life",
+});
+</script>

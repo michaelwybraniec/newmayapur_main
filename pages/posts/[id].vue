@@ -132,6 +132,10 @@ const setTagsBg = function (value) {
     return "bg-green-600";
   }
 };
+
+useHead({
+  title: "New Mayapur - " + post.data.attributes.Title,
+});
 </script>
 
 <style lang="postcss">
