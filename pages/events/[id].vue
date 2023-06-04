@@ -1,17 +1,17 @@
 <template>
   <UIMiscFestival
-    v-if="event.data.attributes.Tag === 'Temple'"
+    v-if="event.attributes.Tag === 'Temple'"
     :img="
       config.public.strapiBase +
-      event.data.attributes.Thumbnail.data.attributes.formats.small.url
+      event.attributes.Thumbnail.data.attributes.formats.small.url
     "
     :start="start"
     :end="end"
-    :title="event.data.attributes.Title"
-    :description="event.data.attributes.Description"
-    :days="event.data.attributes.Days.data"
-    :full="event.data.attributes.Full"
-    :organizer-contact="event.data.attributes.OrganizerContact"
+    :title="event.attributes.Title"
+    :description="event.attributes.Description"
+    :days="event.attributes.Days.data"
+    :full="event.attributes.Full"
+    :organizer-contact="event.attributes.OrganizerContact"
   />
   <div v-else>
     <div class="hero py-32 bg-base-200">
@@ -195,9 +195,9 @@
 
 <script setup>
 const route = useRoute();
-const { findOne } = useStrapi();
+const { find } = useStrapi();
 
-const event = await findOne("events", route.params.id, {
+const events = await find("events", {
   populate: {
     Teachers: {
       populate: "*",
@@ -209,16 +209,23 @@ const event = await findOne("events", route.params.id, {
     Price: "*",
     Program: "*",
   },
+  filters: {
+    Slug: {
+      $eq: route.params.id,
+    },
+  },
 });
 
-const start = new Date(event.data.attributes.Start).toLocaleString("en-GB", {
+const event = events.data[0];
+
+const start = new Date(event.attributes.Start).toLocaleString("en-GB", {
   day: "numeric",
   month: "short",
   year: "numeric",
 });
 
-const end = event.data.attributes.End
-  ? new Date(event.data.attributes.End).toLocaleString("en-GB", {
+const end = event.attributes.End
+  ? new Date(event.attributes.End).toLocaleString("en-GB", {
       day: "numeric",
       month: "short",
       year: "numeric",

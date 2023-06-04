@@ -183,7 +183,9 @@
                   })
                 }}</span>
               </div>
-              <NuxtLink :to="'/events/' + event.id" class="btn btn-primary mt-4"
+              <NuxtLink
+                :to="'/events/' + event.attributes.Slug"
+                class="btn btn-primary mt-4"
                 >Read More</NuxtLink
               >
             </div>
