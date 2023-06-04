@@ -121,7 +121,7 @@
       >
         <div>
           <h2
-            class="uppercase text-lg font-bold text-center flex items-center justify-center h-full bg-base-200 rounded-lg"
+            class="uppercase text-lg font-bold text-center flex items-center justify-center h-full p-4 bg-base-200 rounded-lg"
           >
             Contact the Organizers
           </h2>
