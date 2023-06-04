@@ -1,13 +1,13 @@
 <template>
-  <div class="navbar bg-base-100">
-    <div class="navbar-start">
+  <div class="navbar bg-base-100 justify-between">
+    <div class="navbar-start w-64">
       <div
         class="dropdown"
         :class="{ 'dropdown-hover': enableDropdownHover }"
         @mouseleave="enableDropdownHover = true"
         style="z-index: 1000"
       >
-        <label tabindex="0" class="btn btn-ghost 2xl:hidden">
+        <label tabindex="0" class="btn btn-ghost xl:hidden">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="h-5 w-5"
@@ -130,7 +130,7 @@
         >New Mayapur</NuxtLink
       >
     </div>
-    <div class="navbar-end hidden 2xl:flex">
+    <div class="navbar-end hidden xl:flex w-[900px]">
       <ul class="menu menu-horizontal px-1 space-x-1">
         <li @click="handleSelected" class="pr-1.5">
           <NuxtLink to="/events">Events</NuxtLink>
