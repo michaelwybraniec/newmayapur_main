@@ -79,8 +79,8 @@
               :to="
                 '/' +
                 item.id.toString().replace('-', '').replace(/[0-9]/g, '') +
-                's/' +
-                item.id.toString().replace(/\D/g, '').replace('-', '')
+                '/' +
+                item.Slug
               "
               v-for="item in items"
               :key="item"
