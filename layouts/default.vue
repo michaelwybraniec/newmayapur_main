@@ -130,11 +130,6 @@
         >New Mayapur</NuxtLink
       >
     </div>
-    <div class="navbar-center hidden 2xl:flex mr-20">
-      <div class="form-control">
-        <UIMiscTheSearch></UIMiscTheSearch>
-      </div>
-    </div>
     <div class="navbar-end hidden 2xl:flex">
       <ul class="menu menu-horizontal px-1 space-x-1">
         <li @click="handleSelected" class="pr-1.5">
@@ -244,9 +239,6 @@
         </li>
       </ul>
     </div>
-  </div>
-  <div class="p-2 sticky top-0 w-full bg-base-100 2xl:hidden shadow-md z-50">
-    <UIMiscTheSearch></UIMiscTheSearch>
   </div>
 
   <slot />
