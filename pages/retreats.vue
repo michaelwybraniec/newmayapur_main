@@ -84,112 +84,11 @@
       </div>
     </div>
   </div>
-  <div class="bg-base-200 py-28 lg:px-16">
-    <div
-      class="grid grid-rows-1 2xl:grid-cols-2 px-4 2xl:px-20 items-center gap-x-4"
-    >
-      <div class="order-2 2xl:order-2 md:px-24 2xl:px-0">
-        <h2 class="text-xl uppercase font-bold">On-site Accomodation</h2>
-        <p class="pt-3 text-lg">
-          Book a room in our fully furnished, comfortable guest-house for the
-          duration of your stay.
-        </p>
-        <div class="grid md:grid-cols-2 gap-12 lg:gap-x-8 xl:gap-x-16 mt-10">
-          <div>
-            <h2 class="font-bold uppercase text-xl">47 Beds</h2>
-            <h3 class="italic text-lg">Shared Bathroom</h3>
-            <ul class="mt-4 text-lg">
-              <li>💤 1 Single Room</li>
-              <li>💤 8 Double Rooms</li>
-              <li>💤 1 Triple Room</li>
-              <li>💤 6 Family Rooms (3 to 5 Beds)</li>
-            </ul>
-          </div>
-          <div>
-            <h2 class="font-bold uppercase text-xl">22 Beds</h2>
-            <h3 class="italic text-lg">Private Bathrooms</h3>
-            <ul class="mt-4 text-lg">
-              <li>💤 1 Single Room</li>
-              <li>💤 6 Double Rooms</li>
-              <li>💤 1 Triple Room</li>
-              <li>💤 1 Four Beds Room</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <img
-        class="order-1 lg:max-w-lg max-w-xs md:max-w-md 2xl:order-1 mb-12 2xl:mb-0 md:mb-24 2xl:mr-auto 2xl:ml-0 mx-auto rounded-lg"
-        src="/img/bed.jpg"
-      />
-    </div>
-  </div>
-  <div>
-    <div class="mx-auto pt-24 pb-32 lg:px-6 2xl:px-16">
-      <div class="md:px-24 mx-4 lg:px-0 lg:flex flex-col lg:items-center mb-20">
-        <div class="p-5 pb-6 lg:pb-4 inline bg-base-200 rounded-xl">
-          <Icon name="ion:calendar-outline" size="28px" />
-        </div>
-        <h2 class="text-xl uppercase font-bold mt-8">Upcoming Events</h2>
-        <p class="pt-3 lg:w-[800px] lg:text-center text-lg mt-2">
-          Discover the science of <i>yoga</i> in all of its variety. From
-          practicing asanas to learning the ancient philosophy of
-          <b>Sanskrit</b> texts, or simply getting introduced to our place, we
-          offer a variety of events all year round.
-        </p>
-      </div>
-      <div
-        class="grid grid-cols-1 lg:grid-cols-3 mx-auto 2xl:w-[1300px] px-4 2xl:px-20 items-center gap-x-4"
-      >
-        <div
-          v-for="event in events.data"
-          class="card mt-6 h-[430px] md:mx-auto max-w-sm bg-base-100 shadow-xl"
-        >
-          <figure>
-            <img
-              :src="
-                config.public.strapiBase +
-                event.attributes.Thumbnail.data.attributes.formats.small.url
-              "
-              class="h-52 w-full object-cover"
-              alt="Shoes"
-            />
-          </figure>
-          <div class="card-body">
-            <h2 class="card-title">
-              {{ event.attributes.Title.substr(0, 16) + "..." }}
-            </h2>
-            <p>{{ event.attributes.Description.substr(0, 65) + "..." }}</p>
-            <div class="flex justify-end">
-              <NuxtLink
-                :to="'events/' + event.attributes.Slug"
-                class="btn btn-primary btn-outline"
-                >Read More</NuxtLink
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <UIMiscAccomodation locale="en" />
+  <UIMiscEventPreview />
 </template>
 
 <script setup>
-const { find } = useStrapi();
-
-const mail = reactive({ value: "" });
-const res = ref("");
-
-const events = await find("events", {
-  pagination: {
-    pageSize: 3,
-    page: 1,
-  },
-  populate: "Thumbnail",
-  sort: ["publishedAt:desc"],
-});
-
-const config = useRuntimeConfig();
-
 useHead({
   title: "New Mayapur - Retreats",
 });
