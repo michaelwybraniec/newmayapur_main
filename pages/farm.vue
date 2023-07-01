@@ -61,6 +61,7 @@ const content = await find("farm-page", {
 });
 
 const config = useRuntimeConfig();
+
 useHead({
   title: "New Mayapur - Farm",
 });

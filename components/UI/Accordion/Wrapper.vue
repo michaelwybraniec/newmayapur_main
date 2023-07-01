@@ -6,7 +6,7 @@
     >
       <img
         class="md:h-[245px] rounded-xl"
-        :src="config.public.strapiBase + image.attributes.formats.medium.url"
+        :src="config.public.strapiBase + image.attributes.formats.small.url"
         v-for="image in props.images"
       />
     </div>

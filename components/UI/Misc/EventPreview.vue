@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-if="props.locale === 'en'">
     <div class="mx-auto pt-24 pb-32 lg:px-6 2xl:px-16">
       <div class="md:px-24 mx-4 lg:px-0 lg:flex flex-col lg:items-center mb-20">
         <div class="p-5 pb-6 lg:pb-4 inline bg-base-200 rounded-xl">
@@ -50,6 +50,8 @@
 </template>
 
 <script setup>
+const props = defineProps(["locale"]);
+
 const { find } = useStrapi();
 
 const events = await find("events", {
