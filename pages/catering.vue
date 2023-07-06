@@ -1,6 +1,9 @@
 <template>
   <UtilitiesTranslateContent :renderComponent="renderComponent">
-    <UISliderSimple :images="content.data.attributes.Slider.data" />
+    <UISliderSimple
+      :images="content.data.attributes.Slider.data"
+      class="flex justify-center"
+    />
     <UISectionParagraphWrapperTwo
       :section0="content.data.attributes.SectionWrapperTwo.Section0"
       :section1="content.data.attributes.SectionWrapperTwo.Section1"

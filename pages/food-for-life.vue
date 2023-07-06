@@ -2,7 +2,7 @@
   <UtilitiesTranslateContent :renderComponent="renderComponent">
     <UISliderSimple
       :images="content.data.attributes.Slider.data"
-      class="mb-32"
+      class="mb-32 flex justify-center"
     />
     <UISectionImgText
       :title="content.data.attributes.ImgTextSection.Title"
