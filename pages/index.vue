@@ -86,6 +86,7 @@ const content = await find("Homepage", {
       populate: "*",
     },
   },
+  locale: locale.value,
 });
 
 watch(locale, async (newValue) => {
@@ -108,6 +109,7 @@ watch(locale, async (newValue) => {
         populate: "*",
       },
     },
+    locale: newValue,
   });
   await sleep(900);
   renderComponent.value = true;
