@@ -26,7 +26,7 @@ const store = useLocaleStore();
 const { locale } = storeToRefs(store);
 const renderComponent = ref(true);
 
-const content = await find("renting-page", {
+let content = await find("renting-page", {
   populate: {
     SectionWrapperTwo: {
       populate: "*",

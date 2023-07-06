@@ -24,7 +24,7 @@ const store = useLocaleStore();
 const { locale } = storeToRefs(store);
 const renderComponent = ref(true);
 
-const content = await find("more-page", {
+let content = await find("more-page", {
   populate: {
     ShowMap: {
       populate: "*",

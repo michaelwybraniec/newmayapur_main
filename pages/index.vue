@@ -68,7 +68,7 @@ const store = useLocaleStore();
 const { locale } = storeToRefs(store);
 const renderComponent = ref(true);
 
-const content = await find("Homepage", {
+let content = await find("Homepage", {
   populate: {
     Hero: {
       populate: "*",

@@ -28,7 +28,7 @@ const store = useLocaleStore();
 const { locale } = storeToRefs(store);
 const renderComponent = ref(true);
 
-const content = await find("food-for-life-page", {
+let content = await find("food-for-life-page", {
   populate: {
     Slider: {
       populate: "*",

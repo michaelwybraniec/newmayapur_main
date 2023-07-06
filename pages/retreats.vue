@@ -35,7 +35,7 @@ const store = useLocaleStore();
 const { locale } = storeToRefs(store);
 const renderComponent = ref(true);
 
-const content = await find("retreats-page", {
+let content = await find("retreats-page", {
   populate: {
     Header: {
       populate: "*",
