@@ -129,6 +129,12 @@
       <NuxtLink to="/" class="btn btn-ghost normal-case text-xl"
         >New Mayapur</NuxtLink
       >
+      <div @click="changeLocale" class="cursor-pointer">
+        <p
+          v-html="locale"
+          class="uppercase font-bold border-2 xl:hidden p-2 rounded-lg"
+        ></p>
+      </div>
     </div>
     <div class="navbar-end hidden xl:flex w-[900px]">
       <ul class="menu menu-horizontal px-1 space-x-1">
@@ -231,6 +237,9 @@
             </li>
           </ul>
         </li>
+        <li @click="changeLocale">
+          <p v-html="locale" class="uppercase font-bold border-2"></p>
+        </li>
         <li
           @click="handleSelected"
           class="bg-primary text-white font-bold rounded-lg"
@@ -318,12 +327,22 @@
 </template>
 
 <script setup>
+import { useLocaleStore } from "../stores/locale";
+import { storeToRefs } from "pinia";
+
 const enableDropdownHover = ref(true);
 const handleSelected = () => {
   if (document.activeElement instanceof HTMLElement) {
     document.activeElement.blur();
   }
   enableDropdownHover.value = false;
+};
+
+const store = useLocaleStore();
+const { locale } = storeToRefs(store);
+const changeLocale = () => {
+  if (locale.value === "en") locale.value = "fr";
+  else locale.value = "en";
 };
 
 const route = useRoute();

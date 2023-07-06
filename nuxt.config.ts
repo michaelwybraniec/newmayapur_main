@@ -8,6 +8,8 @@ export default defineNuxtConfig({
     "nuxt-meilisearch",
     "nuxt-mail",
     "nuxt-gtag",
+    "@pinia/nuxt",
+    "@nuxt/devtools",
   ],
   build: {
     transpile: ["vue-instantsearch", "marked", "@glidejs/glide"],

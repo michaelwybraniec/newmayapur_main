@@ -27,7 +27,13 @@
 </template>
 
 <script setup>
+import { useLocaleStore } from "../stores/locale";
+import { storeToRefs } from "pinia";
+
 const { find } = useStrapi();
+const store = useLocaleStore();
+const { locale } = storeToRefs(store);
+const renderComponent = ref(true);
 
 const content = await find("retreats-page", {
   populate: {
@@ -38,6 +44,22 @@ const content = await find("retreats-page", {
       populate: "*",
     },
   },
+});
+
+watch(locale, async (newValue) => {
+  renderComponent.value = false;
+  content = await find("retreats-page", {
+    populate: {
+      Header: {
+        populate: "*",
+      },
+      AccordionSection: {
+        populate: "*",
+      },
+    },
+  });
+  await sleep(900);
+  renderComponent.value = true;
 });
 
 const config = useRuntimeConfig();
