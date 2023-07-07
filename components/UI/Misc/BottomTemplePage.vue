@@ -11,16 +11,29 @@
             >
               <Icon name="ion:logo-facebook" class="m-5" size="28px" />
             </div>
-            <h2 class="text-xl uppercase mt-4 font-bold">Daily Darshan</h2>
-            <p class="pt-3 text-lg">
+            <h2 class="text-xl uppercase mt-4 font-bold">
+              {{
+                props.locale === "en" ? "Daily Darshan" : "Darshan Quotidien"
+              }}
+            </h2>
+            <p class="pt-3 text-lg" v-if="props.locale === 'en'">
               Get <b>Sri-Sri Gaura-Nitai</b>, <b>Sri-Sri Krishna-Balarama</b>,
               <b>Sri Varahadeva</b>, and <b>Sri-Sri Radha-Govinda-Madhava</b>'s
               <i>darshan</i> regularly, straight from your social media feed.
             </p>
+            <p class="pt-3 text-lg" v-else>
+              Bénéficiez du <i>darshan</i> de <b>Sri-Sri Gaura-Nitai</b>,
+              <b>Sri-Sri Krishna-Balarama</b>, <b>Sri Varahadeva</b>, and
+              <b>Sri-Sri Radha-Govinda-Madhava</b> sur vos réseaux sociaux
+              régulièrement.
+            </p>
             <NuxtLink
               to="https://www.facebook.com/people/Daily-darsan-New-Mayapur-Iskcon-France/100064249227219/"
               class="btn-primary btn mt-4"
-              >See on Facebook</NuxtLink
+              >{{
+                props.locale === "en" ? "See On" : "Voir Sur"
+              }}
+              Facebook</NuxtLink
             >
           </div>
           <div class="mt-12">
@@ -29,24 +42,36 @@
             >
               <Icon name="ion:logo-youtube" class="m-5" size="28px" />
             </div>
-            <h2 class="text-xl uppercase mt-4 font-bold">Online Lectures</h2>
-            <p class="pt-3 text-lg">
+            <h2 class="text-xl uppercase mt-4 font-bold">
+              {{
+                props.locale === "en" ? "Online Lectures" : "Classes en Ligne"
+              }}
+            </h2>
+            <p class="pt-3 text-lg" v-if="props.locale === 'en'">
               Want to learn more about <b>Krishna Consciousness</b>? Our YouTube
               channel has hundreds of recordings of lectures from holy
               scriptures, like <i>Srimad-Bhagavatam</i> and
+              <i>Bhagavad-Gita</i>.
+            </p>
+            <p class="pt-3 text-lg" v-else>
+              Vous souhaitez en savoir plus sur la <b>Conscience de Krishna</b>?
+              Notre chaîne YouTube a des centaines d'enregistrements de classes
+              sur des textes sacrés, tel le <i>Srimad-Bhagavatam</i> et la
               <i>Bhagavad-Gita</i>.
             </p>
             <NuxtLink
               to="https://www.youtube.com/@NewMayapur"
               class="bg-red-600 text-white border-0 hover:bg-red-700 btn mt-4"
             >
-              Watch Now
+              {{ props.locale === "en" ? "See Now" : "En Savoir Plus" }}
             </NuxtLink>
           </div>
         </div>
       </div>
       <div class="overflow-x-auto">
-        <h2 class="text-xl uppercase mb-5 ml-0.5 font-bold">Our Schedule</h2>
+        <h2 class="text-xl uppercase mb-5 ml-0.5 font-bold">
+          {{ props.locale === "en" ? "Our Schedule" : "Notre Emploi du Temps" }}
+        </h2>
         <div class="border-2 border-base-300 rounded-xl mb-20 lg:mb-0">
           <table class="table table-zebra w-full">
             <!-- head -->
