@@ -61,6 +61,7 @@
     />
     <UIMiscBottomTemplePage
       v-if="content.data.attributes.ShowScheduleAndSocials"
+      :locale="locale"
     />
   </UtilitiesTranslateContent>
 </template>

@@ -21,7 +21,7 @@
       />
     </UIAccordionWrapper>
     <UIMiscAccomodation
-      locale="en"
+      :locale="locale"
       v-if="content.data.attributes.ShowAccomodation"
     />
     <UIMiscEventPreview locale="en" v-if="content.data.attributes.ShowEvents" />

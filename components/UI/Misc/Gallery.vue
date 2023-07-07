@@ -27,7 +27,11 @@
       to="https://www.vedalivres.com"
       class="btn btn-secondary w-44 mx-auto block pt-4"
     >
-      View All Products
+      {{ props.locale === "en" ? "View All Products" : "Voir nos Produits" }}
     </NuxtLink>
   </div>
 </template>
+
+<script setup>
+const props = defineProps(["locale"]);
+</script>

@@ -38,6 +38,45 @@
       />
     </div>
   </div>
+  <div class="bg-base-200 py-28 lg:px-16" v-else>
+    <div
+      class="grid grid-rows-1 2xl:grid-cols-2 px-4 2xl:px-20 items-center gap-x-4"
+    >
+      <div class="order-2 2xl:order-2 md:px-24 2xl:px-0">
+        <h2 class="text-xl uppercase font-bold">Hébergement Sur Place</h2>
+        <p class="pt-3 text-lg">
+          Réservez une chambre dans notre guesthouse pour la durée de votre
+          séjour.
+        </p>
+        <div class="grid md:grid-cols-2 gap-12 lg:gap-x-8 xl:gap-x-16 mt-10">
+          <div>
+            <h2 class="font-bold uppercase text-xl">47 Lits</h2>
+            <h3 class="italic text-lg">Salle de Bain partagée</h3>
+            <ul class="mt-4 text-lg">
+              <li>💤 1 Chambre Individuelle</li>
+              <li>💤 8 Chambres Doubles</li>
+              <li>💤 1 Chambre Triple</li>
+              <li>💤 6 Chambres Familiales (3 à 5 Lits)</li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="font-bold uppercase text-xl">22 Lits</h2>
+            <h3 class="italic text-lg">Salle de Bain Privée</h3>
+            <ul class="mt-4 text-lg">
+              <li>💤 1 Chambre Individuelle</li>
+              <li>💤 6 Chambres Doubles</li>
+              <li>💤 1 Chambre Triple</li>
+              <li>💤 1 Chambre 4 Lits</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <img
+        class="order-1 lg:max-w-lg max-w-xs md:max-w-md 2xl:order-1 mb-12 2xl:mb-0 md:mb-24 2xl:mr-auto 2xl:ml-0 mx-auto rounded-lg"
+        src="/img/bed.jpg"
+      />
+    </div>
+  </div>
 </template>
 
 <script setup>

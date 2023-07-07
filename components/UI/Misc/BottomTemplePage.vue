@@ -53,8 +53,8 @@
             <thead>
               <tr>
                 <th></th>
-                <th>Time</th>
-                <th>Activity</th>
+                <th>{{ props.locale === "en" ? "Time" : "Heure" }}</th>
+                <th>{{ props.locale === "en" ? "Activity" : "Activité" }}</th>
               </tr>
             </thead>
             <tbody>
@@ -74,22 +74,34 @@
               <tr>
                 <th class="text-gray-300">3</th>
                 <td>08:00</td>
-                <td>Srimad-Bhagavatam Class</td>
+                <td>
+                  {{
+                    props.locale === "en"
+                      ? "Srimad-Bhagavatam Class"
+                      : "Classe de Srimad-Bhagavatam"
+                  }}
+                </td>
               </tr>
               <tr>
                 <th class="text-gray-300">4</th>
                 <td>08:45</td>
-                <td>Breakfast</td>
+                <td>
+                  {{ props.locale === "en" ? "Breakfast" : "Petit-Déjeuner" }}
+                </td>
               </tr>
               <tr>
                 <th class="text-gray-300">5</th>
                 <td>12:30</td>
-                <td>Midday Arati</td>
+                <td>
+                  {{ props.locale === "en" ? "Midday Arati" : "Arati de Midi" }}
+                </td>
               </tr>
               <tr>
                 <th class="text-gray-300">6</th>
                 <td>13:30</td>
-                <td>Lunch</td>
+                <td>
+                  {{ props.locale === "en" ? "Lunch" : "Déjeuner" }}
+                </td>
               </tr>
               <tr>
                 <th class="text-gray-300">7</th>
@@ -99,7 +111,7 @@
               <tr>
                 <th class="text-gray-300">8</th>
                 <td>19:30</td>
-                <td>Diner</td>
+                <td>{{ props.locale === "en" ? "Dinner" : "Dîner" }}</td>
               </tr>
             </tbody>
           </table>
@@ -108,3 +120,7 @@
     </div>
   </div>
 </template>
+
+<script setup>
+const props = defineProps(["locale"]);
+</script>

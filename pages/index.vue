@@ -34,7 +34,10 @@
       class="pb-32 pt-32 lg:px-4 2xl:px-28 grid grid-cols-1 mx-4 lg:mx-0 lg:grid-cols-2 gap-6 2xl:gap-24"
     >
       <UIMiscUpcomingEvents v-if="content.data.attributes.ShowUpcomingEvents" />
-      <UIMiscGallery v-if="content.data.attributes.ShowShopGallery" />
+      <UIMiscGallery
+        v-if="content.data.attributes.ShowShopGallery"
+        :locale="locale"
+      />
     </div>
     <!-- <UISectionFullScreen
     v-if="'FullScreenSection' in content.data.attributes"
@@ -55,7 +58,10 @@
       :description="content.data.attributes.BlogPreview.Description"
       :showArticles="content.data.attributes.BlogPreview.ShowArticles"
     />
-    <UIMiscNewsletterForm v-if="content.data.attributes.ShowNewsletterForm" />
+    <UIMiscNewsletterForm
+      v-if="content.data.attributes.ShowNewsletterForm"
+      :locale="locale"
+    />
   </UtilitiesTranslateContent>
 </template>
 

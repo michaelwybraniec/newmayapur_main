@@ -1,7 +1,7 @@
 <template>
   <UtilitiesTranslateContent :renderComponent="renderComponent">
     <h1 class="text-center mx-auto text-4xl md:text-5xl font-bold my-24">
-      Rent Our Space
+      {{ locale === "en" ? "Rent Our Space" : "Louez Notre Espace" }}
     </h1>
     <div class="max-md:mx-4">
       <img

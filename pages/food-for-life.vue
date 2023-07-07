@@ -15,7 +15,10 @@
       :bg-color="content.data.attributes.ImgTextSection.BgColor"
       :image-place="content.data.attributes.ImgTextSection.ImagePlace"
     />
-    <UIMiscBottomFFLPage v-if="content.data.attributes.ShowQuoteAndSocials" />
+    <UIMiscBottomFFLPage
+      v-if="content.data.attributes.ShowQuoteAndSocials"
+      :locale="locale"
+    />
   </UtilitiesTranslateContent>
 </template>
 

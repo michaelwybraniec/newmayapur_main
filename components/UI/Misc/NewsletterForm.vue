@@ -1,5 +1,8 @@
 <template>
-  <div class="lg:w-[900px] xl:w-[1000px] mx-4 lg:mx-auto my-32">
+  <div
+    class="lg:w-[900px] xl:w-[1000px] mx-4 lg:mx-auto my-32"
+    v-if="props.locale === 'en'"
+  >
     <div class="card sm:card-side bg-base-100 border-2 border-base-200">
       <figure class="sm:w-[400px]">
         <img
@@ -95,11 +98,109 @@
       </div>
     </div>
   </div>
+  <div class="lg:w-[900px] xl:w-[1000px] mx-4 lg:mx-auto my-32" v-else>
+    <div class="card sm:card-side bg-base-100 border-2 border-base-200">
+      <figure class="sm:w-[400px]">
+        <img
+          src="/img/mail.jpg"
+          alt="Album"
+          class="max-sm:h-[225px] md:h-[345px] max-md:w-full object-cover"
+        />
+      </figure>
+      <div class="card-body">
+        <h2 class="card-title">Suivez notre Actualité</h2>
+        <p class="text-lg max-md:mb-6">
+          Restez au courant des derniers évènements à la Nouvelle Mayapur.
+        </p>
+        <form @submit.prevent="subscribe">
+          <div class="grid md:grid-cols-2 gap-2">
+            <div>
+              <input
+                type="text"
+                v-model="data.value.fName"
+                placeholder="First Name"
+                class="input input-bordered w-full"
+                @input="v$.value.fName.$touch"
+              />
+              <p
+                v-if="v$.value.fName.$error"
+                class="text-sm mt-0.5 text-red-600"
+              >
+                Entrez un prénom valide.
+              </p>
+            </div>
+            <div>
+              <input
+                v-model="data.value.lName"
+                type="text"
+                placeholder="Last Name"
+                class="input input-bordered w-full"
+                @input="v$.value.lName.$touch"
+              />
+              <p
+                v-if="v$.value.lName.$error"
+                class="text-sm mt-0.5 text-red-600"
+              >
+                Entrez un nom valide.
+              </p>
+            </div>
+          </div>
+          <div class="grid md:grid-cols-2 gap-2 mt-3">
+            <div>
+              <input
+                type="text"
+                placeholder="Email"
+                class="input input-bordered w-full"
+                v-model="data.value.email"
+                @input="v$.value.email.$touch"
+              />
+              <p
+                v-if="v$.value.email.$error"
+                class="text-sm mt-0.5 text-red-600"
+              >
+                Entrez un email valide.
+              </p>
+            </div>
+            <div>
+              <select
+                class="select select-bordered w-full"
+                v-model="data.value.language"
+                @input="v$.value.language.$touch"
+              >
+                <option disabled selected value="">Language</option>
+                <option value="20b75dca3e">French</option>
+                <option value="c4e9098dd7">English</option>
+              </select>
+              <p
+                v-if="v$.value.language.$error"
+                class="text-sm mt-0.5 text-red-600"
+              >
+                Sélectionnez un language.
+              </p>
+            </div>
+          </div>
+          <div class="card-actions mt-3 items-center">
+            <button class="btn btn-primary max-md:w-full">S'inscrire</button>
+            <p
+              class="2xl:text-center"
+              :class="
+                res.includes('registered') ? 'text-green-600' : 'text-red-600'
+              "
+            >
+              {{ res }}
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script setup>
 import { required, email } from "@vuelidate/validators";
 import { useVuelidate } from "@vuelidate/core";
+
+const props = defineProps(["locale"]);
 
 const rules = computed(() => {
   return {

@@ -5,9 +5,14 @@
     >
       <div class="order-2 lg:order-1 md:px-24 lg:px-0">
         <h2 class="text-xl uppercase font-bold">Contact</h2>
-        <p class="pt-3 text-lg">
+        <p class="pt-3 text-lg" v-if="props.locale === 'en'">
           You have a question, or you would like to share with us your ideas and
           suggestions? Please reach out to us using the form below.
+        </p>
+        <p class="pt-3 text-lg" v-else>
+          Vous avez une question, où vous souhaiteriez partager avec nous vos
+          idées et vos suggestions? Contactez-nous avec le formularie
+          ci-dessous.
         </p>
         <div
           class="alert alert-success mt-6 -mb-2 rounded-lg"
@@ -112,7 +117,11 @@
         </form>
       </div>
       <div class="order-1 lg:order-2 md:px-24 lg:px-0" id="contact">
-        <h2 class="text-xl uppercase font-bold">Find us Online</h2>
+        <h2 class="text-xl uppercase font-bold">
+          {{
+            props.locale === "en" ? "Find us Online" : "Retrouvez nous en Ligne"
+          }}
+        </h2>
         <div class="grid grid-col-1 mb-12 2xl:grid-cols-3 gap-3 mt-8">
           <a
             href="https://www.instagram.com/lanouvellemayapur/"
@@ -144,6 +153,8 @@
 <script setup>
 import { required, email, minLength, helpers } from "@vuelidate/validators";
 import { useVuelidate } from "@vuelidate/core";
+
+const props = defineProps(["locale"]);
 
 const rules = computed(() => {
   return {

@@ -5,12 +5,28 @@
         <div class="p-5 pb-6 lg:pb-4 inline bg-base-200 rounded-xl">
           <Icon name="ion:calendar-outline" size="28px" />
         </div>
-        <h2 class="text-xl uppercase font-bold mt-8">Upcoming Events</h2>
-        <p class="pt-3 lg:w-[800px] lg:text-center text-lg mt-2">
+        <h2
+          class="text-xl uppercase font-bold mt-8"
+          v-if="props.locale === 'en'"
+        >
+          Upcoming Events
+        </h2>
+        <h2 class="text-xl uppercase font-bold mt-8" v-else>
+          Évenements à Venir
+        </h2>
+        <p
+          class="pt-3 lg:w-[800px] lg:text-center text-lg mt-2"
+          v-if="props.locale === 'en'"
+        >
           Discover the science of <i>yoga</i> in all of its variety. From
           practicing asanas to learning the ancient philosophy of
           <b>Sanskrit</b> texts, or simply getting introduced to our place, we
           offer a variety of events all year round.
+        </p>
+        <p class="pt-3 lg:w-[800px] lg:text-center text-lg mt-2" v-else>
+          Découvrez la science du <i>yoga</i> dans toute sa variété. De la
+          pratique des asanas à l'apprentissage des textes <b>Sanskrit</b>, nous
+          offrons une variété d'évènements et ateliers au cours de l'année.
         </p>
       </div>
       <div
