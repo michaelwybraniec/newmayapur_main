@@ -56,7 +56,7 @@
             <p class="pt-3 text-lg" v-else>
               Vous souhaitez en savoir plus sur la <b>Conscience de Krishna</b>?
               Notre chaîne YouTube a des centaines d'enregistrements de classes
-              sur des textes sacrés, tel le <i>Srimad-Bhagavatam</i> et la
+              sur des textes sacrés, tels le <i>Srimad-Bhagavatam</i> et la
               <i>Bhagavad-Gita</i>.
             </p>
             <NuxtLink
