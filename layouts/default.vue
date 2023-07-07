@@ -1,4 +1,14 @@
 <template>
+  <div
+    class="bg-blue-600 flex justify-center items-center p-2 text-sm text-white"
+  >
+    <p>
+      We now have a French 🇫🇷 translation! The
+      <b><NuxtLink to="/events" class="underline">events</NuxtLink></b> and
+      <b><NuxtLink to="/posts" class="underline">blog</NuxtLink></b> pages are
+      however still in the work.
+    </p>
+  </div>
   <div class="navbar bg-base-100 justify-between">
     <div class="navbar-start w-64">
       <div
@@ -284,7 +294,7 @@
     </div>
     <div>
       <span class="footer-title">Navigation</span>
-      <NuxtLink to="/blog" class="link link-hover">Blog</NuxtLink>
+      <NuxtLink to="/posts" class="link link-hover">Blog</NuxtLink>
       <NuxtLink to="https://www.vedalivres.com/" class="link link-hover"
         >Shop</NuxtLink
       >
