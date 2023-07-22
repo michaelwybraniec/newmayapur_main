@@ -115,6 +115,15 @@
                 >
                   Happening Now
                 </div>
+                <div
+                  class="py-1 px-2 rounded-md bg-red-600 text-white font-bold"
+                  v-else-if="
+                    !event.attributes.End &&
+                    new Date(event.attributes.Start) < new Date()
+                  "
+                >
+                  Finished
+                </div>
               </div>
               <h2 class="card-title">{{ event.attributes.Title }}</h2>
               <p>
@@ -204,11 +213,8 @@ const events = ref(
     populate: ["Thumbnail"],
     pagination: options,
     filters: {
-      End: {
-        $gte: new Date(),
-      },
       Start: {
-        $gte: new Date(),
+        $gte: new Date().getDate() - 7,
       },
     },
     sort: ["Start:asc"],
@@ -220,11 +226,8 @@ watch(options, async (newValue) => {
     populate: ["Thumbnail"],
     pagination: newValue,
     filters: {
-      End: {
-        $gte: new Date(),
-      },
       Start: {
-        $gte: new Date(),
+        $gte: new Date().getDate() - 7,
       },
     },
     sort: ["Start:asc"],
