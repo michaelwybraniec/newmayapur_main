@@ -207,6 +207,9 @@ const events = ref(
       End: {
         $gte: new Date(),
       },
+      Start: {
+        $gte: new Date(),
+      },
     },
     sort: ["Start:asc"],
   })
@@ -218,6 +221,9 @@ watch(options, async (newValue) => {
     pagination: newValue,
     filters: {
       End: {
+        $gte: new Date(),
+      },
+      Start: {
         $gte: new Date(),
       },
     },
