@@ -124,6 +124,15 @@
                 >
                   Finished
                 </div>
+                <div
+                  class="py-1 px-2 rounded-md bg-red-600 text-white font-bold"
+                  v-else-if="
+                    event.attributes.End &&
+                    new Date(event.attributes.End) < new Date()
+                  "
+                >
+                  Finished
+                </div>
               </div>
               <h2 class="card-title">{{ event.attributes.Title }}</h2>
               <p>
