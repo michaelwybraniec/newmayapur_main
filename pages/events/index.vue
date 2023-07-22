@@ -83,45 +83,6 @@
           All Events
         </h1>
         <div
-          class="w-full rounded-xl xl:mx-auto flex flex-col md:flex-row items-center justify-between"
-        >
-          <div class="flex flex-col md:flex-row gap-2 w-full md:max-w-xs">
-            <select
-              v-model="filter"
-              class="select select-bordered w-100 md:max-w-xs xl:w-64"
-            >
-              <option value="" disabled selected>Category</option>
-              <option value="Temple">Temple</option>
-              <option value="Discovery">Discovery</option>
-              <option value="Retreat">Retreat</option>
-            </select>
-            <select
-              v-model="date.month"
-              class="select select-bordered w-full md:w-40 xl:w-64"
-            >
-              <option value="" disabled selected>Month</option>
-              <option value="01">January</option>
-              <option value="02">February</option>
-              <option value="03">March</option>
-              <option value="04">April</option>
-              <option value="05">May</option>
-              <option value="06">June</option>
-              <option value="07">July</option>
-              <option value="08">August</option>
-              <option value="09">September</option>
-              <option value="10">October</option>
-              <option value="11">November</option>
-              <option value="12">December</option>
-            </select>
-          </div>
-          <button
-            class="btn mt-2 w-full md:w-36 md:mt-0 btn-secondary btn-outline"
-            @click="() => ((filter = ''), (date.month = ''))"
-          >
-            Clear Filters
-          </button>
-        </div>
-        <div
           v-if="events.data.length > 0"
           class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 mx-auto gap-4 gap-y-8 2xl:gap-6 mt-6"
         >
@@ -257,184 +218,17 @@ const events = ref(
   })
 );
 
-watch(options, async (newValue, oldValue) => {
-  if (filter.value === "" && date.month === "") {
-    events.value = await find("events", {
-      populate: ["Thumbnail"],
-      pagination: newValue,
-      sort: ["Start:asc"],
-    });
-  } else if (filter.value !== "" && date.month === "") {
-    events.value = await find("events", {
-      populate: ["Thumbnail"],
-      pagination: newValue,
-      filters: {
-        Tag: {
-          $eq: filter.value,
-        },
+watch(options, async (newValue) => {
+  events.value = await find("events", {
+    populate: ["Thumbnail"],
+    pagination: newValue,
+    filters: {
+      Start: {
+        $gte: new Date(),
       },
-      sort: ["Start:asc"],
-    });
-  } else if (filter.value === "" && date.month !== "") {
-    events.value = await find("events", {
-      populate: ["Thumbnail"],
-      pagination: newValue,
-      sort: ["Start:asc"],
-      filters: {
-        Start: {
-          $gte: new Date(date.year + "-" + date.month + "-" + date.firstDay),
-          $lte: new Date(
-            date.year +
-              "-" +
-              date.month +
-              "-" +
-              new Date(date.year, date.month, 0).getDate()
-          ),
-        },
-      },
-    });
-  } else {
-    events.value = await find("events", {
-      populate: ["Thumbnail"],
-      pagination: newValue,
-      sort: ["Start:asc"],
-      filters: {
-        Start: {
-          $gte: new Date(date.year + "-" + date.month + "-" + date.firstDay),
-          $lte: new Date(
-            date.year +
-              "-" +
-              date.month +
-              "-" +
-              new Date(date.year, date.month, 0).getDate()
-          ),
-        },
-        Tag: {
-          $eq: filter.value,
-        },
-      },
-    });
-  }
-});
-
-watch(date, async (newValue, oldValue) => {
-  if (filter.value === "" && newValue.month !== "") {
-    options.page = 1;
-    events.value = await find("events", {
-      populate: ["Thumbnail"],
-      pagination: options,
-      sort: ["Start:asc"],
-      filters: {
-        Start: {
-          $gte: new Date(
-            newValue.year + "-" + newValue.month + "-" + newValue.firstDay
-          ),
-          $lte: new Date(
-            newValue.year +
-              "-" +
-              newValue.month +
-              "-" +
-              new Date(newValue.year, newValue.month, 0).getDate()
-          ),
-        },
-      },
-    });
-  } else if (filter.value !== "" && newValue.month !== "") {
-    options.page = 1;
-    events.value = await find("events", {
-      populate: ["Thumbnail"],
-      pagination: options,
-      sort: ["Start:asc"],
-      filters: {
-        Start: {
-          $gte: new Date(
-            newValue.year + "-" + newValue.month + "-" + newValue.firstDay
-          ),
-          $lte: new Date(
-            newValue.year +
-              "-" +
-              newValue.month +
-              "-" +
-              new Date(newValue.year, newValue.month, 0).getDate()
-          ),
-        },
-        Tag: {
-          $eq: filter.value,
-        },
-      },
-    });
-  } else if (newValue.month === "") {
-    options.page = 1;
-    events.value = await find("events", {
-      populate: ["Thumbnail"],
-      sort: ["Start:asc"],
-      pagination: options,
-    });
-  }
-});
-
-watch(filter, async (newValue, oldValue) => {
-  if (newValue === "" && date.month === "") {
-    options.page = 1;
-    events.value = await find("events", {
-      populate: ["Thumbnail"],
-      pagination: options,
-      sort: ["Start:asc"],
-    });
-  } else if (newValue !== "" && date.month === "") {
-    options.page = 1;
-    events.value = await find("events", {
-      populate: ["Thumbnail"],
-      pagination: options,
-      sort: ["Start:asc"],
-      filters: {
-        Tag: {
-          $eq: newValue,
-        },
-      },
-    });
-  } else if (newValue === "" && date.month !== "") {
-    options.page = 1;
-    events.value = await find("events", {
-      populate: ["Thumbnail"],
-      sort: ["Start:asc"],
-      pagination: options,
-      filters: {
-        Start: {
-          $gte: new Date(date.year + "-" + date.month + "-" + date.firstDay),
-          $lte: new Date(
-            date.year +
-              "-" +
-              date.month +
-              "-" +
-              new Date(date.year, date.month, 0).getDate()
-          ),
-        },
-      },
-    });
-  } else {
-    options.page = 1;
-    events.value = await find("events", {
-      populate: ["Thumbnail"],
-      pagination: options,
-      sort: ["Start:asc"],
-      filters: {
-        Start: {
-          $gte: new Date(date.year + "-" + date.month + "-" + date.firstDay),
-          $lte: new Date(
-            date.year +
-              "-" +
-              date.month +
-              "-" +
-              new Date(date.year, date.month, 0).getDate()
-          ),
-        },
-        Tag: {
-          $eq: newValue,
-        },
-      },
-    });
-  }
+    },
+    sort: ["Start:asc"],
+  });
 });
 
 const config = useRuntimeConfig();
