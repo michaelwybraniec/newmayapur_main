@@ -34,7 +34,7 @@
               {{ post.attributes.Title.substr(0, 14) + "..." }}
               <div
                 class="badge border-none"
-                :class="setTagsBg(post.attributes.Category)"
+                :class="setColor(post.attributes.Category)"
               >
                 #{{ post.attributes.Category }}
               </div>
@@ -68,16 +68,6 @@ const posts = await find("posts", {
   populate: "Thumbnail",
   sort: ["publishedAt:desc"],
 });
-
-const setTagsBg = function (value) {
-  if (value === "Temple") {
-    return "bg-orange-600";
-  } else if (value === "Community") {
-    return "bg-blue-600";
-  } else {
-    return "bg-green-600";
-  }
-};
 
 const props = defineProps(["title", "ionIcon", "description", "showArticles"]);
 

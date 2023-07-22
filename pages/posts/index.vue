@@ -28,7 +28,7 @@
                   <h2 class="card-title">{{ post.attributes.Title }}</h2>
                   <span
                     class="p-1 px-2 rounded-md text-white font-bold -translate-y-4 translate-x-4"
-                    :class="setTagsBg(post.attributes.Category)"
+                    :class="setColor(post.attributes.Category)"
                     >#{{ post.attributes.Category }}</span
                   >
                 </div>
@@ -280,16 +280,6 @@ watch(filter, async (newValue, oldValue) => {
     });
   }
 });
-
-const setTagsBg = function (value) {
-  if (value === "Temple") {
-    return "bg-orange-600";
-  } else if (value === "Community") {
-    return "bg-blue-600";
-  } else {
-    return "bg-green-600";
-  }
-};
 
 const config = useRuntimeConfig();
 

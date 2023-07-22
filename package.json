@@ -16,7 +16,8 @@
     "nuxt": "3.6.1",
     "nuxt-gtag": "^0.5.7",
     "nuxt-icon": "^0.4.2",
-    "nuxt-meilisearch": "^0.1.9"
+    "nuxt-meilisearch": "^0.1.9",
+    "tailwindcss-inner-border": "^0.2.0"
   },
   "dependencies": {
     "@glidejs/glide": "^3.6.0",

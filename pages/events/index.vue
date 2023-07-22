@@ -141,13 +141,22 @@
               <div class="mb-1 flex gap-2">
                 <div
                   class="py-1 px-2 rounded-md text-white font-bold"
-                  :class="setTagsBg(event.attributes.Tag)"
+                  :class="setColor(event.attributes.Tag)"
                 >
                   #{{ event.attributes.Tag }}
                 </div>
                 <div
+                  class="py-1 px-2 rounded-md bg-orange-600 text-white font-bold"
+                  v-if="
+                    new Date(event.attributes.Start) < new Date() &&
+                    new Date(event.attributes.End) > new Date()
+                  "
+                >
+                  Happening Now
+                </div>
+                <div
                   class="py-1 px-2 rounded-md bg-red-700 text-white font-bold"
-                  v-if="new Date(event.attributes.Start) < new Date()"
+                  v-else-if="new Date(event.attributes.End) < new Date()"
                 >
                   Finished
                 </div>
@@ -231,7 +240,7 @@ const options = reactive({
 
 const date = reactive({
   firstDay: 1,
-  year: new Date().getFullYear(),
+  year: new Date().getFullYear,
   month: "",
 });
 
@@ -241,7 +250,7 @@ const events = ref(
     pagination: options,
     filters: {
       Start: {
-        $gte: new Date(date.year, 0, 1),
+        $gte: new Date(),
       },
     },
     sort: ["Start:asc"],
@@ -427,16 +436,6 @@ watch(filter, async (newValue, oldValue) => {
     });
   }
 });
-
-const setTagsBg = function (value) {
-  if (value === "Temple") {
-    return "bg-purple-600";
-  } else if (value === "Discovery") {
-    return "bg-blue-600";
-  } else {
-    return "bg-orange-600";
-  }
-};
 
 const config = useRuntimeConfig();
 

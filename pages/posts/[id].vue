@@ -16,7 +16,10 @@
     <h1 class="text-3xl mt-16 font-bold">
       {{ post.data.attributes.Title }}
     </h1>
-    <div v-html="markdown" class="mt-6 mb-12 markdown"></div>
+    <UtilitiesMarkdown
+      :content="post.data.attributes.Content"
+      class="mt-6 mb-12"
+    />
     <div v-if="post.data.attributes.author.data">
       <h2 class="font-bold text-xl uppercase pb-2 border-b-2 border-base-300">
         About the Author
@@ -84,8 +87,6 @@
 </template>
 
 <script setup>
-import { marked } from "marked";
-
 const route = useRoute();
 const { findOne, find } = useStrapi();
 
@@ -119,8 +120,6 @@ const id = between(1, posts.data.length);
 const post1 = posts.data[id - 1];
 const post2 = posts.data[id];
 
-const markdown = computed(() => marked.parse(post.data.attributes.Content));
-
 const config = useRuntimeConfig();
 
 const setTagsBg = function (value) {
@@ -137,25 +136,3 @@ useHead({
   title: "New Mayapur - " + post.data.attributes.Title,
 });
 </script>
-
-<style lang="postcss">
-.markdown h2 {
-  @apply font-bold text-xl mt-6 -mb-2;
-}
-
-.markdown p {
-  @apply mt-4;
-}
-
-.markdown {
-  @apply text-lg;
-}
-
-.markdown ul {
-  @apply list-disc mt-4 ml-3;
-}
-
-.markdown a {
-  @apply underline text-blue-600 hover:text-blue-800 visited:text-purple-600;
-}
-</style>
