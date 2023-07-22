@@ -214,7 +214,7 @@ const events = ref(
     pagination: options,
     filters: {
       Start: {
-        $gte: new Date().getDate() - 7,
+        $gte: new Date(new Date().setDate(new Date().getDate() - 7)),
       },
     },
     sort: ["Start:asc"],
@@ -227,7 +227,7 @@ watch(options, async (newValue) => {
     pagination: newValue,
     filters: {
       Start: {
-        $gte: new Date().getDate() - 7,
+        $gte: new Date(new Date().setDate(new Date().getDate() - 7)),
       },
     },
     sort: ["Start:asc"],
