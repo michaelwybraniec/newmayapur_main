@@ -2,7 +2,7 @@
   <div class="border-b-2 p-2 last:border-b-0 pb-8">
     <a :href="props.link">
       <div class="flex hover:translate-x-4 cursor-pointer transition">
-        <h2 class="uppercase mb-1.5 font-bold text-xl">
+        <h2 class="uppercase font-bold text-xl">
           {{ props.title }}
         </h2>
         <Icon

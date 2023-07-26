@@ -1,22 +1,4 @@
 <template>
-  <div
-    v-if="clicked === false"
-    class="bg-blue-600 justify-between md:items-center p-2 text-sm text-white grid grid-cols-8"
-  >
-    <p class="col-span-7">
-      We now have a French 🇫🇷 translation! The
-      <b><NuxtLink to="/events" class="underline">events</NuxtLink></b> and
-      <b><NuxtLink to="/posts" class="underline">blog</NuxtLink></b> pages are
-      however still in the work.
-    </p>
-    <div class="text-right font-bold cursor-pointer">
-      <span
-        @click="() => (clicked = !clicked)"
-        class="border-white text-base border-2 p-0.5 px-1 rounded-md"
-        >X</span
-      >
-    </div>
-  </div>
   <div class="navbar bg-base-100 justify-between">
     <div class="navbar-start w-64">
       <div
