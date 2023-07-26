@@ -17,7 +17,7 @@
           }}
         </div>
         <div class="p-4 px-6 pb-5 border-2 rounded-lg mt-2 lg:mt-0">
-          <NuxtLink :to="'/events/' + event.Slug"
+          <NuxtLink :to="'/events/' + event.attributes.Slug"
             ><h3 class="font-bold text-xl pb-2">
               {{ event.attributes.Title }}
             </h3></NuxtLink
