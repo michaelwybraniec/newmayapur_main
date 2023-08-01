@@ -12,7 +12,12 @@ export default defineNuxtConfig({
     "@nuxt/devtools",
   ],
   build: {
-    transpile: ["vue-instantsearch", "marked", "@glidejs/glide"],
+    transpile: [
+      "vue-instantsearch",
+      "marked",
+      "@glidejs/glide",
+      "vue3-picture-swipe",
+    ],
   },
   meilisearch: {
     hostUrl: process.env.NUXT_MEILISEARCH_URL,
