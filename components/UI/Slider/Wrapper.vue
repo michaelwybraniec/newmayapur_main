@@ -27,16 +27,17 @@ import Glide from "@glidejs/glide";
 import { Autoplay } from "@glidejs/glide/dist/glide.modular.esm";
 
 export default {
+  props: ["autoplay"],
   mounted() {
     let glide = new Glide(".glide", {
-      autoplay: 4000,
+      autoplay: this.autoplay,
     }).mount({ Autoplay });
   },
 };
 </script>
 
 <script setup>
-const props = defineProps(["width"]);
+const props = defineProps(["width", "autoplay"]);
 const style = computed(() => "max-width: " + props.width);
 </script>
 

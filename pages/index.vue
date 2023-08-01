@@ -5,7 +5,7 @@
       :description="content.data.attributes.Header.Description"
     />
     <UISectionImgColWrapper>
-      <UISliderWrapper width="470px">
+      <UISliderWrapper width="470px" autoplay="4000">
         <UISliderItem
           v-for="slide in content.data.attributes.Hero"
           :img="

@@ -39,11 +39,65 @@
           .url
       "
     />
+    <div class="py-24 grid lg:grid-cols-2 xl:px-32 gap-16 mx-4">
+      <div>
+        <h2 class="uppercase text-xl font-bold mb-6 border-b-2">
+          Our Latest News
+        </h2>
+        <div class="space-y-3">
+          <div v-for="post in posts.data">
+            <NuxtLink :to="'/posts/' + post.id">
+              <div
+                class="p-4 lg:p-8 border-2 rounded-2xl flex items-center justify-between"
+              >
+                <p class="text-lg font-bold">
+                  {{
+                    post.attributes.Title.length > 22
+                      ? post.attributes.Title.substring(0, 24) + "..."
+                      : post.attributes.Title
+                  }}
+                </p>
+                <Icon name="ion:arrow-forward-circle-outline" size="32px" />
+              </div>
+            </NuxtLink>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h2 class="uppercase text-xl font-bold mb-8 border-b-2">
+          View Our Gallery
+        </h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <NuxtLink to="/farm/gallery">
+            <img
+              src="/img/cow_dev.jpg"
+              class="w-full rounded-xl cursor-pointer hover:-translate-y-2 transition-all"
+            />
+          </NuxtLink>
+          <NuxtLink to="/farm/gallery">
+            <img
+              src="/img/dharma.jpg"
+              class="w-full rounded-xl cursor-pointer hover:-translate-y-2 transition-all"
+            /> </NuxtLink
+          ><NuxtLink to="/farm/gallery">
+            <img
+              src="/img/teaching_cows.jpg"
+              class="w-full rounded-xl cursor-pointer hover:-translate-y-2 transition-all"
+            /> </NuxtLink
+          ><NuxtLink to="/farm/gallery">
+            <img
+              src="/img/white_goat.jpg"
+              class="w-full rounded-xl cursor-pointer hover:-translate-y-2 transition-all"
+            />
+          </NuxtLink>
+        </div>
+      </div>
+    </div>
   </UtilitiesTranslateContent>
 </template>
 
 <script setup>
-import { useLocaleStore } from "../stores/locale";
+import { useLocaleStore } from "../../stores/locale";
 import { storeToRefs } from "pinia";
 
 const { find } = useStrapi();
@@ -67,6 +121,17 @@ let content = await find("farm-page", {
     },
   },
   locale: locale.value,
+});
+
+const posts = await find("posts", {
+  pagination: {
+    pageSize: 3,
+    page: 1,
+  },
+  filters: {
+    Category: "Farm",
+  },
+  sort: ["publishedAt:desc"],
 });
 
 watch(locale, async (newValue) => {

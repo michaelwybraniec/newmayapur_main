@@ -1,5 +1,5 @@
 <template>
-  <div class="pb-32 py-28 lg:px-10 lg:w-[1000px] mx-auto">
+  <div class="pb-32 py-28 lg:px-10 lg:w-[1000px] lg:mx-auto mx-4">
     <h2 class="text-2xl font-bold text-center mb-12">{{ props.title }}</h2>
     <div
       v-if="props.images"

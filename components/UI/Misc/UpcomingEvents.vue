@@ -22,11 +22,10 @@
               {{ event.attributes.Title }}
             </h3></NuxtLink
           >
+          <!-- prettier-ignore -->
           <p>
-            {{
-              event.attributes.Description.split(" ").splice(0, 35).join(" ")
-            }}
-            ...
+            {{ event.attributes.Description.replace('<br>','').split(" ").splice(0,
+            35).join(" ") }} ...
           </p>
         </div>
       </li>
