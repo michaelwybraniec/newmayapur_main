@@ -20,7 +20,7 @@
         class="pb-24 md:pb-40"
       >
         <a :href="image.src" v-for="image in images">
-          <img alt="img1" :src="image.thumbnail" />
+          <img alt="" :src="image.src" />
         </a>
       </lightgallery>
     </div>
@@ -29,8 +29,8 @@
 
 <script setup>
 import Lightgallery from "lightgallery/vue/LightGalleryVue.umd.js";
-import lgThumbnail from "../../node_modules/lightgallery/plugins/thumbnail";
-import lgZoom from "../../node_modules/lightgallery/plugins/zoom";
+import lgThumbnail from "lightgallery/plugins/thumbnail/lg-thumbnail.umd";
+import lgZoom from "lightgallery/plugins/zoom/lg-zoom.umd";
 
 const { find } = useStrapi();
 const config = useRuntimeConfig();
@@ -59,9 +59,9 @@ const images = computed(() => {
 </script>
 
 <style>
-@import "lightgallery/css/lightgallery.css";
-@import "lightgallery/css/lg-thumbnail.css";
-@import "lightgallery/css/lg-zoom.css";
+@import "../../node_modules/lightgallery/css/lightgallery.css";
+@import "../../node_modules/lightgallery/css/lg-thumbnail.css";
+@import "../../node_modules/lightgallery/css/lg-zoom.css";
 
 .lightgallery-vue {
   display: flex;
@@ -73,6 +73,19 @@ const images = computed(() => {
 .lightgallery-vue a {
   border-radius: 12px;
   overflow: hidden;
+}
+
+.lightgallery-vue a {
+  width: 200px;
+  height: 200px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightgallery-vue a img {
+  max-width: 600px;
 }
 
 @media (max-width: 500px) {
