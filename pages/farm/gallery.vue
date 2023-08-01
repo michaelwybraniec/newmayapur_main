@@ -1,8 +1,6 @@
 <template>
   <div class="bg-base-200">
-    <div
-      class="max-w-6xl md:mx-auto min-h-screen md:pt-24 pt-20 pb-32 md:pb-40"
-    >
+    <div class="max-w-6xl md:mx-auto min-h-screen md:pt-24 pt-20 md:pb-40">
       <div class="flex items-center justify-center">
         <div class="p-6 bg-base-100 inline rounded-xl">
           <Icon :name="'ion:camera-outline'" size="34px" />
@@ -17,13 +15,23 @@
         A life in nature is worth living. See it for yourself by browsing those
         beautiful pictures!
       </p>
-      <vue-picture-swipe :items="images"></vue-picture-swipe>
+      <lightgallery
+        :settings="{ speed: 500, plugins: [lgThumbnail, lgZoom] }"
+        class="pb-24 md:pb-40"
+      >
+        <a :href="image.src" v-for="image in images">
+          <img alt="img1" :src="image.thumbnail" />
+        </a>
+      </lightgallery>
     </div>
   </div>
 </template>
 
 <script setup>
-import VuePictureSwipe from "vue3-picture-swipe";
+import Lightgallery from "lightgallery/vue/LightGalleryVue.umd.js";
+import lgThumbnail from "../../node_modules/lightgallery/plugins/thumbnail";
+import lgZoom from "../../node_modules/lightgallery/plugins/zoom";
+
 const { find } = useStrapi();
 const config = useRuntimeConfig();
 
@@ -51,30 +59,31 @@ const images = computed(() => {
 </script>
 
 <style>
-.my-gallery {
+@import "lightgallery/css/lightgallery.css";
+@import "lightgallery/css/lg-thumbnail.css";
+@import "lightgallery/css/lg-zoom.css";
+
+.lightgallery-vue {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 12px;
 }
 
-.gallery-thumbnail {
+.lightgallery-vue a {
   border-radius: 12px;
   overflow: hidden;
 }
 
 @media (max-width: 500px) {
-  .my-gallery figure {
+  .lightgallery-vue a {
     width: 80px;
     height: 80px;
-  }
-
-  figure img {
-    max-width: 200px;
-  }
-
-  .gallery-thumbnail {
     border-radius: 8px;
-    overflow: hidden;
+  }
+
+  .lightgallery-vue a img {
+    max-width: 200px;
   }
 }
 </style>

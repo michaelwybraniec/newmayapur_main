@@ -17,6 +17,7 @@ export default defineNuxtConfig({
       "marked",
       "@glidejs/glide",
       "vue3-picture-swipe",
+      "lightgallery/vue",
     ],
   },
   meilisearch: {
