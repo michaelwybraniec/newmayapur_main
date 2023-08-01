@@ -59,9 +59,9 @@ const images = computed(() => {
 </script>
 
 <style>
-@import "../../node_modules/lightgallery/css/lightgallery.css";
-@import "../../node_modules/lightgallery/css/lg-thumbnail.css";
-@import "../../node_modules/lightgallery/css/lg-zoom.css";
+@import url("https://cdn.jsdelivr.net/npm/lightgallery@2.0.0-beta.4/css/lightgallery.css");
+@import url("https://cdn.jsdelivr.net/npm/lightgallery@2.0.0-beta.4/css/lg-zoom.css");
+@import url("https://cdn.jsdelivr.net/npm/lightgallery@2.0.0-beta.4/css/lg-thumbnail.css");
 
 .lightgallery-vue {
   display: flex;
