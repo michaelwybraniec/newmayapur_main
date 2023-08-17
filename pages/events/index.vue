@@ -228,14 +228,14 @@ watch(locale, async (newValue) => {
   renderComponent.value = false;
   events.value = await find("events", {
     populate: ["Thumbnail"],
-    pagination: newValue,
+    pagination: options,
     filters: {
       Start: {
         $gte: new Date(new Date().setDate(new Date().getDate() - 7)),
       },
     },
     sort: ["Start:asc"],
-    locale: locale.value,
+    locale: newValue,
   });
 
   content = await find("event-page", {
