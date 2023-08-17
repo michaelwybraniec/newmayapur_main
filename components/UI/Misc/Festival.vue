@@ -71,65 +71,134 @@
       </div>
     </div>
   </div>
-  <div
-    :class="days.length > 0 ? 'bg-base-200' : ''"
-    v-if="!props.organizerContact"
-  >
-    <div class="lg:w-[900px] mx-4 lg:mx-auto pt-28 pb-36">
-      <h2 class="text-3xl font-bold text-center mb-6">Interested?</h2>
-      <p class="max-w-xl pt-2 pb-2 mx-auto text-center mb-16">
-        Book your stay in our fully furnished guesthouse. We provide a variety
-        of rooms; both <b>en suite</b> and with shared bathrooms, for families
-        and individuals alike.
-      </p>
-      <div
-        class="p-6 rounded-xl shadow-lg mt-20 grid md:grid-cols-2 gap-4 bg-base-100"
-      >
-        <div class="rounded-md p-4 bg-base-200">
-          <div class="flex justify-between">
-            <p class="text-2xl font-bold">Price</p>
-            <span
-              class="text-xl uppercase font-bold bg-red-300 rounded-md px-2 py-0.5"
-              >{{ props.full ? "FULL" : "FREE" }}</span
+  <div v-if="lang === 'en'">
+    <div
+      :class="days.length > 0 ? 'bg-base-200' : ''"
+      v-if="!props.organizerContact"
+    >
+      <div class="lg:w-[900px] mx-4 lg:mx-auto pt-28 pb-36">
+        <h2 class="text-3xl font-bold text-center mb-6">Interested?</h2>
+        <p class="max-w-xl pt-2 pb-2 mx-auto text-center mb-16">
+          Book your stay in our fully furnished guesthouse. We provide a variety
+          of rooms; both <b>en suite</b> and with shared bathrooms, for families
+          and individuals alike.
+        </p>
+        <div
+          class="p-6 rounded-xl shadow-lg mt-20 grid md:grid-cols-2 gap-4 bg-base-100"
+        >
+          <div class="rounded-md p-4 bg-base-200">
+            <div class="flex justify-between">
+              <p class="text-2xl font-bold">Price</p>
+              <span
+                class="text-xl uppercase font-bold bg-red-300 rounded-md px-2 py-0.5"
+                >{{ props.full ? "FULL" : "FREE" }}</span
+              >
+            </div>
+            <p class="italic">Without Accomodation</p>
+          </div>
+          <div
+            class="border-2 rounded-md border-base-300 flex max-md:flex-col justify-center items-center p-4 gap-2"
+          >
+            <NuxtLink
+              :disabled="props.full"
+              to="https://booking.newmayapur.com"
+              class="btn btn-secondary w-full"
+              >Book Your Stay</NuxtLink
             >
           </div>
-          <p class="italic">Without Accomodation</p>
         </div>
+      </div>
+    </div>
+    <div :class="days.length > 0 ? 'bg-base-200' : ''" v-else>
+      <div class="lg:w-[900px] mx-4 lg:mx-auto pt-28 pb-36">
+        <h2 class="text-3xl font-bold text-center mb-6">Interested?</h2>
+        <p class="max-w-xl pt-2 pb-2 mx-auto text-center mb-16">
+          Book your stay in our fully furnished guesthouse. We provide a variety
+          of rooms; both <b>en suite</b> and with shared bathrooms, for families
+          and individuals alike.
+        </p>
         <div
-          class="border-2 rounded-md border-base-300 flex max-md:flex-col justify-center items-center p-4 gap-2"
+          class="p-6 rounded-xl shadow-lg mt-20 grid md:grid-cols-2 gap-4 bg-base-100"
         >
-          <NuxtLink
-            :disabled="props.full"
-            to="https://booking.newmayapur.com"
-            class="btn btn-secondary w-full"
-            >Book Your Stay</NuxtLink
+          <div>
+            <h2
+              class="uppercase text-lg font-bold text-center flex items-center justify-center h-full p-4 bg-base-200 rounded-lg"
+            >
+              Contact the Organizers
+            </h2>
+          </div>
+          <div
+            class="border-2 rounded-md border-base-300 flex max-md:flex-col justify-center items-center p-4 gap-2 text-lg italic"
           >
+            {{ props.organizerContact.replace("@", "[at]") }}
+          </div>
         </div>
       </div>
     </div>
   </div>
-  <div :class="days.length > 0 ? 'bg-base-200' : ''" v-else>
-    <div class="lg:w-[900px] mx-4 lg:mx-auto pt-28 pb-36">
-      <h2 class="text-3xl font-bold text-center mb-6">Interested?</h2>
-      <p class="max-w-xl pt-2 pb-2 mx-auto text-center mb-16">
-        Book your stay in our fully furnished guesthouse. We provide a variety
-        of rooms; both <b>en suite</b> and with shared bathrooms, for families
-        and individuals alike.
-      </p>
-      <div
-        class="p-6 rounded-xl shadow-lg mt-20 grid md:grid-cols-2 gap-4 bg-base-100"
-      >
-        <div>
-          <h2
-            class="uppercase text-lg font-bold text-center flex items-center justify-center h-full p-4 bg-base-200 rounded-lg"
-          >
-            Contact the Organizers
-          </h2>
-        </div>
+  <div v-else>
+    <div
+      :class="days.length > 0 ? 'bg-base-200' : ''"
+      v-if="!props.organizerContact"
+    >
+      <div class="lg:w-[900px] mx-4 lg:mx-auto pt-28 pb-36">
+        <h2 class="text-3xl font-bold text-center mb-6">Intéressé(e) ?</h2>
+        <p class="max-w-xl pt-2 pb-2 mx-auto text-center mb-16">
+          Réservez votre séjour dans notre maison d'hôtes entièrement meublée.
+          Nous proposons une grande variété de chambres, avec salle de bains
+          privative ou commune, pour les familles comme pour les voyageurs
+          individuels.
+        </p>
         <div
-          class="border-2 rounded-md border-base-300 flex max-md:flex-col justify-center items-center p-4 gap-2 text-lg italic"
+          class="p-6 rounded-xl shadow-lg mt-20 grid md:grid-cols-2 gap-4 bg-base-100"
         >
-          {{ props.organizerContact.replace("@", "[at]") }}
+          <div class="rounded-md p-4 bg-base-200">
+            <div class="flex justify-between">
+              <p class="text-2xl font-bold">Prix</p>
+              <span
+                class="text-xl uppercase font-bold bg-red-300 rounded-md px-2 py-0.5"
+                >{{ props.full ? "FULL" : "FREE" }}</span
+              >
+            </div>
+            <p class="italic">Sans Accomodation</p>
+          </div>
+          <div
+            class="border-2 rounded-md border-base-300 flex max-md:flex-col justify-center items-center p-4 gap-2"
+          >
+            <NuxtLink
+              :disabled="props.full"
+              to="https://booking.newmayapur.com"
+              class="btn btn-secondary w-full"
+              >Réserver</NuxtLink
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <div :class="days.length > 0 ? 'bg-base-200' : ''" v-else>
+      <div class="lg:w-[900px] mx-4 lg:mx-auto pt-28 pb-36">
+        <h2 class="text-3xl font-bold text-center mb-6">Intéressé(e) ?</h2>
+        <p class="max-w-xl pt-2 pb-2 mx-auto text-center mb-16">
+          Réservez votre séjour dans notre maison d'hôtes entièrement meublée.
+          Nous proposons une grande variété de chambres, avec salle de bains
+          privative ou commune, pour les familles comme pour les voyageurs
+          individuels.
+        </p>
+        <div
+          class="p-6 rounded-xl shadow-lg mt-20 grid md:grid-cols-2 gap-4 bg-base-100"
+        >
+          <div>
+            <h2
+              class="uppercase text-lg font-bold text-center flex items-center justify-center h-full p-4 bg-base-200 rounded-lg"
+            >
+              Contacter les Organisateurs
+            </h2>
+          </div>
+          <div
+            class="border-2 rounded-md border-base-300 flex max-md:flex-col justify-center items-center p-4 gap-2 text-lg italic"
+          >
+            {{ props.organizerContact.replace("@", "[at]") }}
+          </div>
         </div>
       </div>
     </div>
@@ -137,6 +206,12 @@
 </template>
 
 <script setup>
+import { useLocaleStore } from "../../../stores/locale";
+import { storeToRefs } from "pinia";
+
+const store = useLocaleStore();
+const { locale } = storeToRefs(store);
+
 const props = defineProps([
   "img",
   "start",
@@ -146,5 +221,6 @@ const props = defineProps([
   "days",
   "full",
   "organizerContact",
+  "lang",
 ]);
 </script>

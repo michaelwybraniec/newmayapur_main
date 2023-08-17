@@ -12,14 +12,15 @@
     :days="event.attributes.Days.data"
     :full="event.attributes.Full"
     :organizer-contact="event.attributes.OrganizerContact"
+    :lang="locale"
   />
   <div v-else>
-    <div class="hero py-32 bg-base-200">
+    <!-- <div class="hero py-32 bg-base-200">
       <div class="hero-content flex-col lg:flex-row">
         <img
           :src="
             config.public.strapiBase +
-            event.data.attributes.Thumbnail.data.attributes.formats.small.url
+            event.attributes.Thumbnail.data.attributes.formats.small.url
           "
           class="max-w-xs max-lg:mb-8 md:max-w-md rounded-lg shadow-2xl"
         />
@@ -48,15 +49,15 @@
               }}</span>
             </div>
           </div>
-          <h1 class="text-5xl font-bold">{{ event.data.attributes.Title }}</h1>
+          <h1 class="text-5xl font-bold">{{ event.attributes.Title }}</h1>
           <p class="py-6">
-            {{ event.data.attributes.Description }}
+            {{ event.attributes.Description }}
           </p>
           <NuxtLink
             to="https://booking.newmayapur.com"
             class="btn btn-primary w-44"
             :class="
-              new Date(event.data.attributes.Start) < new Date()
+              new Date(event.attributes.Start) < new Date()
                 ? 'btn-disabled'
                 : ''
             "
@@ -65,10 +66,10 @@
           </NuxtLink>
         </div>
       </div>
-    </div>
-    <div
+    </div> -->
+    <!-- <div
       class="xl:w-[1280px] mx-4 xl:mx-auto py-28"
-      v-if="event.data.attributes.Teachers.data.length !== 0"
+      v-if="event.attributes.Teachers.data.length !== 0"
     >
       <h2 class="text-3xl font-bold text-center mb-6">Your Teachers</h2>
       <p class="max-w-xl pt-2 pb-2 mx-auto text-center">
@@ -80,7 +81,7 @@
         class="pt-36 max-md:space-y-16 grid-cols-1 md:grid-cols-2 pb-16 grid gap-4"
       >
         <div
-          v-for="teacher in event.data.attributes.Teachers.data"
+          v-for="teacher in event.attributes.Teachers.data"
           class="p-6 border-2 border-base-300 rounded-xl"
         >
           <img
@@ -101,17 +102,15 @@
           <p class="mb-2">{{ teacher.attributes.Description }}</p>
         </div>
       </div>
-    </div>
+    </div> -->
     <div
-      :class="
-        event.data.attributes.Teachers.data.length === 0 ? '' : 'bg-base-200'
-      "
+      :class="event.attributes.Teachers.data.length === 0 ? '' : 'bg-base-200'"
     >
       <div class="xl:w-[1280px] mx-4 xl:mx-auto pt-28 pb-44">
         <h2 class="text-3xl font-bold text-center mb-6">Your Schedule</h2>
         <div class="grid grid-cols-1 max-md:space-y-8 md:grid-cols-2 gap-6">
           <div
-            v-for="day in event.data.attributes.Days.data"
+            v-for="day in event.attributes.Days.data"
             class="flex items-center flex-col"
           >
             <div
@@ -127,7 +126,6 @@
               class="border-2 mt-4 w-full overflow-auto border-base-300 rounded-2xl"
             >
               <table class="table table-zebra w-full">
-                <!-- head -->
                 <thead>
                   <tr>
                     <th></th>
@@ -150,6 +148,7 @@
         </div>
       </div>
     </div>
+    {{ event.attributes }}
     <div class="lg:w-[900px] mx-4 lg:mx-auto pt-28 pb-36">
       <h2 class="text-3xl font-bold text-center mb-6">Interested?</h2>
       <p class="max-w-xl pt-2 pb-2 mx-auto text-center mb-16">
@@ -165,22 +164,20 @@
             <p class="text-2xl font-bold">Price</p>
             <p class="italic">Without Accomodation</p>
           </div>
-          <span class="text-2xl font-bold"
-            >€{{ event.data.attributes.Price }}</span
-          >
+          <span class="text-2xl font-bold">€{{ event.attributes.Price }}</span>
         </div>
         <div
           class="border-2 rounded-md border-base-300 flex max-md:flex-col justify-center items-center p-4 gap-2"
         >
-          <a
+          <!-- <a
             :href="
               config.public.strapiBase +
-              event.data.attributes.Program.data.attributes.url
+              event.attributes.Program.data.attributes.url
             "
             target="_blank"
             class="btn btn-primary max-md:w-full"
             >Download the Program</a
-          >
+          > -->
           <NuxtLink
             to="https://booking.newmayapur.com"
             class="btn btn-secondary max-md:w-full"
@@ -194,8 +191,13 @@
 </template>
 
 <script setup>
+import { useLocaleStore } from "../../stores/locale";
+import { storeToRefs } from "pinia";
+
 const route = useRoute();
 const { find } = useStrapi();
+const store = useLocaleStore();
+const { locale } = storeToRefs(store);
 
 const events = await find("events", {
   populate: {
@@ -214,6 +216,7 @@ const events = await find("events", {
       $eq: route.params.id,
     },
   },
+  locale: "all",
 });
 
 const event = events.data[0];
