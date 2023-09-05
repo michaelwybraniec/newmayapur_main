@@ -29,17 +29,23 @@
         >
           <li @click="handleSelected"><NuxtLink to="/posts">Blog</NuxtLink></li>
           <li @click="handleSelected">
-            <NuxtLink to="/events">Events</NuxtLink>
+            <NuxtLink to="/events">{{
+              locale === "en" ? "Events" : "Évènements"
+            }}</NuxtLink>
           </li>
           <li @click="handleSelected">
-            <NuxtLink to="https://booking.newmayapur.com">Booking</NuxtLink>
+            <NuxtLink to="https://booking.newmayapur.com">{{
+              locale === "en" ? "Booking" : "Réservations"
+            }}</NuxtLink>
           </li>
           <li @click="handleSelected">
-            <a href="https://www.vedalivres.com/">Shop</a>
+            <a href="https://www.vedalivres.com/">{{
+              locale === "en" ? "Shop" : "Boutique"
+            }}</a>
           </li>
           <li tabindex="0">
             <a class="justify-between">
-              About
+              {{ locale === "en" ? "About" : "À Propos" }}
               <svg
                 class="fill-current"
                 xmlns="http://www.w3.org/2000/svg"
@@ -57,10 +63,14 @@
                 <NuxtLink to="/temple">Temple</NuxtLink>
               </li>
               <li @click="handleSelected">
-                <NuxtLink to="/community">Community</NuxtLink>
+                <NuxtLink to="/community">{{
+                  locale === "en" ? "Community" : "Communauté"
+                }}</NuxtLink>
               </li>
               <li @click="handleSelected">
-                <NuxtLink to="/farm">Farm</NuxtLink>
+                <NuxtLink to="/farm">{{
+                  locale === "en" ? "Farm" : "Ferme"
+                }}</NuxtLink>
               </li>
             </ul>
           </li>
@@ -81,13 +91,19 @@
             </a>
             <ul class="p-2 bg-base-100 lg:shadow-lg space-y-1">
               <li @click="handleSelected">
-                <NuxtLink to="/retreats">Retreats</NuxtLink>
+                <NuxtLink to="/retreats">{{
+                  locale === "en" ? "Retreats" : "Retraites"
+                }}</NuxtLink>
               </li>
               <li @click="handleSelected">
-                <NuxtLink to="/catering">Catering</NuxtLink>
+                <NuxtLink to="/catering">{{
+                  locale === "en" ? "Catering" : "Restauration"
+                }}</NuxtLink>
               </li>
               <li @click="handleSelected">
-                <NuxtLink to="/renting-venue">Renting Venue</NuxtLink>
+                <NuxtLink to="/renting-venue">{{
+                  locale === "en" ? "Renting Venue" : "Location d'Espaces"
+                }}</NuxtLink>
               </li>
               <li @click="handleSelected">
                 <NuxtLink to="/food-for-life">Food For Life</NuxtLink>
@@ -122,7 +138,9 @@
             @click="handleSelected"
             class="bg-primary text-white font-bold rounded-lg"
           >
-            <a href="https://donations.newmayapur.com">Donate</a>
+            <a href="https://donations.newmayapur.com">{{
+              locale === "en" ? "Donate" : "Faire un Don"
+            }}</a>
           </li>
         </ul>
       </div>
@@ -136,23 +154,29 @@
         ></p>
       </div>
     </div>
-    <div class="navbar-end hidden xl:flex w-[900px]">
+    <div class="navbar-end hidden xl:flex w-[1000px]">
       <ul class="menu menu-horizontal px-1 space-x-1">
         <li @click="handleSelected" class="pr-1.5">
-          <NuxtLink to="/events">Events</NuxtLink>
+          <NuxtLink to="/events">{{
+            locale === "en" ? "Events" : "Évènements"
+          }}</NuxtLink>
         </li>
         <li @click="handleSelected" class="pr-1.5">
-          <NuxtLink to="https://booking.newmayapur.com">Booking</NuxtLink>
+          <NuxtLink to="https://booking.newmayapur.com">{{
+            locale === "en" ? "Booking" : "Réservations"
+          }}</NuxtLink>
         </li>
         <li @click="handleSelected" class="pr-1.5">
           <NuxtLink to="/posts">Blog</NuxtLink>
         </li>
         <li @click="handleSelected" class="pr-1.5">
-          <a href="https://www.vedalivres.com/">Shop</a>
+          <a href="https://www.vedalivres.com/">{{
+            locale === "en" ? "Shop" : "Boutique"
+          }}</a>
         </li>
         <li class="dropdown dropdown-end dropdown-hover">
           <a class="justify-between">
-            About
+            {{ locale === "en" ? "About" : "À Propos" }}
             <svg
               class="fill-current"
               xmlns="http://www.w3.org/2000/svg"
@@ -172,10 +196,14 @@
               <NuxtLink to="/temple">Temple</NuxtLink>
             </li>
             <li @click="handleSelected">
-              <NuxtLink to="/community">Community</NuxtLink>
+              <NuxtLink to="/community">{{
+                locale === "en" ? "Communiy " : "Communauté"
+              }}</NuxtLink>
             </li>
             <li @click="handleSelected">
-              <NuxtLink to="/farm">Farm</NuxtLink>
+              <NuxtLink to="/farm">{{
+                locale === "en" ? "Farm" : "Ferme"
+              }}</NuxtLink>
             </li>
           </ul>
         </li>
@@ -198,13 +226,19 @@
             class="dropdown-content menu p-2 border-2 space-y-1 border-base-300 bg-base-100 rounded-box w-52"
           >
             <li @click="handleSelected">
-              <NuxtLink to="/retreats">Retreats</NuxtLink>
+              <NuxtLink to="/retreats">{{
+                locale === "en" ? "Retreats" : "Retraites"
+              }}</NuxtLink>
             </li>
             <li @click="handleSelected">
-              <NuxtLink to="/catering">Catering</NuxtLink>
+              <NuxtLink to="/catering">{{
+                locale === "en" ? "Catering" : "Restauration"
+              }}</NuxtLink>
             </li>
             <li @click="handleSelected">
-              <NuxtLink to="/renting-venue">Renting Venue</NuxtLink>
+              <NuxtLink to="/renting-venue">{{
+                locale === "en" ? "Renting Venue" : "Location d'Espaces"
+              }}</NuxtLink>
             </li>
             <li @click="handleSelected">
               <NuxtLink to="/food-for-life">Food For Life</NuxtLink>
@@ -213,7 +247,8 @@
         </li>
         <li class="dropdown dropdown-end dropdown-hover">
           <label tabindex="0" class=""
-            >More<svg
+            >{{ locale === "en" ? "More" : "Plus"
+            }}<svg
               class="fill-current"
               xmlns="http://www.w3.org/2000/svg"
               width="20"
@@ -244,7 +279,9 @@
           @click="handleSelected"
           class="bg-primary text-white font-bold rounded-lg"
         >
-          <a href="https://donations.newmayapur.com">Donate</a>
+          <a href="https://donations.newmayapur.com">{{
+            locale === "en" ? "Donate" : "Contribuer"
+          }}</a>
         </li>
       </ul>
     </div>
@@ -268,8 +305,11 @@
         </NuxtLink>
       </div>
       <p>
-        <b>ISKCON New Mayapur</b><br />A spiritual eco-village in the heart of
-        France.
+        <b>ISKCON New Mayapur</b><br />{{
+          locale === "en"
+            ? "A spiritual eco-village in the heart of France."
+            : "Un éco-village spirituel au coeur de la France"
+        }}
       </p>
       <div class="mt-8">
         <img
@@ -278,43 +318,56 @@
         />
         <p class="mt-2 text-gray-400">
           <i>Sri Srila A.C. Bhaktivedanta Swami Prabhupada</i>, <br />
-          <b>ISKCON</b> Founder-Acarya
+          <b>ISKCON</b>
+          {{ locale === "en" ? " Founder-Acarya" : " Acarya Fondateur" }}
         </p>
       </div>
     </div>
     <div>
       <span class="footer-title">Navigation</span>
       <NuxtLink to="/posts" class="link link-hover">Blog</NuxtLink>
-      <NuxtLink to="https://www.vedalivres.com/" class="link link-hover"
-        >Shop</NuxtLink
-      >
-      <NuxtLink to="https://booking.newmayapur.com" class="link link-hover"
-        >Booking</NuxtLink
-      >
-      <NuxtLink to="/events" class="link link-hover">Events</NuxtLink>
-      <a href="https://donations.newmayapur.com" class="link link-hover"
-        >Donate</a
-      >
+      <NuxtLink to="https://www.vedalivres.com/" class="link link-hover">{{
+        locale === "en" ? "Shop" : "Boutique"
+      }}</NuxtLink>
+      <NuxtLink to="https://booking.newmayapur.com" class="link link-hover">{{
+        locale === "en" ? "Booking" : "Réservations"
+      }}</NuxtLink>
+      <NuxtLink to="/events" class="link link-hover">{{
+        locale === "en" ? "Events" : "Évènements"
+      }}</NuxtLink>
+      <a href="https://donations.newmayapur.com" class="link link-hover">{{
+        locale === "en" ? "Donate" : "Contribuer"
+      }}</a>
       <NuxtLink to="/more" class="link link-hover">Directions</NuxtLink>
       <NuxtLink to="/more#contact" class="link link-hover">Contact</NuxtLink>
     </div>
     <div>
-      <span class="footer-title">About</span>
+      <span class="footer-title">{{
+        locale === "en" ? "About" : "À Propos"
+      }}</span>
       <NuxtLink to="/temple" class="link link-hover">Temple</NuxtLink>
-      <NuxtLink to="/farm" class="link link-hover">Farm</NuxtLink>
-      <NuxtLink to="/community" class="link link-hover">Community</NuxtLink>
+      <NuxtLink to="/farm" class="link link-hover">{{
+        locale === "en" ? "Farm" : "Ferme"
+      }}</NuxtLink>
+      <NuxtLink to="/community" class="link link-hover">{{
+        locale === "en" ? "Community" : "Communauté"
+      }}</NuxtLink>
       <span class="footer-title mt-4">Services</span>
-      <NuxtLink to="/retreats" class="link link-hover">Retreats</NuxtLink>
-      <NuxtLink to="/catering" class="link link-hover">Catering</NuxtLink>
-      <NuxtLink to="/renting-venue" class="link link-hover"
-        >Renting Venue</NuxtLink
-      >
+      <NuxtLink to="/retreats" class="link link-hover">{{
+        locale === "en" ? "Retreats" : "Retraites"
+      }}</NuxtLink>
+      <NuxtLink to="/catering" class="link link-hover">{{
+        locale === "en" ? "Catering" : "Restauration"
+      }}</NuxtLink>
+      <NuxtLink to="/renting-venue" class="link link-hover">{{
+        locale === "en" ? "Renting Venue" : "Location d'Espaces"
+      }}</NuxtLink>
       <NuxtLink to="/food-for-life" class="link link-hover"
         >Food For Life</NuxtLink
       >
     </div>
     <div>
-      <span class="footer-title">More</span>
+      <span class="footer-title">{{ locale === "en" ? "More" : "Plus" }}</span>
       <a href="https://legopal.fr/" class="link link-hover">Le Gopal</a>
       <a href="https://newbahulavan.fr/" class="link link-hover"
         >New Bahulavan</a
