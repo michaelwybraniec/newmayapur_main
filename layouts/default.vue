@@ -44,7 +44,7 @@
             }}</a>
           </li>
           <li tabindex="0">
-            <a class="justify-between">
+            <a class="justify-between" @click="aboutClicked = !aboutClicked">
               {{ locale === "en" ? "About" : "À Propos" }}
               <svg
                 class="fill-current"
@@ -58,7 +58,10 @@
                 />
               </svg>
             </a>
-            <ul class="p-2 bg-base-100 lg:shadow-lg space-y-1">
+            <ul
+              class="p-2 bg-base-100 lg:shadow-lg space-y-1"
+              :class="aboutClicked ? '' : 'hidden'"
+            >
               <li @click="handleSelected">
                 <NuxtLink to="/temple">Temple</NuxtLink>
               </li>
@@ -75,7 +78,10 @@
             </ul>
           </li>
           <li tabindex="0">
-            <a class="justify-between">
+            <a
+              class="justify-between"
+              @click="servicesClicked = !servicesClicked"
+            >
               Services
               <svg
                 class="fill-current"
@@ -89,7 +95,10 @@
                 />
               </svg>
             </a>
-            <ul class="p-2 bg-base-100 lg:shadow-lg space-y-1">
+            <ul
+              class="p-2 bg-base-100 lg:shadow-lg space-y-1"
+              :class="servicesClicked ? '' : 'hidden'"
+            >
               <li @click="handleSelected">
                 <NuxtLink to="/retreats">{{
                   locale === "en" ? "Retreats" : "Retraites"
@@ -111,8 +120,8 @@
             </ul>
           </li>
           <li tabindex="0">
-            <a class="justify-between">
-              More
+            <a class="justify-between" @click="moreClicked = !moreClicked">
+              {{ locale === "en" ? "More" : "Plus" }}
               <svg
                 class="fill-current"
                 xmlns="http://www.w3.org/2000/svg"
@@ -125,7 +134,10 @@
                 />
               </svg>
             </a>
-            <ul class="p-2 bg-base-100 lg:shadow-lg space-y-1">
+            <ul
+              class="p-2 bg-base-100 lg:shadow-lg space-y-1"
+              :class="moreClicked ? '' : 'hidden'"
+            >
               <li @click="handleSelected">
                 <NuxtLink to="/more#map">Directions</NuxtLink>
               </li>
@@ -277,7 +289,7 @@
         </li>
         <li
           @click="handleSelected"
-          class="bg-primary text-white font-bold rounded-lg"
+          class="bg-primary h-[38px] mt-[1px] text-white font-bold rounded-lg"
         >
           <a href="https://donations.newmayapur.com">{{
             locale === "en" ? "Donate" : "Contribuer"
@@ -383,6 +395,9 @@
 import { useLocaleStore } from "../stores/locale";
 import { storeToRefs } from "pinia";
 
+const aboutClicked = ref(false);
+const servicesClicked = ref(false);
+const moreClicked = ref(false);
 const clicked = ref(false);
 const enableDropdownHover = ref(true);
 const handleSelected = () => {
