@@ -45,7 +45,7 @@ export default defineNuxtConfig({
   },
   mail: {
     message: {
-      to: "valentinmorice1@gmail.com",
+      to: "contact@newmayapur.com",
     },
     smtp: {
       host: "smtp-relay.sendinblue.com",
